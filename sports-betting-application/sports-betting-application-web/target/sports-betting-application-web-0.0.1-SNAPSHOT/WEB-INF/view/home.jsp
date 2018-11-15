@@ -90,15 +90,15 @@
 						<c:forEach var="wager" items="${listWagersModel.wagers}">
 							<tr>
 								<td>
-									<c:if test="${!wager.isProcessed}">
+									<c:if test="${!wager.processed}">
 									<form:form modelAttribute="removeWagerRequest" action="removeWager.html">									
-										<form:input path="wagerId" type="hidden" name="wagerId" value="${wager.wagerId}"/>
+										<form:input path="id" type="hidden" name="id" value="${wager.id}"/>
 										<button type="submit" class="btn btn-inline">Remove</button>
 									</form:form>
 									</c:if>
 								</td>
 								<td>
-									${wager.wagerId}
+									${wager.id}
 								</td>
 								<td>${wager.bet.event.title}</td>
 								<td>${wager.bet.event.eventType}</td>
@@ -106,13 +106,9 @@
 								<td>${wager.outcome.value}</td>
 								<td>${wager.outcome.odd.value}</td>
 								<td>${wager.stake}</td>
+								<td><c:choose></c:choose></td>
 								<td><c:choose>
-										<c:when test="${!wager.isProcessed}">-</c:when>
-										<c:when test="${wager.isWinner}">Yes</c:when>
-										<c:otherwise>No</c:otherwise>
-									</c:choose></td>
-								<td><c:choose>
-										<c:when test="${!wager.isProcessed}">-</c:when>
+										<c:when test="${!wager.processed}">-</c:when>
 										<c:otherwise>Yes</c:otherwise>
 									</c:choose></td>
 							</tr>

@@ -59,7 +59,7 @@
 										<div class="card">
 											<div class="card-header">
 												<a class="card-link" data-toggle="collapse"
-													href="#bet${betModel.id}"> ${betModel.description} </a>
+													href="#sports.betting.application.domain.bet${betModel.id}"> ${betModel.description} </a>
 											</div>
 											<div id="bet${betModel.id}" class="collapse"
 												data-parent="#${sportEventModel.id}">
@@ -69,7 +69,7 @@
 														<c:forEach var="outcomeModel" items="${betModel.outcomes}">
 															<div id="accordion" class="btn-group">
 																<div class="card">
-																	<a href="#outcome${outcomeModel.id}"
+																	<a href="#sports.betting.application.domain.outcome${outcomeModel.id}"
 																		class="btn btn-primary" data-toggle="collapse">
 																		${outcomeModel.value}<br>${outcomeModel.odd}
 																	</a>

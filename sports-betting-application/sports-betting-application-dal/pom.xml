@@ -8,10 +8,9 @@
 		<artifactId>sports-betting-application</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>sports.betting.application</groupId>
 	<artifactId>sports-betting-application-dal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sports-betting-application-dal</name>
+	<name>sports-betting-application-sba.config.dal</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -106,11 +106,7 @@
 								<td>${wager.outcome.value}</td>
 								<td>${wager.outcome.odd.value}</td>
 								<td>${wager.stake}</td>
-								<td><c:choose>
-										<c:when test="${!wager.processed}">-</c:when>
-										<c:when test="${wager.winner}">Yes</c:when>
-										<c:otherwise>No</c:otherwise>
-									</c:choose></td>
+								<td><c:choose></c:choose></td>
 								<td><c:choose>
 										<c:when test="${!wager.processed}">-</c:when>
 										<c:otherwise>Yes</c:otherwise>

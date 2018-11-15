@@ -1,0 +1,7 @@
+sports\betting\application\config\web\MvcConfig.class
+sports\betting\application\config\dal\JpaConfig.class
+sports\betting\application\config\service\ServiceConfig.class
+sports\betting\application\config\dal\DaoConfig.class
+sports\betting\application\config\resources\MessageSourceConfig.class
+sports\betting\application\config\service\AppConfig.class
+sports\betting\application\config\web\SecurityConfig.class

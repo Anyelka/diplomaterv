@@ -39,8 +39,8 @@
 		<div class="panel-body">
 			<h5>Somebody tried to edit the data at the same time. Please try
 				it again.</h5>
-			<form:form action="home.html">
-				<button type="submit" class="btn">Back to home</button>
+			<form:form action="sports.betting.application.web.controller.home.html">
+				<button type="submit" class="btn">Back to sports.betting.application.web.controller.home</button>
 			</form:form>
 		</div>
 	</div>

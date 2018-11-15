@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="sports-betting-application-web-0.0.1-SNAPSHOT">
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+    <wb-module deploy-name="sports-betting-application-sba.config.web-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/sba.config.web-sba.config.resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <dependent-module archiveName="sports-betting-application-service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-service/sports-betting-application-service">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/sba.config.resources"/>
+        <dependent-module archiveName="sports-betting-application-sba.config.service-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-sba.config.service/sports-betting-application-sba.config.service">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="sports-betting-application-dal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-dal/sports-betting-application-dal">
+        <dependent-module archiveName="sports-betting-application-sba.config.dal-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-sba.config.dal/sports-betting-application-sba.config.dal">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="sports-betting-application-domain-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-domain/sports-betting-application-domain">
@@ -16,7 +16,7 @@
         <dependent-module archiveName="sports-betting-application-config-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-config/sports-betting-application-config">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="sports-betting-application-web"/>
-        <property name="java-output-path" value="/sports-betting-application-web/target/classes"/>
+        <property name="context-root" value="sports-betting-application-sba.config.web"/>
+        <property name="java-output-path" value="/sports-betting-application-sba.config.web/target/classes"/>
     </wb-module>
 </project-modules>

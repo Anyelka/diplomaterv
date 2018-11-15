@@ -16,8 +16,8 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
-                web.MvcConfig
-            </param-value>
+				sports.betting.application.config.web.MvcConfig
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

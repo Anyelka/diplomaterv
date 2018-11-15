@@ -7,11 +7,10 @@
 		<artifactId>sports-betting-application</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>sports.betting.application</groupId>
 	<artifactId>sports-betting-application-service</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sports-betting-application-service</name>
+	<name>sports-betting-application-sba.config.service</name>
 	<url>http://maven.apache.org</url>
 	<build>
 		<plugins>
@@ -24,7 +23,7 @@
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>org.sports.betting.application.service.App</mainClass>
+							<mainClass>org.sports.betting.application.sba.config.service.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
@@ -45,7 +44,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.sports.betting.application.service.App</mainClass>
+							<mainClass>org.sports.betting.application.sba.config.service.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

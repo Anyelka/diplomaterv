@@ -45,7 +45,7 @@
 
 	<modules>
 		<module>sports-betting-application-domain</module>
-		<module>sports-betting-application-app</module>
+		<module>sports-betting-application-service</module>
 		<module>sports-betting-application-web</module>
 		<module>sports-betting-application-dal</module>
 		<module>sports-betting-application-config</module>
