@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playerInfo>
+    <id>1</id>
+    <name>Eden Hazard</name>
+    <accountNumber>0001-007A3</accountNumber>
+    <balance>175000</balance>
+    <currency>GBP</currency>
+    <dateOfBirth>1991-01-08+01:00</dateOfBirth>
+    <sportEvents>
+        <sportEvent>
+            <id>3</id>
+            <title>Shapovalov - Edmund</title>
+            <startDate>2018-01-02T00:00:00.000+01:00</startDate>
+            <endDate>2018-01-02T00:00:00.000+01:00</endDate>
+            <type>TENNIS</type>
+            <wagers>
+                <wager>
+                    <id>3</id>
+                    <betType>TENNIS_WINNER</betType>
+                    <betDescription>Shapovalov - Edmund -- Winner</betDescription>
+                    <outcomeValue>AWAY</outcomeValue>
+                    <amount>23109</amount>
+                    <currency>GBP</currency>
+                    <odd>1.65</odd>
+                    <win>false</win>
+                    <date>2017-03-30T00:00:00.000+02:00</date>
+                </wager>
+            </wagers>
+        </sportEvent>
+    </sportEvents>
+</playerInfo>

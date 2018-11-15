@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="playerInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element type="xs:long" name="id" nillable="false" />
+				<xs:element type="xs:string" name="name" nillable="false" />
+				<xs:element type="xs:string" name="accountNumber" nillable="false" />
+				<xs:element type="xs:decimal" name="balance" nillable="false" />
+				<xs:element ref="currency" />
+				<xs:element type="xs:date" name="dateOfBirth" nillable="false" />
+				<xs:element name="sportEvents">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" minOccurs="0" ref="sportEvent" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="currency">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="EUR" />
+				<xs:enumeration value="USD" />
+				<xs:enumeration value="HUF" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="wager">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" nillable="false" type="xs:long" />
+				<xs:element name="betType" nillable="false" type="xs:string" />
+				<xs:element name="betDescription" nillable="false" type="xs:string" />
+				<xs:element name="outcomeValue" nillable="false" type="xs:string" />
+				<xs:element name="amount" nillable="false" type="xs:decimal" />
+				<xs:element ref="currency" />
+				<xs:element name="odd" nillable="false" type="xs:float" />
+				<xs:element name="win" nillable="false" type="xs:boolean" />
+				<xs:element name="date" nillable="false" type="xs:dateTime" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="sportEvent">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" nillable="false" type="xs:long" />
+				<xs:element name="title" type="xs:string" />
+				<xs:element name="startDate" type="xs:dateTime" />
+				<xs:element name="endDate" type="xs:dateTime" />
+				<xs:element name="type" type="xs:string" />
+				<xs:element name="wagers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" ref="wager" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

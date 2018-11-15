@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SportsBet</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="assets\bootstrap\bootstrap.css">
+
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="assets\style.css">
+
+
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">SportsBetting</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li><a href="home">Home</a></li>
+				<li class="active"><a href="events.html">Events</a></li>
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">English</a></li>
+						<li><a href="#">Hungarian</a></li>
+					</ul></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">Events</div>
+		<div class="panel-body">
+
+
+			<div id="accordion">
+
+				<div class="card">
+					<div class="card-header">
+						<a class="card-link" data-toggle="collapse" href="#arsChe">
+							Arsenal - Chelsea - 2018.01.03 </a>
+					</div>
+					<div id="arsChe" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#arsCheWinner"> Winner </a>
+								</div>
+								<div id="arsCheWinner" class="collapse" data-parent="#arsChe">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary" href="#demo" data-toggle="collapse">
+													HOME<br>2.7
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													DRAW<br>3.3
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													AWAY<br>2.6
+												</button>
+											</div>
+										</div>
+										<div id="demo" class="collapse">
+											Bet on home
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#arsCheGoals25"> Goals Over/Under (2.5) </a>
+								</div>
+								<div id="arsCheGoals25" class="collapse" data-parent="#arsChe">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified ">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													OVER<br>2.7
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													UNDER<br>3.3
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<a class="card-link" data-toggle="collapse" href="#rusSar">
+							Russia - Saud-Arabia - 2018.06.15 </a>
+					</div>
+					<div id="rusSar" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#rusSarWinner"> Winner </a>
+								</div>
+								<div id="rusSarWinner" class="collapse" data-parent="#rusSar">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													HOME<br>1.3
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													DRAW<br>3.3
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													AWAY<br>7
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#rusSarHandi10"> Handicap result </a>
+								</div>
+								<div id="rusSarHandi10" class="collapse" data-parent="#rusSar">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified ">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													HOME (-1.0)<br>2.0
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													DRAW (-1.0)<br>2.8
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													AWAY (+1.0)<br>3.3
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<a class="card-link" data-toggle="collapse" href="#cheMan">
+							Chelsea-Man Utd - 2018.05.19 </a>
+					</div>
+					<div id="cheMan" class="collapse" data-parent="#accordion">
+						<div class="card-body">
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#cheManWinner"> Winner </a>
+								</div>
+								<div id="cheManWinner" class="collapse" data-parent="#cheMan">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													HOME<br>3.0
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													DRAW<br>3.2
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													AWAY<br>2.5
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link" data-toggle="collapse"
+										href="#cheManTrophyWinner"> Trophy Winner </a>
+								</div>
+								<div id="cheManTrophyWinner" class="collapse"
+									data-parent="#cheMan">
+									<div class="card-body">
+										<div class="btn-group btn-group-justified ">
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													Chelsea<br>2.0
+												</button>
+											</div>
+											<div class="btn-group">
+												<button type="button" class="btn btn-primary">
+													Man Utd<br>1.75
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+	</div>
+</body>
+</html>
