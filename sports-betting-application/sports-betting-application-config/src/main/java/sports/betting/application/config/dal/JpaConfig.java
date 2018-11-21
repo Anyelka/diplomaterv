@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories("org.sports.betting.application.sba.config.domain")
+@EnableJpaRepositories("sports.betting.application.dal")
 @Import({DaoConfig.class})
 public class JpaConfig {
     private static final String URL = "jdbc:mysql://localhost:3306/sports-betting-application";
@@ -31,7 +31,7 @@ public class JpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
         emf.setDataSource(dataSource());
-        emf.setPackagesToScan("org.sports.betting.application.sba.config.domain");
+        emf.setPackagesToScan("sports.betting.application.dal");
         emf.setPersistenceUnitName("pu");
 
         emf.setJpaVendorAdapter(vendorAdapter());

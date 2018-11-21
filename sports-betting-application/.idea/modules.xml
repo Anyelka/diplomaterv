@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application.iml" filepath="$PROJECT_DIR$/sports-betting-application.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sports-betting-application-app/sports-betting-application-app.iml" filepath="$PROJECT_DIR$/sports-betting-application-app/sports-betting-application-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" filepath="$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" filepath="$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" filepath="$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" />
