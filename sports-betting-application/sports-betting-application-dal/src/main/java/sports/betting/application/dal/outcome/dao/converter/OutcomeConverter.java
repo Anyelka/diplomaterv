@@ -13,9 +13,6 @@ public class OutcomeConverter implements Converter<OutcomeEntity, Outcome>{
     @Autowired
     private BetConverter betConverter;
     
-    @Autowired
-    private OutcomeOddConverter outcomeOddConverter;
-    
     @Override
     public Outcome convert(OutcomeEntity outcomeEntity) {
         if(outcomeEntity == null) {
@@ -25,7 +22,7 @@ public class OutcomeConverter implements Converter<OutcomeEntity, Outcome>{
         outcome.setId(outcomeEntity.getId());
         outcome.setValue(outcomeEntity.getValue());
         outcome.setBet(betConverter.convert(outcomeEntity.getBet()));
-        outcome.setCurrentOdd(outcomeOddConverter.convert(outcomeEntity.getCurrentOdd()));
+        outcome.setCurrentOdd(outcomeEntity.getCurrentOdd());
         return outcome;
     }
 

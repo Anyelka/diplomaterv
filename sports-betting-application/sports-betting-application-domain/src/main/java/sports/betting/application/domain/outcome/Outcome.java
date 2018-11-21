@@ -6,12 +6,12 @@ public class Outcome {
     private int id;
     private Bet bet;
     private String value;
-    private OutcomeOdd currentOdd;
+    private double currentOdd;
 
     public Outcome() {
     };
 
-    public Outcome(Bet bet, String value, OutcomeOdd currentOdd) {
+    public Outcome(Bet bet, String value, double currentOdd) {
         this.bet = bet;
         this.value = value;
         this.currentOdd = currentOdd;
@@ -41,11 +41,11 @@ public class Outcome {
         this.value = value;
     }
 
-    public OutcomeOdd getCurrentOdd() {
+    public double getCurrentOdd() {
         return currentOdd;
     }
 
-    public void setCurrentOdd(OutcomeOdd currentOdd) {
+    public void setCurrentOdd(double currentOdd) {
         this.currentOdd = currentOdd;
     }
 

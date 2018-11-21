@@ -20,7 +20,7 @@ public class OutcomeViewConverter implements Converter<Outcome, OutcomeModel>{
         String outcomeDescription = outcome.getBet().getDescription() + " -- " + outcomeValue.substring(0, 1)+ outcomeValue.toLowerCase().substring(1);
         outcomeModel.setFullDescription(outcomeDescription);
         outcomeModel.setValue(outcomeValue);
-        outcomeModel.setOdd(outcome.getCurrentOdd().getValue() + "");
+        outcomeModel.setOdd(outcome.getCurrentOdd() + "");
         return outcomeModel;
     }
     

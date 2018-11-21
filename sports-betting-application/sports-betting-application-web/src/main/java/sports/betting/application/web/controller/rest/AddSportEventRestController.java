@@ -39,8 +39,7 @@ public class AddSportEventRestController {
         for(BetModel betModel : eventModel.getBets()) {
             betService.createBet(betModel.getDescription(), BetType.valueOf(betModel.getType()));
             for (OutcomeModel outcomeModel : betModel.getOutcomes()) {
-                Outcome outcome = outcomeService.createOutcome(betModel.getDescription(), outcomeModel.getValue());
-                outcomeService.createOutcomeOdd(outcome, Double.parseDouble(outcomeModel.getOdd()), "2018-06-28 00:00", "2018-06-28 12:00" );
+                Outcome outcome = outcomeService.createOutcome(betModel.getDescription(), outcomeModel.getValue(), Double.parseDouble(outcomeModel.getOdd()));
             }
         }
             

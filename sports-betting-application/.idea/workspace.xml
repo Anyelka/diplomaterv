@@ -7,55 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="327af057-433a-4dd0-830d-81d5634f5595" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/sports_betting_application_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/sports_betting_application_web_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/JpaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/classes/sports/betting/application/config/dal/JpaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/classes/sports/betting/application/config/dal/JpaConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/sports-betting-application-config-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/sports-betting-application-config-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/surefire-reports/TEST-org.sports.betting.application.config.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/surefire-reports/TEST-org.sports.betting.application.config.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/target/surefire-reports/org.sports.betting.application.config.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/target/surefire-reports/org.sports.betting.application.config.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/sports-betting-application-dal-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/sports-betting-application-dal-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/surefire-reports/TEST-org.sports.betting.application.dal.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/surefire-reports/TEST-org.sports.betting.application.dal.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/target/surefire-reports/org.sports.betting.application.dal.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/target/surefire-reports/org.sports.betting.application.dal.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/target/sports-betting-application-domain-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/target/sports-betting-application-domain-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/sports-betting-application-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/sports-betting-application-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/sports-betting-application-service-0.0.1-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/sports-betting-application-service-0.0.1-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/target/sports-betting-application-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/target/sports-betting-application-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/sports-betting-application-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/sports-betting-application-web.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-config-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-config-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-dal-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-dal-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-domain-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-domain-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-service-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/target/sports-betting-application-web-0.0.1-SNAPSHOT/WEB-INF/lib/sports-betting-application-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sports-betting-application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/DefaultOutcomeOddDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/OutcomeOddDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeBackConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeBackConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeOddBackTransformer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeOddConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeOddEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/repository/OutcomeOddRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/wager/entity/WagerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/wager/entity/WagerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/Outcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/Outcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/OutcomeOdd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/TestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/TestDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddOddRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddOddRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddSportEventRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddSportEventRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/test/TestOutcomeOddController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/test/TestSportEventDetailsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/sports-betting-application-web/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -132,26 +107,26 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="iml" value="1" />
-          <entry key="java" value="12" />
+          <entry key="java" value="65" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="12" />
+          <entry key="JAVA" value="65" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="13" />
+          <entry key="java" value="314" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="314" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -159,20 +134,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeEntity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="176">
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeOddEntity.java">
+        <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -192,12 +179,9 @@
         <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/service/AppConfig.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sba/config/service/AppConfig.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/service/AppConfig.java" />
-        <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/bet/dao/BetDao.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/ResultDataGenerator.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/BetService.java" />
-        <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java" />
-        <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java" />
         <option value="$PROJECT_DIR$/sports-betting-application-web/pom.xml" />
         <option value="$PROJECT_DIR$/sports-betting-application-service/pom.xml" />
         <option value="$PROJECT_DIR$/sports-betting-application-domain/pom.xml" />
@@ -207,6 +191,20 @@
         <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/JpaConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeEntity.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeConverter.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/Outcome.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/TestDataGenerator.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/wager/entity/WagerEntity.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeBackConverter.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/service/ServiceConfig.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddSportEventRestController.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddOddRestController.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java" />
+        <option value="$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java" />
       </list>
     </option>
   </component>
@@ -246,97 +244,83 @@
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sports" type="462c0819:PsiDirectoryNode" />
-              <item name="betting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sports" type="462c0819:PsiDirectoryNode" />
               <item name="betting" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sports" type="462c0819:PsiDirectoryNode" />
               <item name="betting" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="dal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sports" type="462c0819:PsiDirectoryNode" />
               <item name="betting" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="dal" type="462c0819:PsiDirectoryNode" />
-              <item name="outcome" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sports-betting-application" type="b2602c69:ProjectViewProjectNode" />
               <item name="sports-betting-application" type="462c0819:PsiDirectoryNode" />
-              <item name="sports-betting-application-dal" type="462c0819:PsiDirectoryNode" />
+              <item name="sports-betting-application-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sports" type="462c0819:PsiDirectoryNode" />
               <item name="betting" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="dal" type="462c0819:PsiDirectoryNode" />
-              <item name="outcome" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -347,10 +331,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="securityconfig&#9;FILE&#9;file://C:/workspace/sports-betting-application/sports-betting-application-config/src/main/java/sports/betting/application/config/web/SecurityConfig.java" />
+    <property name="SearchEverywhereHistoryKey" value="wagerser&#9;FILE&#9;file://C:/sba/diplomaterv/sports-betting-application/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java&#10;outcomeconver&#9;FILE&#9;file://C:/sba/diplomaterv/sports-betting-application/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeConverter.java&#10;wageren&#9;PSI&#9;JAVA://sports.betting.application.dal.wager.entity.WagerEntity&#10;securityconfig&#9;FILE&#9;file://C:/workspace/sports-betting-application/sports-betting-application-config/src/main/java/sports/betting/application/config/web/SecurityConfig.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542816036677" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542819390324" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -468,12 +452,12 @@
       <workItem from="1542310965742" duration="4397000" />
       <workItem from="1542358100872" duration="195000" />
       <workItem from="1542809566835" duration="3374000" />
-      <workItem from="1542815463050" duration="603000" />
+      <workItem from="1542815463050" duration="4084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10644000" />
+    <option name="totallyTimeSpent" value="14125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -496,15 +480,15 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.44251627" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44251627" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286334" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.39045554" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3295082" />
       <window_info anchor="bottom" auto_hide="true" id="Messages" order="11" type="SLIDING" weight="0.36117136" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -533,222 +517,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/wager/dao/DefaultWagerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/ResultService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/SportEventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/bet/dao/DefaultBetDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/bet/dao/BetDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/BetModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/BetViewConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/ListEventsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/BetService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/ResultDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/SportEventViewConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/SportEventModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="84" column="20" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-domain/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/web/SecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/sportevent/dao/converter/SportEventConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          <folding>
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1604#1605#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/JpaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="e#897#911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/sportevent/dao/SportEventDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/sportevent/dao/DefaultSportEventDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/sportevent/repository/SportEventRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -770,20 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="46" column="75" selection-start-line="46" selection-start-column="62" selection-end-line="46" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/TestDataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
@@ -812,10 +566,335 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeOddBackTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/Outcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding>
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/entity/OutcomeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/DefaultOutcomeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/DefaultOutcomeOddDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-domain/src/main/java/sports/betting/application/domain/outcome/OutcomeOdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeBackConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/outcome/dao/converter/OutcomeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/WagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="39" column="77" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-dal/src/main/java/sports/betting/application/dal/wager/entity/WagerEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/TestDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/SportEventService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/ResultService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/ResultDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/PlayerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/OutcomeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-service/src/main/java/sports/betting/application/service/BetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/JpaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="24" column="49" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="49" />
+          <folding>
+            <element signature="e#897#911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/dal/DaoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-config/src/main/java/sports/betting/application/config/service/ServiceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="65" lean-forward="true" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/authentication/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/authentication/LoginRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/events/EventsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/events/wager/SaveWagerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/events/wager/SaveWagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/wagers/ListWagersConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/wagers/ListWagersModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/wagers/RemoveWagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/wagers/RemoveWagerRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/accountdetails/AccountDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/accountdetails/AccountDetailsConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/accountdetails/AccountDetailsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/home/accountdetails/ConModController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/GetAccountDetailsRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddSportEventRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="41" column="156" selection-start-line="41" selection-start-column="156" selection-end-line="41" selection-end-column="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddOddRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="e#840#940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/AddResultRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/test/TestSportEventDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/test/TestOutcomeOddController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/controller/rest/test/DeleteSportEventRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddViewConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeOddModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sports-betting-application-web/src/main/java/sports/betting/application/web/model/OutcomeViewConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
         </state>
       </provider>
     </entry>

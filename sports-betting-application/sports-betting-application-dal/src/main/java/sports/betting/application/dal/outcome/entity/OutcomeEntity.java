@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import sports.betting.application.dal.bet.entity.BetEntity;
@@ -21,9 +20,7 @@ public class OutcomeEntity {
     @ManyToOne
     private BetEntity bet;
     private String value;
-    
-    @OneToOne
-    private OutcomeOddEntity currentOdd;
+    private double currentOdd;
 
     public OutcomeEntity() {
     };
@@ -57,11 +54,11 @@ public class OutcomeEntity {
         this.value = value;
     }
 
-    public OutcomeOddEntity getCurrentOdd() {
+    public double getCurrentOdd() {
         return currentOdd;
     }
 
-    public void setCurrentOdd(OutcomeOddEntity currentOdd) {
+    public void setCurrentOdd(double currentOdd) {
         this.currentOdd = currentOdd;
     }
     

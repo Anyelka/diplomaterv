@@ -12,7 +12,6 @@ import javax.persistence.Table;
 
 import sports.betting.application.dal.bet.entity.BetEntity;
 import sports.betting.application.dal.outcome.entity.OutcomeEntity;
-import sports.betting.application.dal.outcome.entity.OutcomeOddEntity;
 import sports.betting.application.dal.user.entity.UserEntity;
 
 @Entity
@@ -41,7 +40,7 @@ public class WagerEntity {
     public WagerEntity() {
     }
 
-    public WagerEntity(UserEntity player, BetEntity chosenBet, OutcomeEntity outcome, OutcomeOddEntity outcomeOdd, int amount, Currency currency, LocalDateTime date) {
+    public WagerEntity(UserEntity player, BetEntity chosenBet, OutcomeEntity outcome, int amount, Currency currency, LocalDateTime date) {
         this.bet = chosenBet;
         this.player = player;
         this.outcome = outcome;
@@ -51,7 +50,7 @@ public class WagerEntity {
         this.processed = false;
     }
     
-    public WagerEntity(UserEntity player, BetEntity chosenBet, OutcomeEntity outcome, OutcomeOddEntity outcomeOdd, int amount, Currency currency, LocalDateTime date,boolean isProcessed, boolean isWinner) {
+    public WagerEntity(UserEntity player, BetEntity chosenBet, OutcomeEntity outcome, int amount, Currency currency, LocalDateTime date,boolean isProcessed, boolean isWinner) {
         this.bet = chosenBet;
         this.player = player;
         this.outcome = outcome;

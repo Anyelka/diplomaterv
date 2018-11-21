@@ -3,9 +3,7 @@ package sports.betting.application.config.dal;
 import sports.betting.application.dal.bet.dao.BetDao;
 import sports.betting.application.dal.bet.dao.DefaultBetDao;
 import sports.betting.application.dal.outcome.dao.DefaultOutcomeDao;
-import sports.betting.application.dal.outcome.dao.DefaultOutcomeOddDao;
 import sports.betting.application.dal.outcome.dao.OutcomeDao;
-import sports.betting.application.dal.outcome.dao.OutcomeOddDao;
 import sports.betting.application.dal.result.dao.DefaultResultDao;
 import sports.betting.application.dal.result.dao.ResultDao;
 import sports.betting.application.dal.sportevent.dao.DefaultSportEventDao;
@@ -30,11 +28,6 @@ public class DaoConfig {
     @Bean
     public OutcomeDao outcomeDao() {
         return new DefaultOutcomeDao();
-    }
-
-    @Bean
-    public OutcomeOddDao outcomeOddDao() {
-        return new DefaultOutcomeOddDao();
     }
 
     @Bean
