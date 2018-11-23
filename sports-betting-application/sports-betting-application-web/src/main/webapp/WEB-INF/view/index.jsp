@@ -15,7 +15,7 @@
 	<div class="jumbotron text-center">
 		<h1>Welcome to SportsBet!</h1>
 		<p>Sports betting is the activity of predicting sports results and
-            placing a wager on the sports.betting.application.domain.outcome.</p>
+            placing a wager on the outcome.</p>
 	</div>
 
 	<div class="container">
