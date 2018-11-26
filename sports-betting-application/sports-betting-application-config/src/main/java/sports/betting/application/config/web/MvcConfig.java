@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("org.sports.betting.application")
+@ComponentScan("sports.betting.application")
 @Import({SecurityConfig.class, AppConfig.class})
 public class MvcConfig implements WebMvcConfigurer {
 

@@ -21,29 +21,11 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<servlet>
-		<servlet-name>ExportPageServlet</servlet-name>
-		<servlet-class>org.sports.betting.application.web.export.ExportPageServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>ExportServlet</servlet-name>
-		<servlet-class>org.sports.betting.application.web.export.ExportServlet</servlet-class>
-	</servlet>
-
 
 	<servlet-mapping>
 		<servlet-name>sports-betting-application</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ExportPageServlet</servlet-name>
-		<url-pattern>/export.html</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ExportServlet</servlet-name>
-		<url-pattern>/exportData.html</url-pattern>
-	</servlet-mapping>
-
 
 
 	<jsp-config>

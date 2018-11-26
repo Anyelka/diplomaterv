@@ -31,7 +31,7 @@
 				<div class="panel-heading">Login</div>
 				<div class="panel-body">
 					<form:form modelAttribute="loginRequest" class="form-horizontal"
-						action="j_spring_security_check">
+						action="login">
 						<form:errors element="div"/>
 						<div class="form-group col-xs-12">
 							<form:input path="username" class="form-control"

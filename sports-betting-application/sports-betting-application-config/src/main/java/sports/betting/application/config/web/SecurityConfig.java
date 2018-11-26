@@ -33,8 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/auth/**").access("isAuthenticated()").anyRequest().permitAll().and().formLogin().loginPage("/index.html")
-                .defaultSuccessUrl("/sports.betting.application.web.controller.home.html").failureUrl("/index.html").usernameParameter("username").passwordParameter("password")
-                .loginProcessingUrl("/j_spring_security_check").and().logout().logoutSuccessUrl("/").and().exceptionHandling().accessDeniedPage("/403").and()
+                .defaultSuccessUrl("/home.html").failureUrl("/index.html").usernameParameter("username").passwordParameter("password")
+                .loginProcessingUrl("/login").and().logout().logoutSuccessUrl("/").and().exceptionHandling().accessDeniedPage("/403").and()
                 .csrf().disable();
     }
 }

@@ -29,6 +29,7 @@ public class PlayerService {
         User player = new User();
         player.setPlayerData(new PlayerData(name, accountNumber, balance, currency, dob));
         UserRole playerRole = userService.getUserRole(TestDataGenerator.USER_ROLE_PLAYER);
+        player.setEnabled(enabled);
         userService.saveUser(player, credentials, playerRole);
 
         return player;

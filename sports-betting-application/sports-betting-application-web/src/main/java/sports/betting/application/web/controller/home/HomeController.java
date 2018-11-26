@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
-    private static final String REQUEST_MAPPING = "/sports.betting.application.web.controller.home.html";
+    private static final String REQUEST_MAPPING = "/home.html";
 
     @Autowired
     private AccountDetailsConverter accountDetailsConverter;
