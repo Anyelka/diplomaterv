@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class EventsController {
 
-    private static final String REQUEST_MAPPING = "/sports.betting.application.web.controller.events.html";
+    private static final String REQUEST_MAPPING = "/events.html";
 
     @Autowired
     private SportEventService sportEventService;
