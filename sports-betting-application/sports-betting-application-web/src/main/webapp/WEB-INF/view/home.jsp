@@ -104,9 +104,11 @@
 								<td>${wager.bet.event.eventType}</td>
 								<td>${wager.bet.betType}</td>
 								<td>${wager.outcome.value}</td>
-								<td>${wager.outcome.odd.value}</td>
+								<td>${wager.outcome.currentOdd}</td>
 								<td>${wager.stake}</td>
-								<td><c:choose></c:choose></td>
+								<td>
+									<%--<c:choose></c:choose>--%>
+								</td>
 								<td><c:choose>
 										<c:when test="${!wager.processed}">-</c:when>
 										<c:otherwise>Yes</c:otherwise>
