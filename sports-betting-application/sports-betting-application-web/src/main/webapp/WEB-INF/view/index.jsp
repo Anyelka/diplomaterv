@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="row login-header">
 			<h2>
-				<em>Login</em> or <em>Register</em> to start!
+				<em>Login</em> or <em><a href="register.html">Register</a></em> to start!
 			</h2>
 			<div></div>
 		</div>

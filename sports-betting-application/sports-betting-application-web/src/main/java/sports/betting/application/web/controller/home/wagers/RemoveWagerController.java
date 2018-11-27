@@ -4,6 +4,7 @@ import sports.betting.application.service.WagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import sports.betting.application.web.controller.home.wagers.model.RemoveWagerRequest;
 
 @Controller
 public class RemoveWagerController {

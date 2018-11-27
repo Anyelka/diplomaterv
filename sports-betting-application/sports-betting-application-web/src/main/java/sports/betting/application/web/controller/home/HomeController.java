@@ -5,9 +5,9 @@ import sports.betting.application.service.PlayerService;
 import sports.betting.application.domain.user.User;
 import sports.betting.application.web.controller.home.accountdetails.AccountDetailsConverter;
 import sports.betting.application.web.controller.home.accountdetails.AccountDetailsRequest;
-import sports.betting.application.web.controller.home.wagers.ListWagersConverter;
-import sports.betting.application.web.controller.home.wagers.ListWagersModel;
-import sports.betting.application.web.controller.home.wagers.RemoveWagerRequest;
+import sports.betting.application.web.controller.home.wagers.model.ListWagersConverter;
+import sports.betting.application.web.controller.home.wagers.model.ListWagersModel;
+import sports.betting.application.web.controller.home.wagers.model.RemoveWagerRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -37,8 +37,7 @@ public class HomeController {
     
     @ModelAttribute("listWagersModel")
     public ListWagersModel createListWagersModel() {
-        User player = getCurrentPlayer();
-        return listWagersConverter.convert(player);
+        return listWagersConverter.convert(getCurrentPlayer());
     }
     
     @ModelAttribute("removeWagerRequest")

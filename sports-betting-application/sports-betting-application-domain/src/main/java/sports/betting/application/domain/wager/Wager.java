@@ -27,6 +27,7 @@ public class Wager {
         this.bet = chosenBet;
         this.player = player;
         this.outcome = outcome;
+        this.outcomeOdd = outcomeOdd;
         this.stake = amount;
         this.currency = currency;
         this.timestamp = date;
@@ -37,6 +38,7 @@ public class Wager {
         this.bet = chosenBet;
         this.player = player;
         this.outcome = outcome;
+        this.outcomeOdd = outcomeOdd;
         this.stake = amount;
         this.currency = currency;
         this.timestamp = date;
