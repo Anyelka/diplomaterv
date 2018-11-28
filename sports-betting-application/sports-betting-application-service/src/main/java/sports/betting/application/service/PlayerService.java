@@ -7,6 +7,7 @@ import java.util.Currency;
 import sports.betting.application.dal.user.dao.UserDao;
 import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.User;
+import sports.betting.application.domain.user.UserCredentials;
 import sports.betting.application.domain.user.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.OptimisticLockingFailureException;
@@ -19,15 +20,13 @@ public class PlayerService {
     @Autowired
     private UserService userService;
 
-    public User createPlayer(String[] data, String[] credentials, boolean enabled) {
-        String name = data[0];
-        String accountNumber = data[1];
-        int balance = Integer.parseInt(data[2]);
-        Currency currency = Currency.getInstance(data[3]);
-        LocalDate dob = LocalDate.parse(data[4]);
+    public User createRegisteringPlayer(UserCredentials credentials, PlayerData playerData) {
+        return createPlayer(playerData, credentials, true);
+    }
 
+    public User createPlayer(PlayerData playerData, UserCredentials credentials, boolean enabled) {
         User player = new User();
-        player.setPlayerData(new PlayerData(name, accountNumber, balance, currency, dob));
+        player.setPlayerData(playerData);
         UserRole playerRole = userService.getUserRole(TestDataGenerator.USER_ROLE_PLAYER);
         player.setEnabled(enabled);
         userService.saveUser(player, credentials, playerRole);

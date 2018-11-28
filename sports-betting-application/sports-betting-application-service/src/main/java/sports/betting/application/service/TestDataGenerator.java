@@ -6,8 +6,10 @@ import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.bet.BetType;
 import sports.betting.application.domain.outcome.Outcome;
 import sports.betting.application.domain.sportevent.EventType;
+import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import sports.betting.application.domain.user.UserCredentials;
 
 public class TestDataGenerator {
     static final String USER_ROLE_PLAYER = "ROLE_PLAYER";
@@ -90,8 +92,8 @@ public class TestDataGenerator {
     }
 
     public User createPlayer() {
-        return playerService.createPlayer(new String[] { PLAYER_NAME, PLAYER_ACCOUNT_NUMBER, PLAYER_BALANCE, PLAYER_CURRENCY, PLAYER_DATE_OF_BIRTH },
-                new String[] {PLAYER_USERNAME, PLAYER_PASSWORD, PLAYER_EMAIL}, PLAYER_ENABLED);
+        return playerService.createPlayer(new PlayerData( PLAYER_NAME, PLAYER_ACCOUNT_NUMBER, PLAYER_BALANCE, PLAYER_CURRENCY, PLAYER_DATE_OF_BIRTH) ,
+                new UserCredentials(PLAYER_EMAIL, PLAYER_USERNAME, PLAYER_PASSWORD), PLAYER_ENABLED);
     }
 
     public void createTestWagers() {

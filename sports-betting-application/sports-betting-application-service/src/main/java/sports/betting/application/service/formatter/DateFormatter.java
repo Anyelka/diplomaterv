@@ -3,6 +3,7 @@ package sports.betting.application.service.formatter;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
 
 import javax.xml.datatype.DatatypeConfigurationException;
@@ -13,6 +14,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DateFormatter {
+
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/DD/YYYY");
+
+    /**
+     * Uses the format of the date picker: MM/DD/YYYY
+     * to parse a String to LocalDate
+     * */
+    public LocalDate parseDate(String date) {
+        return LocalDate.parse(date, dateTimeFormatter);
+    }
 
     public String formatDate(LocalDateTime localDateTime) {
         String date = localDateTime.toString();

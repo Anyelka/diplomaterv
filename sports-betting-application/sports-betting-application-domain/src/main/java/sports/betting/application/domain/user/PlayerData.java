@@ -18,6 +18,15 @@ public class PlayerData {
         this.currency = currency;
         this.dateOfBirth = dateOfBirth;
     }
+
+    public PlayerData(String name, String accountNumber, String balance, String currency, String dateOfBirth) {
+        super();
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = Integer.parseInt(balance);
+        this.currency = Currency.getInstance(currency);
+        this.dateOfBirth = LocalDate.parse(dateOfBirth);
+    }
     
     public PlayerData() {
     }
