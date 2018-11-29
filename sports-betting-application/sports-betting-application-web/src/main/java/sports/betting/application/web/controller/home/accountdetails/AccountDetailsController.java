@@ -17,7 +17,7 @@ public class AccountDetailsController {
     @Autowired
     private PlayerService playerService;
     
-    @RequestMapping(REQUEST_MAPPING)
+    @RequestMapping("saveAccountDetails")
     public String saveAccountDetails(AccountDetailsRequest accountDetailsRequest) {
         try {
             playerService.updatePlayer(SecurityContextHolder.getContext().getAuthentication().getName() ,accountDetailsRequest.getName(),

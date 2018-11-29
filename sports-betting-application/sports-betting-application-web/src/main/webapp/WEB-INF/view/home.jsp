@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets\bootstrap\bootstrap.css">
     <script src="assets\bootstrap\bootstrap.js"></script>
     <link rel="stylesheet" href="assets\style.css">
+    <%--js controller for saving account details:--%>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -44,29 +45,31 @@
 
             <div class="input-group">
                 <span class="input-group-addon">Name</span>
-                <form:input path="name" id="msg" type="text" class="form-control" name="playerName"/>
+                <form:input path="name" id="playerName" type="text" class="form-control" name="playerName"/>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">Date of birth</span>
-                <form:input path="dateOfBirth" id="msg" type="text" class="form-control" name="playerDateOfBirth"/>
+                <form:input path="dateOfBirth" id="playerDateOfBirth" type="text" class="form-control"
+                            name="playerDateOfBirth"/>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">Account number</span>
-                <form:input path="accountNumber" id="msg" type="text" class="form-control" name="playerAccountNumber"/>
+                <form:input path="accountNumber" id="playerAccountNumber" type="text" class="form-control"
+                            name="playerAccountNumber"/>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">Balance</span>
-                <form:input path="balance" id="msg" type="text" class="form-control" name="playerBalance"
+                <form:input path="balance" id="playerBalance" type="text" class="form-control" name="playerBalance"
                             disabled="true"/>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">Currency</span>
-                <form:input path="currency" id="msg" type="text" class="form-control" name="playerCurrency"
+                <form:input path="currency" id="playerCurrency" type="text" class="form-control" name="playerCurrency"
                             disabled="true"/>
             </div>
             <%-- 				<input type="hidden" name="playerId" value="${player.userId}"> --%>
-            <button type="submit" class="btn btn-default">Save</button>
         </form:form>
+        <button id="saveAccountDetailsButton" type="button" class="btn btn-default">Save</button>
     </div>
 </div>
 
@@ -125,5 +128,6 @@
 
     </div>
 </div>
+<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
 </body>
 </html>
