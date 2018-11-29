@@ -73,47 +73,55 @@
 <div class="panel panel-default">
     <div class="panel-heading">Wagers</div>
     <div class="panel-body">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Event title</th>
-                    <th>Event type</th>
-                    <th>Bet type</th>
-                    <th>Outcome value</th>
-                    <th>Outcome odd</th>
-                    <th>Wager amount</th>
-                    <th>Winner</th>
-                    <th>Processed</th>
-                    <th id="remove"></th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="wager" items="${listWagersModel.wagers}">
-                    <tr>
-                        <td>${wager.id}</td>
-                        <td>${wager.eventTitle}</td>
-                        <td>${wager.eventType}</td>
-                        <td>${wager.betType}</td>
-                        <td>${wager.outcome}</td>
-                        <td>${wager.odd}</td>
-                        <td>${wager.stake}</td>
-                        <td>${wager.isWinner}</td>
-                        <td>${wager.isProcessed}</td>
-                        <td>
-                            <c:if test="${!wager.isProcessed}">
-                                <form:form modelAttribute="removeWagerRequest" action="removeWager.html">
-                                    <form:input path="id" type="hidden" name="id" value="${wager.id}"/>
-                                    <button type="submit" class="btn btn-inline">Remove</button>
-                                </form:form>
-                            </c:if>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
+        <c:choose>
+            <c:when test="${listWagersModel.wagers.size() == 0}">
+                You have no wagers!
+            </c:when>
+            <c:otherwise>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Event title</th>
+                            <th>Event type</th>
+                            <th>Bet type</th>
+                            <th>Outcome value</th>
+                            <th>Outcome odd</th>
+                            <th>Stake</th>
+                            <th>Winner</th>
+                            <th>Processed</th>
+                            <th id="remove"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <c:forEach var="wager" items="${listWagersModel.wagers}">
+                            <tr>
+                                <td>${wager.id}</td>
+                                <td>${wager.eventTitle}</td>
+                                <td>${wager.eventType}</td>
+                                <td>${wager.betType}</td>
+                                <td>${wager.outcome}</td>
+                                <td>${wager.odd}</td>
+                                <td>${wager.stake}</td>
+                                <td>${wager.isWinner}</td>
+                                <td>${wager.isProcessed}</td>
+                                <td>
+                                    <c:if test="${!wager.isProcessed}">
+                                        <form:form modelAttribute="removeWagerRequest" action="removeWager.html">
+                                            <form:input path="id" type="hidden" name="id" value="${wager.id}"/>
+                                            <button type="submit" class="btn btn-inline">Remove</button>
+                                        </form:form>
+                                    </c:if>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </div>
+            </c:otherwise>
+        </c:choose>
+
 
     </div>
 </div>

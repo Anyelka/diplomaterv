@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DateFormatter {
 
-    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/DD/YYYY");
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
 
     /**
      * Uses the format of the date picker: MM/DD/YYYY

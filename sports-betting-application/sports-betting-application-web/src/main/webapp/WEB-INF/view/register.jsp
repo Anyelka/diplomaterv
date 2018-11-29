@@ -28,7 +28,10 @@
 
     <div class="row">
         <div class="panel panel-default login-panel">
-            <div class="panel-heading">Create an account!</div>
+            <div class="panel-heading">
+                <strong>Create an account!</strong>
+                <p> or go back to <a href="index.html">Login page</a></p>
+            </div>
             <div class="panel-body">
                 <form:form modelAttribute="registrationRequest" class="form-horizontal"
                            action="sendRegistrationRequest">

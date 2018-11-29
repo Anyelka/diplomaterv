@@ -14,7 +14,7 @@
 <body>
 <div class="jumbotron text-center">
     <h1>Successful Registration!</h1>
-    <p><a href="login.html">Return to the login page</a></p>
+    <p><a href="index.html">Return to the login page</a></p>
 </div>
 
 </body>
