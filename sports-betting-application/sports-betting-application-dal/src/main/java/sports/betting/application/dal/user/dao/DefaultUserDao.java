@@ -53,4 +53,9 @@ public class DefaultUserDao implements UserDao {
         userRepository.save(userEntity);
     }
 
+    @Override
+    public boolean checkIfUserExists(String username) {
+        return userRepository.findByUsername(username) == null ? false : true;
+    }
+
 }

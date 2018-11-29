@@ -49,5 +49,9 @@ public class UserService {
     public UserRole getUserRole(String role) {
         return userRoleDao.getByName(role);
     }
+
+    public boolean checkIfUserExists(String username) {
+        return userDao.checkIfUserExists(username);
+    }
     
 }

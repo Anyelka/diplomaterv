@@ -20,10 +20,6 @@ public class PlayerService {
     @Autowired
     private UserService userService;
 
-    public User createRegisteringPlayer(UserCredentials credentials, PlayerData playerData) {
-        return createPlayer(playerData, credentials, true);
-    }
-
     public User createPlayer(PlayerData playerData, UserCredentials credentials, boolean enabled) {
         User player = new User();
         player.setPlayerData(playerData);

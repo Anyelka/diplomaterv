@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>SportsBet</title>
@@ -16,9 +16,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $( function() {
-            $( "#datepicker" ).datepicker();
-        } );
+        $(function () {
+            $("#datepicker").datepicker();
+        });
     </script>
     <%--Datepicker--%>
 </head>
@@ -27,34 +27,34 @@
 <div class="container">
 
     <div class="row">
-        <div class="panel panel-default login-panel">
+        <div class="panel panel-default registration-panel center-block">
+
             <div class="panel-heading">
-                <strong>Create an account!</strong>
-                <p> or go back to <a href="index.html">Login page</a></p>
+                <p>Create an account!</p>
             </div>
+
             <div class="panel-body">
                 <form:form modelAttribute="registrationRequest" class="form-horizontal"
                            action="sendRegistrationRequest">
-                    <form:errors element="div"/>
                     <div class="form-group col-xs-12">
                         <form:input path="email" class="form-control"
-                                    placeholder="E-mail" />
+                                    placeholder="E-mail"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="username" class="form-control"
-                                    placeholder="Username" />
+                                    placeholder="Username"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="password" class="form-control"
-                                    placeholder="Password" />
+                                    placeholder="Password"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="fullName" class="form-control"
-                                    placeholder="Full Name" />
+                                    placeholder="Full Name"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="accountNumber" class="form-control"
-                                    placeholder="Account Number" />
+                                    placeholder="Account Number"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <label>Currency</label>
@@ -68,14 +68,30 @@
                         <form:input path="dateOfBirth" class="form-control"
                                     placeholder="Date Of Birth" id="datepicker"/>
                     </div>
-                    <button type="submit" class="btn btn-default">Register</button>
+                    <c:if test="${!registrationResponse.valid}">
+                        <div class="form-group col-xs-12">
+                            <div class="alert alert-danger">
+                                <strong>There are problems with the data you gave!</strong>
+                                <c:if test="${registrationResponse.usernameError.present}">
+                                    <p>${registrationResponse.usernameError.get()}</p>
+                                </c:if>
+                            </div>
+                        </div>
+                    </c:if>
+
+                    <button type="submit" class="btn">Register</button>
+                    <button type="button" onclick="window.location.href='index.html'" class="btn btn-secondary pull-right">
+                        Back to login page
+                    </button>
+
                 </form:form>
+
             </div>
 
 
         </div>
-
     </div>
+
 </div>
 
 </body>

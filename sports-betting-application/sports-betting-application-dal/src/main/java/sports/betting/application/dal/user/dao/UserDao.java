@@ -7,4 +7,5 @@ public interface UserDao {
     public User getByUsername(String username);
     public User getPlayerByFullName(String name);
     public void save(User user);
+    public boolean checkIfUserExists(String username);
 }

@@ -22,14 +22,18 @@ em {
 	max-width: 250px;
 }
 
+.registration-panel {
+	max-width: 600px;
+}
+
 .btn {
 	background-color: #0066aa;
 	color: #FFF;
 }
 
-#secondary-button {
-	color: #0066aa;
-	background-color: #FFF;
+.btn-secondary {
+	color: #080808;
+	background-color: #afd9ee;
 }
 
 .btn-inline{
@@ -50,6 +54,14 @@ em {
 	margin: 0px;
 }
 
+.absolute-center {
+	margin:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+}
 
 
 @media only screen and (max-width: 600px) {
