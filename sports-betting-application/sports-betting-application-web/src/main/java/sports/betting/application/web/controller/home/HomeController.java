@@ -51,7 +51,6 @@ public class HomeController {
     }
     
     private User getCurrentPlayer() {
-        String currentUsername = SecurityContextHolder.getContext().getAuthentication().getName();
-        return playerService.getPlayerByUsername(currentUsername);
+        return playerService.getPlayerByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
     }
 }

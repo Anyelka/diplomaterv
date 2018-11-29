@@ -54,10 +54,10 @@ public class PlayerService {
         return userDao.getPlayerByFullName(name);
     }
 
-    public void updatePlayer(String name, String dob, String accountNumber, int version) {
-        User player = getPlayerByUsername(name);
+    public void updatePlayer(String username, String fullName, String dob, String accountNumber, int version) {
+        User player = getPlayerByUsername(username);
         player.setVersion(version);
-        player.getPlayerData().setName(name);
+        player.getPlayerData().setName(fullName);
         player.getPlayerData().setDateOfBirth(LocalDate.parse(dob));
         player.getPlayerData().setAccountNumber(accountNumber);
 
