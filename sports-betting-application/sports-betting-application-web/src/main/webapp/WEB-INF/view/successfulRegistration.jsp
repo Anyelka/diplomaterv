@@ -2,14 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
-    <title>SportsBet</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets\bootstrap\bootstrap.css">
-    <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets\bootstrap\bootstrap.js"></script>
-    <link rel="stylesheet" href="assets\style.css">
+    <jsp:include page="../assets/include.jsp"/>
 </head>
 <body>
 <div class="jumbotron text-center">

@@ -4,13 +4,14 @@
 
 <html>
 <head>
-    <title>SportsBet</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets\bootstrap\bootstrap.css">
-    <script src="assets\bootstrap\bootstrap.js"></script>
-    <link rel="stylesheet" href="assets\style.css">
-    <%--js controller for saving account details:--%>
+    <jsp:include page="../assets/include.jsp"/>
+<%--js controller for saving account details:--%>
+    <%--<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>--%>
+    <script>
+        $("button").click(function(){
+            console.log("this button is clicked");
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -128,6 +129,5 @@
 
     </div>
 </div>
-<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
 </body>
 </html>

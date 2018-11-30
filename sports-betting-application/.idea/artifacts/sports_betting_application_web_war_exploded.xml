@@ -56,7 +56,7 @@
           <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.5.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.5.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.0.5.RELEASE" />
