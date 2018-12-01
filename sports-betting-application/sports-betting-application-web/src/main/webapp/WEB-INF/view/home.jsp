@@ -127,6 +127,7 @@
 
     </div>
 </div>
+<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
 <script>
     $(document).ready(function () {
         $("#saveAccountDetailsButton").click(function () {
@@ -148,7 +149,6 @@
                         messageDiv.addClass("alert alert-danger");
                         messageDiv.removeClass("alert-success");
                         messageText.text(response.status);
-                        messageText.
                     }
 
                 }
