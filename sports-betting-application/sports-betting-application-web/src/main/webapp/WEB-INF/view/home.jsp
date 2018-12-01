@@ -5,13 +5,8 @@
 <html>
 <head>
     <jsp:include page="../assets/include.jsp"/>
-<%--js controller for saving account details:--%>
+    <%--js controller for saving account details:--%>
     <%--<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>--%>
-    <script>
-        $("button").click(function(){
-            console.log("this button is clicked");
-        });
-    </script>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -70,6 +65,9 @@
             </div>
             <%-- 				<input type="hidden" name="playerId" value="${player.userId}"> --%>
         </form:form>
+        <div id="saveAccountDetailsResponseDiv">
+            <p id="saveAccountDetailsResponseText"></p>
+        </div>
         <button id="saveAccountDetailsButton" type="button" class="btn btn-default">Save</button>
     </div>
 </div>
@@ -129,5 +127,35 @@
 
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $("#saveAccountDetailsButton").click(function () {
+            $.ajax({
+                url: "saveAccountDetails",
+                data: {
+                    playerName: $("#playerName").val(),
+                    playerDateOfBirth: $("#playerDateOfBirth").val(),
+                    playerAccountNumber: $("#playerAccountNumber").val()
+                },
+                success: function (response) {
+                    var messageDiv = $("#saveAccountDetailsResponseDiv");
+                    var messageText = $("#saveAccountDetailsResponseText")
+                    if(response.successful) {
+                        messageDiv.addClass("alert alert-success");
+                        messageDiv.removeClass("alert-danger");
+                        messageText.text(response.status)
+                    } else {
+                        messageDiv.addClass("alert alert-danger");
+                        messageDiv.removeClass("alert-success");
+                        messageText.text(response.status);
+                        messageText.
+                    }
+
+                }
+            })
+        });
+    });
+
+</script>
 </body>
 </html>

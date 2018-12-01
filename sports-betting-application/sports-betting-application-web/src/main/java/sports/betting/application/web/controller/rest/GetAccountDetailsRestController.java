@@ -1,9 +1,9 @@
 package sports.betting.application.web.controller.rest;
 
-import sports.betting.application.service.PlayerService;
+import sports.betting.application.service.user.player.PlayerService;
 import sports.betting.application.domain.user.User;
 import sports.betting.application.web.controller.home.accountdetails.AccountDetailsConverter;
-import sports.betting.application.web.controller.home.accountdetails.AccountDetailsRequest;
+import sports.betting.application.web.controller.home.accountdetails.SaveAccountDetailsRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +22,7 @@ public class GetAccountDetailsRestController {
     private AccountDetailsConverter accountDetailsConverter;
     
     @RequestMapping(value = REQUEST_MAPPING, method = RequestMethod.GET, produces = "application/json")
-    public AccountDetailsRequest getAccountDetails(@PathVariable("userId") int userId) {
+    public SaveAccountDetailsRequest getAccountDetails(@PathVariable("userId") int userId) {
         User player = playerService.getPlayerById(userId);
         return accountDetailsConverter.convert(player);
     }

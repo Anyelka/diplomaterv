@@ -8,8 +8,10 @@ import sports.betting.application.dal.result.dao.DefaultResultDao;
 import sports.betting.application.dal.result.dao.ResultDao;
 import sports.betting.application.dal.sportevent.dao.DefaultSportEventDao;
 import sports.betting.application.dal.sportevent.dao.SportEventDao;
+import sports.betting.application.dal.user.dao.DefaultPlayerDao;
 import sports.betting.application.dal.user.dao.DefaultUserDao;
 import sports.betting.application.dal.user.dao.DefaultUserRoleDao;
+import sports.betting.application.dal.user.dao.PlayerDao;
 import sports.betting.application.dal.user.dao.UserDao;
 import sports.betting.application.dal.user.dao.UserRoleDao;
 import sports.betting.application.dal.wager.dao.DefaultWagerDao;
@@ -44,12 +46,15 @@ public class DaoConfig {
     public UserDao userDao() {
         return new DefaultUserDao();
     }
-    
+
+    @Bean
+    public PlayerDao playerDao() { return new DefaultPlayerDao(); }
+
     @Bean
     public UserRoleDao userRoleDao() {
         return new DefaultUserRoleDao();
     }
-    
+
     @Bean
     public ResultDao resultDao() {
         return new DefaultResultDao();

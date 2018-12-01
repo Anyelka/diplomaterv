@@ -12,6 +12,8 @@ import sports.betting.application.service.formatter.DateFormatter;
 import sports.betting.application.service.registration.RegistrationResponse;
 import sports.betting.application.service.registration.RegistrationService;
 
+import java.util.Currency;
+
 @Controller
 public class RegistrationController {
 
@@ -43,7 +45,7 @@ public class RegistrationController {
     public String register(final RegistrationRequest registrationRequest, final RedirectAttributes redirectAttributes) {
         String redirectAddress;
         UserCredentials credentials = new UserCredentials(registrationRequest.getEmail(), registrationRequest.getUsername(), registrationRequest.getPassword());
-        PlayerData playerData = new PlayerData(registrationRequest.getFullName(), registrationRequest.getAccountNumber(),0, registrationRequest.getCurrency(), dateFormatter.parseDate(registrationRequest.getDateOfBirth()));
+        PlayerData playerData = new PlayerData(registrationRequest.getFullName(), registrationRequest.getAccountNumber(),0, registrationRequest.getCurrency().toString(), dateFormatter.parseDate(registrationRequest.getDateOfBirth()).toString());
 
         RegistrationResponse registrationResponse = registrationService.attemptRegistration(playerData, credentials);
         if(registrationResponse.isValid()) {

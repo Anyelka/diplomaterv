@@ -5,11 +5,11 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AccountDetailsConverter implements Converter<User, AccountDetailsRequest> {
+public class AccountDetailsConverter implements Converter<User, SaveAccountDetailsRequest> {
 
     @Override
-    public AccountDetailsRequest convert(User player) {
-        AccountDetailsRequest accountDetailsRequest = new AccountDetailsRequest();
+    public SaveAccountDetailsRequest convert(User player) {
+        SaveAccountDetailsRequest accountDetailsRequest = new SaveAccountDetailsRequest();
         accountDetailsRequest.setUsername(player.getUsername());
         accountDetailsRequest.setName(player.getPlayerData().getName());
         accountDetailsRequest.setDateOfBirth(player.getPlayerData().getDateOfBirth().toString());

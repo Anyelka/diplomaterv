@@ -5,6 +5,9 @@ import sports.betting.application.domain.user.PlayerData;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.util.Currency;
+
 @Component
 public class PlayerDataBackConverter implements Converter<PlayerData, PlayerDataEntity> {
 
@@ -14,8 +17,8 @@ public class PlayerDataBackConverter implements Converter<PlayerData, PlayerData
         playerDataEntity.setName(playerData.getName());
         playerDataEntity.setAccountNumber(playerData.getAccountNumber());
         playerDataEntity.setBalance(playerData.getBalance());
-        playerDataEntity.setCurrency(playerData.getCurrency());
-        playerDataEntity.setDateOfBirth(playerData.getDateOfBirth());
+        playerDataEntity.setCurrency(Currency.getInstance(playerData.getCurrency()));
+        playerDataEntity.setDateOfBirth(LocalDate.parse(playerData.getDateOfBirth()));
         return playerDataEntity;
     }
 

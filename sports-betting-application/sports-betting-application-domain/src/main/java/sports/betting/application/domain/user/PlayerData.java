@@ -1,16 +1,13 @@
 package sports.betting.application.domain.user;
 
-import java.time.LocalDate;
-import java.util.Currency;
-
 public class PlayerData {
     private String name;
     private String accountNumber;
     private int balance;
-    private Currency currency;
-    private LocalDate dateOfBirth;
+    private String currency;
+    private String dateOfBirth;
     
-    public PlayerData(String name, String accountNumber, int balance, Currency currency, LocalDate dateOfBirth) {
+    public PlayerData(String name, String accountNumber, int balance, String currency, String dateOfBirth) {
         super();
         this.name = name;
         this.accountNumber = accountNumber;
@@ -24,10 +21,11 @@ public class PlayerData {
         this.name = name;
         this.accountNumber = accountNumber;
         this.balance = Integer.parseInt(balance);
-        this.currency = Currency.getInstance(currency);
-        this.dateOfBirth = LocalDate.parse(dateOfBirth);
+        this.currency = currency;
+        this.dateOfBirth = dateOfBirth;
     }
-    
+
+
     public PlayerData() {
     }
 
@@ -49,16 +47,16 @@ public class PlayerData {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-    public Currency getCurrency() {
+    public String getCurrency() {
         return currency;
     }
-    public void setCurrency(Currency currency) {
+    public void setCurrency(String currency) {
         this.currency = currency;
     }
-    public LocalDate getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
-    public void setDateOfBirth(LocalDate dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
     

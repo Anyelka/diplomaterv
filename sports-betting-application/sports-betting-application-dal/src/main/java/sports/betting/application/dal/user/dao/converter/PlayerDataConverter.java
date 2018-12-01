@@ -14,8 +14,8 @@ public class PlayerDataConverter implements Converter<PlayerDataEntity, PlayerDa
         playerData.setName(source.getName());
         playerData.setAccountNumber(source.getAccountNumber());
         playerData.setBalance(source.getBalance());
-        playerData.setCurrency(source.getCurrency());
-        playerData.setDateOfBirth(source.getDateOfBirth());
+        playerData.setCurrency(source.getCurrency().toString());
+        playerData.setDateOfBirth(source.getDateOfBirth().toString());
         return playerData;
     }
 

@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import sports.betting.application.service.*;
+import sports.betting.application.service.user.UserService;
+import sports.betting.application.service.user.player.PlayerService;
 
 @Configuration
 @ComponentScan("org.sports.betting.application.app.springconfig")

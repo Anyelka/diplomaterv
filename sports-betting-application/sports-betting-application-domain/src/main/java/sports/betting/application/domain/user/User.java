@@ -1,5 +1,6 @@
 package sports.betting.application.domain.user;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class User {
@@ -11,6 +12,10 @@ public class User {
     private Set<UserRole> roles;
     private PlayerData playerData;
     private Integer version;
+
+    public User() {
+        this.roles = new HashSet<>();
+    }
 
     public int getId() {
         return id;

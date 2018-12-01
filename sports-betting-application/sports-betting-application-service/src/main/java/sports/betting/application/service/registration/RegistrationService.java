@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.UserCredentials;
-import sports.betting.application.service.PlayerService;
-import sports.betting.application.service.UserService;
+import sports.betting.application.service.user.player.PlayerService;
+import sports.betting.application.service.user.UserService;
 
 import java.util.Optional;
 

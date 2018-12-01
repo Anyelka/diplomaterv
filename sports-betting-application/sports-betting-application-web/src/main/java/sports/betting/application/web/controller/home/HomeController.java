@@ -1,10 +1,10 @@
 package sports.betting.application.web.controller.home;
 
-import sports.betting.application.service.PlayerService;
+import sports.betting.application.service.user.player.PlayerService;
 
 import sports.betting.application.domain.user.User;
 import sports.betting.application.web.controller.home.accountdetails.AccountDetailsConverter;
-import sports.betting.application.web.controller.home.accountdetails.AccountDetailsRequest;
+import sports.betting.application.web.controller.home.accountdetails.SaveAccountDetailsRequest;
 import sports.betting.application.web.controller.home.wagers.model.ListWagersConverter;
 import sports.betting.application.web.controller.home.wagers.model.ListWagersModel;
 import sports.betting.application.web.controller.home.wagers.model.RemoveWagerRequest;
@@ -29,9 +29,9 @@ public class HomeController {
     
     
     @ModelAttribute("accountDetailsRequest")
-    public AccountDetailsRequest createAccountDetailsRequest(){        
+    public SaveAccountDetailsRequest createAccountDetailsRequest(){
         User player = getCurrentPlayer();       
-        AccountDetailsRequest accountDetailsRequest = accountDetailsConverter.convert(player);
+        SaveAccountDetailsRequest accountDetailsRequest = accountDetailsConverter.convert(player);
         return accountDetailsRequest;
     }
     
