@@ -1,31 +1,68 @@
 package sports.betting.application.service.registration;
 
-import java.util.Optional;
-
 public class RegistrationResponse {
 
-    private Optional<String> usernameError;
-    private Optional<String> emailError;
-    private Optional<String> passwordError;
+    private boolean valid;
 
-    private Optional<String> dateOfBirthError;
+    private String usernameError;
+    private String emailError;
+    private String passwordError;
+
+    private String dateOfBirthError;
 
     public RegistrationResponse() {
-        this.usernameError = Optional.empty();
-        this.emailError = Optional.empty();
-        this.passwordError = Optional.empty();
-        this.dateOfBirthError = Optional.empty();
+        this.valid = true;
+        this.usernameError = "";
+        this.emailError = "";
+        this.passwordError = "";
+        this.dateOfBirthError = "";
     }
 
     public boolean isValid() {
-        return !usernameError.isPresent() && !emailError.isPresent() && !passwordError.isPresent() && !dateOfBirthError.isPresent();
+        return this.valid;
     }
 
-    public Optional<String> getUsernameError() {
+    public void setValid(boolean valid) {
+        this.valid = valid;
+    }
+
+    public String getUsernameError() {
         return usernameError;
     }
 
-    public void setUsernameError(Optional<String> usernameError) {
+    public void setUsernameError(String usernameError) {
         this.usernameError = usernameError;
+        this.setValid(getValid());
+    }
+
+    public String getEmailError() {
+        return emailError;
+    }
+
+    public void setEmailError(String emailError) {
+        this.emailError = emailError;
+        this.setValid(getValid());
+    }
+
+    public String getPasswordError() {
+        return passwordError;
+    }
+
+    public void setPasswordError(String passwordError) {
+        this.passwordError = passwordError;
+        this.setValid(getValid());
+    }
+
+    public String getDateOfBirthError() {
+        return dateOfBirthError;
+    }
+
+    public void setDateOfBirthError(String dateOfBirthError) {
+        this.dateOfBirthError = dateOfBirthError;
+        this.setValid(getValid());
+    }
+
+    private boolean getValid() {
+        return usernameError.isEmpty() && emailError.isEmpty() && passwordError.isEmpty() && dateOfBirthError.isEmpty();
     }
 }

@@ -127,10 +127,11 @@
 
     </div>
 </div>
-<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
+<%--<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>--%>
 <script>
     $(document).ready(function () {
-        $("#saveAccountDetailsButton").click(function () {
+        $("#saveAccountDetailsButton").click(function() {
+            console.log("save account details button clicked");
             $.ajax({
                 url: "saveAccountDetails",
                 data: {
@@ -140,7 +141,7 @@
                 },
                 success: function (response) {
                     var messageDiv = $("#saveAccountDetailsResponseDiv");
-                    var messageText = $("#saveAccountDetailsResponseText")
+                    var messageText = $("#saveAccountDetailsResponseText");
                     if (response.successful) {
                         messageDiv.addClass("alert alert-success");
                         messageDiv.removeClass("alert-danger");

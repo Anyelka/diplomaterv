@@ -1,4 +1,4 @@
-package sports.betting.application.web.controller.register;
+package sports.betting.application.service.registration;
 
 import java.util.Currency;
 
@@ -12,6 +12,19 @@ public class RegistrationRequest {
     private String accountNumber;
     private Currency currency;
     private String dateOfBirth;
+
+    public RegistrationRequest() {
+    }
+
+    public RegistrationRequest(String email, String username, String password, String fullName, String accountNumber, Currency currency, String dateOfBirth) {
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.fullName = fullName;
+        this.accountNumber = accountNumber;
+        this.currency = currency;
+        this.dateOfBirth = dateOfBirth;
+    }
 
     public String getEmail() {
         return email;

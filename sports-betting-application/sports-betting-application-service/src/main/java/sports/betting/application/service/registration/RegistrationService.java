@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.UserCredentials;
 import sports.betting.application.service.user.player.PlayerService;
-import sports.betting.application.service.user.UserService;
-
-import java.util.Optional;
 
 @Component
 public class RegistrationService {
@@ -16,27 +13,18 @@ public class RegistrationService {
     private PlayerService playerService;
 
     @Autowired
-    private UserService userService;
+    private RegistrationValidator registrationValidator;
 
-    public RegistrationResponse attemptRegistration(PlayerData playerData, UserCredentials credentials) {
-        RegistrationResponse response = checkRegistrationRequest(playerData, credentials);
+    public RegistrationResponse attemptRegistration(RegistrationRequest registrationRequest) {
+        UserCredentials credentials = new UserCredentials(registrationRequest.getEmail(), registrationRequest.getUsername(), registrationRequest.getPassword());
+        PlayerData playerData = new PlayerData(registrationRequest.getFullName(), registrationRequest.getAccountNumber(),0, registrationRequest.getCurrency().toString(), registrationRequest.getDateOfBirth());
+
+        RegistrationResponse response = registrationValidator.checkRegistrationRequest(playerData, credentials);
+
         if(response.isValid()) {
             playerService.createPlayer(playerData, credentials,true);
         }
         return response;
     }
 
-    private RegistrationResponse checkRegistrationRequest(PlayerData playerData, UserCredentials credentials) {
-        RegistrationResponse registrationResponse = new RegistrationResponse();
-        registrationResponse.setUsernameError(checkUsernameErrors(credentials.getUsername()));
-        return registrationResponse;
-    }
-
-    private Optional<String> checkUsernameErrors(String username) {
-        if(userService.checkIfUserExists(username)) {
-            return Optional.of("The given username is already used by someone else!");
-        }
-
-        return Optional.empty();
-    }
 }

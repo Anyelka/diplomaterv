@@ -4,11 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import sports.betting.application.domain.user.PlayerData;
-import sports.betting.application.domain.user.UserCredentials;
-import sports.betting.application.service.formatter.DateFormatter;
+import sports.betting.application.service.registration.RegistrationRequest;
 import sports.betting.application.service.registration.RegistrationResponse;
 import sports.betting.application.service.registration.RegistrationService;
 
@@ -16,12 +15,6 @@ import java.util.Currency;
 
 @Controller
 public class RegistrationController {
-
-    public static final String SUCCESSFUL_REGISTRATION_URL = "successfulRegistration.html";
-    public static final String REGISTRATION_URL = "register.html";
-
-    @Autowired
-    private DateFormatter dateFormatter;
 
     @Autowired
     private RegistrationService registrationService;
@@ -31,33 +24,32 @@ public class RegistrationController {
         return new RegistrationRequest();
     }
 
-//    @ModelAttribute("registrationResponse")
-//    public RegistrationResponse createRegistrationResponse() {
-//        return new RegistrationResponse();
-//    }
-
-    @RequestMapping(REGISTRATION_URL)
-    public String showRegistrationPage(@ModelAttribute("registrationResponse") RegistrationResponse registrationResponse) {
+    @RequestMapping("register.html")
+    public String showRegistrationPage(RegistrationResponse registrationResponse) {
         return "register";
     }
 
-    @RequestMapping(value = "sendRegistrationRequest", method = RequestMethod.POST)
-    public String register(final RegistrationRequest registrationRequest, final RedirectAttributes redirectAttributes) {
-        String redirectAddress;
-        UserCredentials credentials = new UserCredentials(registrationRequest.getEmail(), registrationRequest.getUsername(), registrationRequest.getPassword());
-        PlayerData playerData = new PlayerData(registrationRequest.getFullName(), registrationRequest.getAccountNumber(),0, registrationRequest.getCurrency().toString(), dateFormatter.parseDate(registrationRequest.getDateOfBirth()).toString());
-
-        RegistrationResponse registrationResponse = registrationService.attemptRegistration(playerData, credentials);
-        if(registrationResponse.isValid()) {
-            redirectAddress = SUCCESSFUL_REGISTRATION_URL;
-        } else {
-            redirectAddress = REGISTRATION_URL;
-            redirectAttributes.addFlashAttribute("registrationResponse", registrationResponse);
-        }
-        return "redirect:"+redirectAddress;
+    @RequestMapping("sendRegistrationRequest")
+    public @ResponseBody
+    RegistrationResponse register(@RequestParam("email") final String email, @RequestParam("username") final String username, @RequestParam("password") final String password,
+            @RequestParam("fullName") final String fullName, @RequestParam("accountNumber") final String accountNumber, @RequestParam("dateOfBirth") final String dateOfBirth,
+            @RequestParam("currency") final Currency currency) {
+        RegistrationRequest request = new RegistrationRequest(email, username, password, fullName, accountNumber, currency, dateOfBirth);
+        return registrationService.attemptRegistration(request);
     }
 
-    @RequestMapping(SUCCESSFUL_REGISTRATION_URL)
+    public String chooseRedirectionPage(RegistrationResponse registrationResponse, final RedirectAttributes redirectAttributes) {
+        String redirectAddress;
+        if (registrationResponse.isValid()) {
+            redirectAddress = "successfulRegistration.html";
+        } else {
+            redirectAddress = "register.html";
+            redirectAttributes.addFlashAttribute("registrationResponse", registrationResponse);
+        }
+        return "redirect:" + redirectAddress;
+    }
+
+    @RequestMapping("successfulRegistration.html")
     public String showSuccessfulRegistrationPage() {
         return "successfulRegistration";
     }
