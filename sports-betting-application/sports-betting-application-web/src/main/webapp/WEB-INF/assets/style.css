@@ -64,6 +64,10 @@ em {
 }
 
 
+.error-input {
+	border: #761c19 2px solid;
+}
+
 @media only screen and (max-width: 600px) {
 	.login-panel,
 	.login-header {

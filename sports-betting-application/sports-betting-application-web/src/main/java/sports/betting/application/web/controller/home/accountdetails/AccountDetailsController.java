@@ -25,7 +25,7 @@ public class AccountDetailsController {
         SaveAccountDetailsResponse response = new SaveAccountDetailsResponse();
         response.setSuccessful(updatePlayerDataResponse.isValid());
         if (updatePlayerDataResponse.getDateOfBirthError().isPresent()) {
-            response.setDateOfBirthError(updatePlayerDataResponse.getDateOfBirthError().get());
+            response.setStatus(updatePlayerDataResponse.getDateOfBirthError().get());
         }
 
         return response;

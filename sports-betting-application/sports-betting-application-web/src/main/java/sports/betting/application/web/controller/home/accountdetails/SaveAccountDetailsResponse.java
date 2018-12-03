@@ -5,17 +5,15 @@ public class SaveAccountDetailsResponse {
     private boolean successful;
     private String status;
 
-    private String playerNameError;
-    private String dateOfBirthError;
-    private String accountNumberError;
-
     public boolean isSuccessful() {
         return successful;
     }
 
     public void setSuccessful(boolean successful) {
         this.successful = successful;
-        this.setStatus(this.successful ?"Changes successfully saved!":"There were some errors in your input data!");
+        if(this.successful) {
+            this.setStatus("Changes successfully saved!");
+        }
     }
 
     public String getStatus() {
@@ -26,27 +24,4 @@ public class SaveAccountDetailsResponse {
         this.status = status;
     }
 
-    public String getPlayerNameError() {
-        return playerNameError;
-    }
-
-    public void setPlayerNameError(String playerNameError) {
-        this.playerNameError = playerNameError;
-    }
-
-    public String getDateOfBirthError() {
-        return dateOfBirthError;
-    }
-
-    public void setDateOfBirthError(String dateOfBirthError) {
-        this.dateOfBirthError = dateOfBirthError;
-    }
-
-    public String getAccountNumberError() {
-        return accountNumberError;
-    }
-
-    public void setAccountNumberError(String accountNumberError) {
-        this.accountNumberError = accountNumberError;
-    }
 }

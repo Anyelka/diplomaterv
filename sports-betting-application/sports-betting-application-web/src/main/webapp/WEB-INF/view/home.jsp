@@ -141,7 +141,7 @@
                 success: function (response) {
                     var messageDiv = $("#saveAccountDetailsResponseDiv");
                     var messageText = $("#saveAccountDetailsResponseText")
-                    if(response.successful) {
+                    if (response.successful) {
                         messageDiv.addClass("alert alert-success");
                         messageDiv.removeClass("alert-danger");
                         messageText.text(response.status)
@@ -149,8 +149,8 @@
                         messageDiv.addClass("alert alert-danger");
                         messageDiv.removeClass("alert-success");
                         messageText.text(response.status);
+                        $("#playerDateOfBirth").addClass("error-input");
                     }
-
                 }
             })
         });
