@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" filepath="$PROJECT_DIR$/sports-betting-application-config/sports-betting-application-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" filepath="$PROJECT_DIR$/sports-betting-application-dal/sports-betting-application-dal.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" filepath="$PROJECT_DIR$/sports-betting-application-domain/sports-betting-application-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sports-betting-application-lib/sports-betting-application-lib.iml" filepath="$PROJECT_DIR$/sports-betting-application-lib/sports-betting-application-lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-service/sports-betting-application-service.iml" filepath="$PROJECT_DIR$/sports-betting-application-service/sports-betting-application-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sports-betting-application-web/sports-betting-application-web.iml" filepath="$PROJECT_DIR$/sports-betting-application-web/sports-betting-application-web.iml" />
     </modules>

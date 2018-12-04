@@ -78,45 +78,7 @@
 
         </div>
     </div>
-    <script>
-        $(document).ready(
-            function () {
-                $("#registerButton").click(
-                    function () {
-                        $.ajax({
-                            url: "sendRegistrationRequest",
-                            data: {
-                                email: $("#email").val(),
-                                username: $("#username").val(),
-                                password: $("#password").val(),
-                                fullName: $("#fullName").val(),
-                                accountNumber: $("#accountNumber").val(),
-                                currency: $("#currency").val(),
-                                dateOfBirth: $("#dateOfBirth").val()
-                            },
-                            success: function (response) {
-                                if (response.valid) {
-                                    $.get("successfulRegistration.html");
-                                } else {
-                                    var usernameError = response.usernameError;
-                                    var dateOfBirthError = response.dateOfBirthError;
-                                    $("#registrationErrorDiv").addClass("alert alert-danger");
-                                    if(!(usernameError === "")) {
-                                        $("#registrationErrorText").text(usernameError);
-                                        $("#username").addClass("error-input");
-                                    }
-                                    if(!(dateOfBirthError === "")){
-                                        $("#registrationErrorText").text(dateOfBirthError);
-                                        $("#dateOfBirth").addClass("error-input");
-                                    }
-                                }
-                            }
-                        })
-                    }
-                );
-            }
-        );
-    </script>
+    <script src="../../resources/js/register.js" type="text/javascript"></script>
 </div>
 
 </body>

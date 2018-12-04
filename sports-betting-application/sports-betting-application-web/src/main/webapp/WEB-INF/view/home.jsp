@@ -127,36 +127,6 @@
 
     </div>
 </div>
-<%--<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>--%>
-<script>
-    $(document).ready(function () {
-        $("#saveAccountDetailsButton").click(function() {
-            console.log("save account details button clicked");
-            $.ajax({
-                url: "saveAccountDetails",
-                data: {
-                    playerName: $("#playerName").val(),
-                    playerDateOfBirth: $("#playerDateOfBirth").val(),
-                    playerAccountNumber: $("#playerAccountNumber").val()
-                },
-                success: function (response) {
-                    var messageDiv = $("#saveAccountDetailsResponseDiv");
-                    var messageText = $("#saveAccountDetailsResponseText");
-                    if (response.successful) {
-                        messageDiv.addClass("alert alert-success");
-                        messageDiv.removeClass("alert-danger");
-                        messageText.text(response.status)
-                    } else {
-                        messageDiv.addClass("alert alert-danger");
-                        messageDiv.removeClass("alert-success");
-                        messageText.text(response.status);
-                        $("#playerDateOfBirth").addClass("error-input");
-                    }
-                }
-            })
-        });
-    });
-
-</script>
+<script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
 </body>
 </html>

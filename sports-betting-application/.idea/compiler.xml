@@ -10,6 +10,7 @@
         <module name="sports-betting-application-config" />
         <module name="sports-betting-application-dal" />
         <module name="sports-betting-application-domain" />
+        <module name="sports-betting-application-lib" />
         <module name="sports-betting-application-service" />
         <module name="sports-betting-application-web" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="sports-betting-application-config" target="1.8" />
       <module name="sports-betting-application-dal" target="1.8" />
       <module name="sports-betting-application-domain" target="1.8" />
+      <module name="sports-betting-application-lib" target="1.8" />
       <module name="sports-betting-application-service" target="1.8" />
       <module name="sports-betting-application-web" target="1.8" />
     </bytecodeTargetLevel>

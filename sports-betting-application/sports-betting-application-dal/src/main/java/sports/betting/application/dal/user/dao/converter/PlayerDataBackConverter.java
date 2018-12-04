@@ -1,15 +1,19 @@
 package sports.betting.application.dal.user.dao.converter;
 
-import sports.betting.application.dal.user.entity.PlayerDataEntity;
-import sports.betting.application.domain.user.PlayerData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
+import sports.betting.application.dal.user.entity.PlayerDataEntity;
+import sports.betting.application.domain.user.PlayerData;
+import sports.betting.application.lib.formatter.DateFormatter;
 
-import java.time.LocalDate;
 import java.util.Currency;
 
 @Component
 public class PlayerDataBackConverter implements Converter<PlayerData, PlayerDataEntity> {
+
+    @Autowired
+    private DateFormatter dateFormatter;
 
     @Override
     public PlayerDataEntity convert(PlayerData playerData) {
@@ -18,7 +22,7 @@ public class PlayerDataBackConverter implements Converter<PlayerData, PlayerData
         playerDataEntity.setAccountNumber(playerData.getAccountNumber());
         playerDataEntity.setBalance(playerData.getBalance());
         playerDataEntity.setCurrency(Currency.getInstance(playerData.getCurrency()));
-        playerDataEntity.setDateOfBirth(LocalDate.parse(playerData.getDateOfBirth()));
+        playerDataEntity.setDateOfBirth(dateFormatter.parseDate(playerData.getDateOfBirth()));
         return playerDataEntity;
     }
 

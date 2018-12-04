@@ -38,7 +38,7 @@ public class PlayerService {
         player.setEnabled(enabled);
 
         player.setEmail(credentials.getEmail());
-        player.setUsername(credentials.getPassword());
+        player.setUsername(credentials.getUsername());
         player.setPassword(bCryptPasswordEncoder.encode(credentials.getPassword()));
 
         player.getRoles().add(userService.getUserRole("ROLE_PLAYER"));

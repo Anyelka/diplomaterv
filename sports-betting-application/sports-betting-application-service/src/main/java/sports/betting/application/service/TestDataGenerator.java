@@ -22,7 +22,7 @@ public class TestDataGenerator {
     private static final String PLAYER_ACCOUNT_NUMBER = "0001-007A3";
     private static final String PLAYER_BALANCE = "175000";
     private static final String PLAYER_CURRENCY = "GBP";
-    private static final String PLAYER_DATE_OF_BIRTH = "1991-01-08";
+    private static final String PLAYER_DATE_OF_BIRTH = "01/08/2018";
     private static final String PLAYER_USERNAME = "eden";
     private static final String PLAYER_PASSWORD = "eden";
     private static final String PLAYER_EMAIL = "eden@hazard.com";
@@ -57,10 +57,6 @@ public class TestDataGenerator {
     private static final double ARS_CHE_GOALS_2_5_UNDER_ODD = 2.15;
     private static final double SHA_EDM_WINNER_HOME_ODD = 2.00;
     private static final double SHA_EDM_WINNER_AWAY_ODD = 1.65;
-    private static final String ODD_VALID_FROM = "2018-01-01 12:00";
-    private static final String ODD_VALID_TO = "2018-01-03 12:00";
-    private static final String ODD_VALID_FROM_INFUTURE = "2019-01-01 12:00";
-    private static final String ODD_VALID_TO_INFUTURE = "2019-01-03 12:00";
 
     @Autowired
     private UserService userService;

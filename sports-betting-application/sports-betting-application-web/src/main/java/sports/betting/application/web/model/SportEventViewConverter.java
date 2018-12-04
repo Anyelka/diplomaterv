@@ -3,7 +3,7 @@ package sports.betting.application.web.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import sports.betting.application.service.formatter.DateFormatter;
+import sports.betting.application.lib.formatter.DateFormatter;
 import sports.betting.application.service.BetService;
 import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.sportevent.SportEvent;

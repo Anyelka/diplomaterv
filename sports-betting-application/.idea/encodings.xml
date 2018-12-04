@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/sports-betting-application-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sports-betting-application-dal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sports-betting-application-domain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sports-betting-application-lib" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sports-betting-application-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sports-betting-application-web" charset="UTF-8" />
   </component>

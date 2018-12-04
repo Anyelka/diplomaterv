@@ -4,10 +4,12 @@ public class RegistrationResponse {
 
     private boolean valid;
 
-    private String usernameError;
     private String emailError;
+    private String usernameError;
     private String passwordError;
 
+    private String fullNameError;
+    private String accountNumberError;
     private String dateOfBirthError;
 
     public RegistrationResponse() {
@@ -50,6 +52,24 @@ public class RegistrationResponse {
 
     public void setPasswordError(String passwordError) {
         this.passwordError = passwordError;
+        this.setValid(getValid());
+    }
+
+    public String getFullNameError() {
+        return fullNameError;
+    }
+
+    public void setFullNameError(String fullNameError) {
+        this.fullNameError = fullNameError;
+        this.setValid(getValid());
+    }
+
+    public String getAccountNumberError() {
+        return accountNumberError;
+    }
+
+    public void setAccountNumberError(String accountNumberError) {
+        this.accountNumberError = accountNumberError;
         this.setValid(getValid());
     }
 
