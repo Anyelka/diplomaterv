@@ -1,6 +1,7 @@
 package sports.betting.application.service;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.bet.BetType;
@@ -79,6 +80,7 @@ public class TestDataGenerator {
     public void init() {
         createRoles();
         createPlayer();
+        createAdmin();
         createBettingDatabase();
         createTestWagers();
     }
@@ -89,13 +91,24 @@ public class TestDataGenerator {
         userService.createUserRole(USER_ROLE_PLAYER);
     }
 
+    public User createAdmin() {
+        User user = new User();
+        user.setUsername("admin");
+        user.setPassword("admin");
+        user.setEmail("admin@admin.com");
+        user.getRoles().add(userService.getUserRole(USER_ROLE_ADMIN));
+        user.setEnabled(true);
+        user.setPlayerData(Optional.empty());
+        return userService.saveUser(user);
+    }
+
     public User createPlayer() {
         return playerService.createPlayer(new PlayerData( PLAYER_NAME, PLAYER_ACCOUNT_NUMBER, PLAYER_BALANCE, PLAYER_CURRENCY, PLAYER_DATE_OF_BIRTH) ,
                 new UserCredentials(PLAYER_EMAIL, PLAYER_USERNAME, PLAYER_PASSWORD), PLAYER_ENABLED);
     }
 
     public void createTestWagers() {
-    	    User player = playerService.getPlayerById(1);
+    	    User player = playerService.getPlayerByUsername(PLAYER_USERNAME);
         wagerService.createWager(player, EVE_MU_EVENT + " -- " + BETTYPE_FT_RES, OUTCOMETYPE_HOME, 1000, LocalDateTime.of(1991, 01, 07, 20, 33));
         wagerService.createWager(player, ARS_CHE_EVENT + " -- " + BETTYPE_GOALS_2_5, OUTCOMETYPE_UNDER, 7500, LocalDateTime.of(2005, 11, 11, 11, 1));
         wagerService.createWager(player, SHA_EDM_EVENT + " -- " + BETTYPE_WINNER, OUTCOMETYPE_AWAY, 23109, LocalDateTime.of(2017, 03, 30, 23, 59));

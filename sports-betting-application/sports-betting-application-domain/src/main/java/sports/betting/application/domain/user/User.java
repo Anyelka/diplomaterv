@@ -1,6 +1,7 @@
 package sports.betting.application.domain.user;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 public class User {
@@ -10,7 +11,7 @@ public class User {
     private String password;
     private boolean enabled;
     private Set<UserRole> roles;
-    private PlayerData playerData;
+    private Optional<PlayerData> playerData;
     private Integer version;
 
     public User() {
@@ -65,11 +66,11 @@ public class User {
         this.roles = roles;
     }
 
-    public PlayerData getPlayerData() {
+    public Optional<PlayerData> getPlayerData() {
         return playerData;
     }
 
-    public void setPlayerData(PlayerData playerData) {
+    public void setPlayerData(Optional<PlayerData> playerData) {
         this.playerData = playerData;
     }
 

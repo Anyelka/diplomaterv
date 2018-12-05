@@ -8,22 +8,26 @@ import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.lib.formatter.DateFormatter;
 
 import java.util.Currency;
+import java.util.Optional;
 
 @Component
-public class PlayerDataBackConverter implements Converter<PlayerData, PlayerDataEntity> {
+public class PlayerDataBackConverter implements Converter<Optional<PlayerData>, PlayerDataEntity> {
 
     @Autowired
     private DateFormatter dateFormatter;
 
     @Override
-    public PlayerDataEntity convert(PlayerData playerData) {
-        PlayerDataEntity playerDataEntity = new PlayerDataEntity();
-        playerDataEntity.setName(playerData.getName());
-        playerDataEntity.setAccountNumber(playerData.getAccountNumber());
-        playerDataEntity.setBalance(playerData.getBalance());
-        playerDataEntity.setCurrency(Currency.getInstance(playerData.getCurrency()));
-        playerDataEntity.setDateOfBirth(dateFormatter.parseDate(playerData.getDateOfBirth()));
-        return playerDataEntity;
+    public PlayerDataEntity convert(Optional<PlayerData> playerData) {
+        if(playerData.isPresent()){
+            PlayerDataEntity playerDataEntity = new PlayerDataEntity();
+            playerDataEntity.setName(playerData.get().getName());
+            playerDataEntity.setAccountNumber(playerData.get().getAccountNumber());
+            playerDataEntity.setBalance(playerData.get().getBalance());
+            playerDataEntity.setCurrency(Currency.getInstance(playerData.get().getCurrency()));
+            playerDataEntity.setDateOfBirth(dateFormatter.parseDate(playerData.get().getDateOfBirth()));
+            return playerDataEntity;
+        }
+        return null;
     }
 
 }

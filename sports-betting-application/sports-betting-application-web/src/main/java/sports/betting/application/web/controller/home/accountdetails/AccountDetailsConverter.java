@@ -11,11 +11,11 @@ public class AccountDetailsConverter implements Converter<User, SaveAccountDetai
     public SaveAccountDetailsRequest convert(User player) {
         SaveAccountDetailsRequest accountDetailsRequest = new SaveAccountDetailsRequest();
         accountDetailsRequest.setUsername(player.getUsername());
-        accountDetailsRequest.setName(player.getPlayerData().getName());
-        accountDetailsRequest.setDateOfBirth(player.getPlayerData().getDateOfBirth().toString());
-        accountDetailsRequest.setAccountNumber(player.getPlayerData().getAccountNumber());
-        accountDetailsRequest.setBalance(player.getPlayerData().getBalance());
-        accountDetailsRequest.setCurrency(player.getPlayerData().getCurrency().toString());
+        accountDetailsRequest.setName(player.getPlayerData().get().getName());
+        accountDetailsRequest.setDateOfBirth(player.getPlayerData().get().getDateOfBirth().toString());
+        accountDetailsRequest.setAccountNumber(player.getPlayerData().get().getAccountNumber());
+        accountDetailsRequest.setBalance(player.getPlayerData().get().getBalance());
+        accountDetailsRequest.setCurrency(player.getPlayerData().get().getCurrency().toString());
         accountDetailsRequest.setVersion(player.getVersion());
         return accountDetailsRequest;
     }

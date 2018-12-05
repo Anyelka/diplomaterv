@@ -34,7 +34,7 @@ public class PlayerService {
 
     public User createPlayer(PlayerData playerData, UserCredentials credentials, boolean enabled) {
         User player = new User();
-        player.setPlayerData(playerData);
+        player.setPlayerData(Optional.of(playerData));
         player.setEnabled(enabled);
 
         player.setEmail(credentials.getEmail());
@@ -46,19 +46,19 @@ public class PlayerService {
     }
 
     public void increaseBalance(int amount, User player) {
-        int initialBalance = player.getPlayerData().getBalance();
-        player.getPlayerData().setBalance(initialBalance + amount);
+        int initialBalance = player.getPlayerData().get().getBalance();
+        player.getPlayerData().get().setBalance(initialBalance + amount);
         userDao.save(player);
     }
 
     public void decreaseBalance(int amount, User player) {
-        int initialBalance = player.getPlayerData().getBalance();
-        player.getPlayerData().setBalance(initialBalance - amount);
+        int initialBalance = player.getPlayerData().get().getBalance();
+        player.getPlayerData().get().setBalance(initialBalance - amount);
         userDao.save(player);
     }
 
     public User getPlayerById(Integer id) {
-        return userDao.getById(id);
+        return playerDao.getById(id);
     }
 
     public User getPlayerByUsername(String username) {
@@ -67,7 +67,7 @@ public class PlayerService {
 
     public UpdatePlayerDataResponse updatePlayerData(String username, String fullName, String dob, String accountNumber) {
         User player = getPlayerByUsername(username);
-        final PlayerData playerData = new PlayerData(fullName, accountNumber, player.getPlayerData().getBalance(), player.getPlayerData().getCurrency(), dob);
+        final PlayerData playerData = new PlayerData(fullName, accountNumber, player.getPlayerData().get().getBalance(), player.getPlayerData().get().getCurrency(), dob);
 
         UpdatePlayerDataResponse updatePlayerDataResponse = playerDataValidator.checkUpdatePlayerDataRequest(playerData);
         if (updatePlayerDataResponse.isValid()) {

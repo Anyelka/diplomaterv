@@ -49,7 +49,9 @@ public class DefaultUserDao implements UserDao {
         UserEntity userEntity = userBackConverter.convert(user);
         PlayerDataEntity playerDataEntity = playerDataBackConverter.convert(user.getPlayerData());
         userEntity.setPlayerData(playerDataEntity);
-        playerDataRepository.save(playerDataEntity);
+        if(playerDataEntity != null) {
+            playerDataRepository.save(playerDataEntity);
+        }
         userRepository.save(userEntity);
     }
 

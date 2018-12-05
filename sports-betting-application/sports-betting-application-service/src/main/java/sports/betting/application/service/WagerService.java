@@ -39,14 +39,14 @@ public class WagerService {
     public void createWager(User player, String betDesription, String outcomeType, boolean winner, int stake, LocalDateTime timestamp) {
         Bet bet = betDao.getByDescription(betDesription);
         Outcome outcome = outcomeDao.getByBetAndValue(bet, outcomeType);
-        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().getCurrency()), LocalDateTime.now(), true, winner);
+        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().get().getCurrency()), LocalDateTime.now(), true, winner);
         wagerDao.save(wager);
     }
 
     public void createWager(User player, String betDesription, String outcomeType, int stake, LocalDateTime timestamp) {
         Bet bet = betDao.getByDescription(betDesription);
         Outcome outcome = outcomeDao.getByBetAndValue(bet, outcomeType);
-        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().getCurrency()), timestamp);
+        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().get().getCurrency()), timestamp);
         wagerDao.save(wager);
     }
 
@@ -54,7 +54,7 @@ public class WagerService {
         User player = playerService.getPlayerByUsername(playerUsername);
         Outcome outcome = outcomeService.getOutcome(outcomeId);
         Bet bet = outcome.getBet();
-        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().getCurrency()), LocalDateTime.now());
+        Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().get().getCurrency()), LocalDateTime.now());
         playerService.decreaseBalance(stake, player);
         wagerDao.save(wager);
     }
