@@ -97,12 +97,10 @@ public class WagerService {
         return wagerDao.getAll();
     }
 
-    public void deleteWager(Wager wager) {
-        wagerDao.delete(wager);
-    }
-
     public void deleteWager(int id) {
-        wagerDao.delete(getWager(id));
+        final Wager wager = getWager(id);
+        wagerDao.delete(wager);
+        playerService.increaseBalance(wager.getStake(), wager.getPlayer());
     }
 
     public void updateWagers(Result result) {

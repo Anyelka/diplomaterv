@@ -10,19 +10,25 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.GregorianCalendar;
 
 @Component
 public class DateFormatter {
 
-    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+    private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("M/d/yyyy");
+    private DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     /**
      * Uses the format of the date picker: MM/DD/YYYY
      * to parse a String to LocalDate
      * */
     public LocalDate parseDate(String date) {
-        return LocalDate.parse(date, dateTimeFormatter);
+        try{
+            return LocalDate.parse(date, dateTimeFormatter);
+        } catch (DateTimeParseException ex) {
+            return LocalDate.parse(date, dateTimeFormatter2);
+        }
     }
 
     public String formatDate(LocalDateTime localDateTime) {
