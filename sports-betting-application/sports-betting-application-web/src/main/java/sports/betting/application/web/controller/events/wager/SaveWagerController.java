@@ -17,16 +17,10 @@ public class SaveWagerController {
     @Autowired
     private WagerService wagerService;
 
-//    @RequestMapping(REQUEST_MAPPING)
-//    public String saveWager(SaveWagerRequest saveWagerRequest) {
-//        wagerService.createWager(saveWagerRequest.getPlayerUsername(), saveWagerRequest.getOutcomeId(), saveWagerRequest.getStake());
-//        return "redirect:/home.html";
-//    }
-
     @RequestMapping(REQUEST_MAPPING)
     public @ResponseBody
     CreateWagerResponse createWager(@RequestParam("playerUsername") final String playerUsername, @RequestParam("outcomeId") final int outcomeId,
-            @RequestParam("stake") final int stake) {
+            @RequestParam("stake") final String stake) {
         return wagerService.attemptWagerCreation(new SaveWagerRequest(playerUsername,outcomeId,stake));
     }
 }

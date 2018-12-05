@@ -43,7 +43,7 @@ public class WagerService {
     public CreateWagerResponse attemptWagerCreation(SaveWagerRequest saveWagerRequest) {
         CreateWagerResponse createWagerResponse = wagerValidator.checkCreateWagerRequest(saveWagerRequest);
         if(createWagerResponse.isValid()) {
-            createWager(saveWagerRequest.getPlayerUsername(), saveWagerRequest.getOutcomeId(), saveWagerRequest.getStake());
+            createWager(saveWagerRequest.getPlayerUsername(), saveWagerRequest.getOutcomeId(), Integer.parseInt(saveWagerRequest.getStake()));
         }
         return createWagerResponse;
     }

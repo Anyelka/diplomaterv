@@ -2,13 +2,13 @@ package sports.betting.application.service.wager;
 
 public class SaveWagerRequest {
     private int outcomeId;
-    private int stake;
+    private String stake;
     private String playerUsername;
 
     public SaveWagerRequest() {
     }
 
-    public SaveWagerRequest(String playerUsername, int outcomeId, int stake) {
+    public SaveWagerRequest(String playerUsername, int outcomeId, String stake) {
         this.outcomeId = outcomeId;
         this.stake = stake;
         this.playerUsername = playerUsername;
@@ -20,10 +20,10 @@ public class SaveWagerRequest {
     public void setOutcomeId(int outcomeId) {
         this.outcomeId = outcomeId;
     }
-    public int getStake() {
+    public String getStake() {
         return stake;
     }
-    public void setStake(int stake) {
+    public void setStake(String stake) {
         this.stake = stake;
     }
     public String getPlayerUsername() {
