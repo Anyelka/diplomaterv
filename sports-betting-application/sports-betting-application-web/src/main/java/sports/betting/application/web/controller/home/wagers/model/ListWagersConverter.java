@@ -3,7 +3,7 @@ package sports.betting.application.web.controller.home.wagers.model;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import sports.betting.application.service.WagerService;
+import sports.betting.application.service.wager.WagerService;
 import sports.betting.application.domain.user.User;
 import sports.betting.application.domain.wager.Wager;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,6 +3,7 @@ package sports.betting.application.service;
 import sports.betting.application.dal.result.dao.ResultDao;
 import sports.betting.application.domain.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import sports.betting.application.service.wager.WagerService;
 
 public class ResultService {
     

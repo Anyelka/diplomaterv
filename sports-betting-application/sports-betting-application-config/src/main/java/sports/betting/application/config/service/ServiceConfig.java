@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Import;
 import sports.betting.application.service.*;
 import sports.betting.application.service.user.UserService;
 import sports.betting.application.service.user.player.PlayerService;
+import sports.betting.application.service.wager.WagerService;
 
 @Configuration
 @ComponentScan("org.sports.betting.application.app.springconfig")

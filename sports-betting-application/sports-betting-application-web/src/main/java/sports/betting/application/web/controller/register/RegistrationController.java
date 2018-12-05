@@ -38,17 +38,6 @@ public class RegistrationController {
         return registrationService.attemptRegistration(request);
     }
 
-//    public String chooseRedirectionPage(RegistrationResponse registrationResponse, final RedirectAttributes redirectAttributes) {
-//        String redirectAddress;
-//        if (registrationResponse.isValid()) {
-//            redirectAddress = "successfulRegistration.html";
-//        } else {
-//            redirectAddress = "register.html";
-//            redirectAttributes.addFlashAttribute("registrationResponse", registrationResponse);
-//        }
-//        return "redirect:" + redirectAddress;
-//    }
-
     @RequestMapping("successfulRegistration.html")
     public String showSuccessfulRegistrationPage() {
         return "successfulRegistration";

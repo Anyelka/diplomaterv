@@ -61,10 +61,6 @@
                                     placeholder="Date Of Birth"/>
                     </div>
 
-                    <div id="registrationErrorDiv" class="form-group col-xs-12">
-                            <p id="registrationErrorText"></p>
-                    </div>
-
                     <button id="registerButton" type="button" class="btn">Register</button>
                     <button type="button" onclick="window.location.href='index.html'"
                             class="btn btn-secondary pull-right">

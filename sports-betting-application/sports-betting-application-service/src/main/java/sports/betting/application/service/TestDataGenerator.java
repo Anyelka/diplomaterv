@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import sports.betting.application.domain.user.UserCredentials;
 import sports.betting.application.service.user.UserService;
 import sports.betting.application.service.user.player.PlayerService;
+import sports.betting.application.service.wager.WagerService;
 
 public class TestDataGenerator {
     static final String USER_ROLE_PLAYER = "ROLE_PLAYER";

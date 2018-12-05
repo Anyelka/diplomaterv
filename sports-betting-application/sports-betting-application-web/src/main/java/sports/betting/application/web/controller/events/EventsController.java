@@ -5,7 +5,7 @@ import java.util.List;
 
 import sports.betting.application.service.SportEventService;
 import sports.betting.application.domain.sportevent.SportEvent;
-import sports.betting.application.web.controller.events.wager.SaveWagerRequest;
+import sports.betting.application.service.wager.SaveWagerRequest;
 import sports.betting.application.web.model.ListEventsModel;
 import sports.betting.application.web.model.SportEventViewConverter;
 import sports.betting.application.web.model.SportEventModel;

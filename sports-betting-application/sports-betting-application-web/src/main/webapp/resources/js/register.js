@@ -34,21 +34,20 @@ $(document).ready(
         );
 
         function reloadForm() {
-            deleteAllAlertBoxes();
-            deleteAllInputOutlines();
+            deleteAlertBoxes();
+            deleteInputOutlines();
         }
 
-        function deleteAllAlertBoxes() {
+        function deleteAlertBoxes() {
             $(".alert").remove();
         }
 
-        function deleteAllInputOutlines() {
+        function deleteInputOutlines() {
             $(".error-input").removeClass("error-input");
         }
 
         function showSuccessfulRegistration() {
-            $("#registrationErrorDiv").addClass("alert alert-success");
-            $("#registrationErrorText").text("Successful registration!");
+            $("#dateOfBirth").after("<div class=\"alert alert-success form-group col-xs-12\"><p>Successful registration!</p></div>");
         }
 
         function showErrors(response) {

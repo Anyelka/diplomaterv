@@ -1,6 +1,6 @@
 package sports.betting.application.web.controller.home.wagers;
 
-import sports.betting.application.service.WagerService;
+import sports.betting.application.service.wager.WagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
