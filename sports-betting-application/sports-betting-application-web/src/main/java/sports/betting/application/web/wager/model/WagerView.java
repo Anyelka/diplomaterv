@@ -1,4 +1,4 @@
-package sports.betting.application.web.controller.home.wagers.model;
+package sports.betting.application.web.wager.model;
 
 public class WagerView {
 

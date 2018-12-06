@@ -65,7 +65,7 @@ public class PlayerService {
         return userService.getUser(username);
     }
 
-    public UpdatePlayerDataResponse updatePlayerData(String username, String fullName, String dob, String accountNumber) {
+    public UpdatePlayerDataResponse attemptPlayerDataUpdate(String username, String fullName, String dob, String accountNumber) {
         User player = getPlayerByUsername(username);
         final PlayerData playerData = new PlayerData(fullName, accountNumber, player.getPlayerData().get().getBalance(), player.getPlayerData().get().getCurrency(), dob);
 

@@ -1,4 +1,4 @@
-package sports.betting.application.web.controller.register;
+package sports.betting.application.web.registration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

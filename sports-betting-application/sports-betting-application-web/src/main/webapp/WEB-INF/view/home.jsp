@@ -53,7 +53,7 @@
     <div class="panel-heading">Wagers</div>
     <div class="panel-body">
         <c:choose>
-            <c:when test="${listWagersModel.wagers.size() == 0}">
+            <c:when test="${listWagersView.wagers.size() == 0}">
                 You have no wagers!
             </c:when>
             <c:otherwise>
@@ -74,7 +74,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <c:forEach var="wager" items="${listWagersModel.wagers}">
+                        <c:forEach var="wager" items="${listWagersView.wagers}">
                             <tr>
                                 <td>${wager.id}</td>
                                 <td>${wager.eventTitle}</td>
@@ -100,10 +100,9 @@
                 </div>
             </c:otherwise>
         </c:choose>
-
-
     </div>
 </div>
+
 <script src="../../resources/js/save-account-details.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package sports.betting.application.web.controller.home.accountdetails;
+package sports.betting.application.web.home.model;
 
 public class SaveAccountDetailsRequest {
     

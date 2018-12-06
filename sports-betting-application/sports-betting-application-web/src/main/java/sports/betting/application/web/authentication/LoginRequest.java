@@ -1,4 +1,4 @@
-package sports.betting.application.web.controller.authentication;
+package sports.betting.application.web.authentication;
 
 public class LoginRequest {
     

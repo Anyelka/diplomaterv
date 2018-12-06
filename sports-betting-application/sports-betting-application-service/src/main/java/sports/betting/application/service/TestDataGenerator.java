@@ -24,7 +24,7 @@ public class TestDataGenerator {
     private static final String PLAYER_ACCOUNT_NUMBER = "0001-007A3";
     private static final String PLAYER_BALANCE = "175000";
     private static final String PLAYER_CURRENCY = "GBP";
-    private static final String PLAYER_DATE_OF_BIRTH = "01/08/2018";
+    private static final String PLAYER_DATE_OF_BIRTH = "01/08/1991";
     private static final String PLAYER_USERNAME = "eden";
     private static final String PLAYER_PASSWORD = "eden";
     private static final String PLAYER_EMAIL = "eden@hazard.com";
