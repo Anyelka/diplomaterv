@@ -93,14 +93,7 @@ public class TestDataGenerator {
     }
 
     public User createAdmin() {
-        User user = new User();
-        user.setUsername("admin");
-        user.setPassword("admin");
-        user.setEmail("admin@admin.com");
-        user.getRoles().add(userService.getUserRole(USER_ROLE_ADMIN));
-        user.setEnabled(true);
-        user.setPlayerData(Optional.empty());
-        return userService.saveUser(user);
+        return userService.createAdmin(new UserCredentials("admin@admin.com","admin", "admin"));
     }
 
     public User createPlayer() {

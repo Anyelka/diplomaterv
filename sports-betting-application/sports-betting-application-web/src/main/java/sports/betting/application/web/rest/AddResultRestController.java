@@ -24,7 +24,7 @@ public class AddResultRestController {
     @RequestMapping(value = REQUEST_MAPPING, method = RequestMethod.POST, consumes = "application/json")
     public String addResult(@RequestBody ResultModel resultModel) {
         Result result = resultConverter.convert(resultModel);
-        resultService.saveResult(result);
+        resultService.save(result);
         return "Result succesfully added";
     }
 }

@@ -86,7 +86,7 @@
                                 <td>${wager.isWinner}</td>
                                 <td>${wager.isProcessed}</td>
                                 <td>
-                                    <c:if test="${!wager.isProcessed}">
+                                    <c:if test="${!(wager.isProcessed=='Yes')}">
                                         <form:form modelAttribute="removeWagerRequest" action="removeWager.html">
                                             <form:input path="id" type="hidden" name="id" value="${wager.id}"/>
                                             <button type="submit" class="btn btn-inline">Remove</button>

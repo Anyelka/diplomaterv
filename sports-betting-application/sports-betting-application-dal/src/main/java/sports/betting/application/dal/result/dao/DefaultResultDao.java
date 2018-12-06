@@ -10,18 +10,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class DefaultResultDao implements ResultDao {
 
-    @Autowired 
+    @Autowired
     private ResultRepository resultRepository;
-    
+
     @Autowired
     private ResultConverter resultConverter;
-    
+
     @Autowired
     private ResultBackConverter resultBackConverter;
 
     @Autowired
     private BetBackConverter betBackConverter;
-    
+
     @Override
     public void save(Result result) {
         resultRepository.save(resultBackConverter.convert(result));

@@ -16,15 +16,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class EventsController {
+public class AdminEventsController {
 
     @Autowired
     private SportEventService sportEventService;
 
     @Autowired
     private SportEventViewConverter sportEventConverter;
-    
-    
+
+
     @ModelAttribute("listEventsModel")
     public ListEventsModel createListEventsModel() {
         ListEventsModel listEventsModel = new ListEventsModel();
@@ -32,18 +32,10 @@ public class EventsController {
         listEventsModel.setEvents(transferEvents(sportEvents));
         return listEventsModel;
     }
-    
-    @ModelAttribute("saveWagerRequest")
-    public SaveWagerRequest createSaveWagerRequest() {
-        SaveWagerRequest saveWagerRequest = new SaveWagerRequest();
-        String currentPlayerUsername = SecurityContextHolder.getContext().getAuthentication().getName();
-        saveWagerRequest.setPlayerUsername(currentPlayerUsername );
-        return saveWagerRequest;
-    }
-    
-    @RequestMapping("/events.html")
-    public String eventsPage() {
-        return "events";
+
+    @RequestMapping("/admin_events.html")
+    public String adminEventsPage() {
+        return "admin_events";
     }
 
     private List<SportEventModel> transferEvents(List<SportEvent> events) {

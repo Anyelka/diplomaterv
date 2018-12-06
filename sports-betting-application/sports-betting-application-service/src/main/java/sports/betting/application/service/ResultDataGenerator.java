@@ -20,7 +20,7 @@ public class ResultDataGenerator {
     private SportEventDao sportEventDao;
 
     @Autowired
-    private ResultDao resultDao;
+    private ResultService resultService;
 
     @Autowired
     private BetDao betDao;
@@ -37,12 +37,11 @@ public class ResultDataGenerator {
         for (SportEvent event : sportEventDao.getAll()) {
             generateRandomResultForAllBetsOfEvent(event);
         }
-//        sportEventDao.getAll().stream().peek(event -> generateRandomResultForAllBetsOfEvent(event));
     }
 
     private void generateRandomResultForAllBetsOfEvent(SportEvent event) {
         for (Bet bet : betDao.getAllByEvent(event)) {
-            resultDao.save(new Result(bet, generateRandomOutcome(bet)));
+            resultService.save(new Result(bet, generateRandomOutcome(bet)));
         }
     }
 

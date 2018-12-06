@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import sports.betting.application.service.registration.RegistrationRequest;
 import sports.betting.application.service.registration.RegistrationResponse;
 import sports.betting.application.service.registration.RegistrationService;
@@ -40,6 +39,6 @@ public class RegistrationController {
 
     @RequestMapping("successfulRegistration.html")
     public String showSuccessfulRegistrationPage() {
-        return "successfulRegistration";
+        return "successful_registration";
     }
 }

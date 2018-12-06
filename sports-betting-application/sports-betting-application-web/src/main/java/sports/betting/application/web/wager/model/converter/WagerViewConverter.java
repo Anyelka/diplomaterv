@@ -32,7 +32,7 @@ public class WagerViewConverter implements Converter<Wager, WagerView> {
 
     private String formatBetType(BetType betTypeAsEnum) {
         String betType = betTypeAsEnum.toString();
-        return betType.substring(0,1).toUpperCase().concat(betType.substring(1).toLowerCase()).replace("_", "\\s+");
+        return betType.substring(0,1).toUpperCase().concat(betType.substring(1).toLowerCase()).replace("_", " ");
     }
 
     private String formatOutcome(String outcomeAsString) {

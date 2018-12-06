@@ -16,7 +16,7 @@ public class ResultService {
     @Autowired
     private WagerService wagerService;
 
-    public void saveResult(Result result) {
+    public void save(Result result) {
         resultDao.save(result);
         
         eventService.updateEvent(result.getBet().getEvent());
