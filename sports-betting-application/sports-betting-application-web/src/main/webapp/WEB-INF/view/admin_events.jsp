@@ -19,7 +19,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="admin_events.html">Events</a></li>
-            <li><a href="admin_users">Users</a></li>
+            <li><a href="admin_users.html">Users</a></li>
             <li class="dropdown"><a class="dropdown-toggle"
                                     data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
                 <ul class="dropdown-menu">

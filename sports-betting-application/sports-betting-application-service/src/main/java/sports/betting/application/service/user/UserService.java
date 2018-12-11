@@ -11,6 +11,7 @@ import sports.betting.application.domain.user.UserCredentials;
 import sports.betting.application.domain.user.UserRole;
 
 import java.net.URLEncoder;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -32,6 +33,10 @@ public class UserService {
     
     public void createUserRole(String role) {
         userRoleDao.save(new UserRole(role));
+    }
+
+    public List<User> getAll() {
+        return userDao.getAll();
     }
 
     public User getUser(String username) {

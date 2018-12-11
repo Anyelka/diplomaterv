@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.google.common.collect.Lists;
 
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class DefaultUserDao implements UserDao {
 
     @Autowired
@@ -19,7 +23,7 @@ public class DefaultUserDao implements UserDao {
 
     @Autowired
     private UserBackConverter userBackConverter;
-    
+
     @Autowired
     private PlayerDataBackConverter playerDataBackConverter;
 
@@ -28,6 +32,11 @@ public class DefaultUserDao implements UserDao {
 
     @Autowired
     private PlayerDataRepository playerDataRepository;
+
+    @Override
+    public List<User> getAll() {
+        return Lists.newArrayList(userRepository.findAll()).stream().map(userEntity -> userConverter.convert(userEntity)).collect(Collectors.toList());
+    }
 
     @Override
     public User getById(int id) {
@@ -49,7 +58,7 @@ public class DefaultUserDao implements UserDao {
         UserEntity userEntity = userBackConverter.convert(user);
         PlayerDataEntity playerDataEntity = playerDataBackConverter.convert(user.getPlayerData());
         userEntity.setPlayerData(playerDataEntity);
-        if(playerDataEntity != null) {
+        if (playerDataEntity != null) {
             playerDataRepository.save(playerDataEntity);
         }
         userRepository.save(userEntity);
