@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories("sports.betting.application.dal")
 @Import({DaoConfig.class})
 public class JpaConfig {
-    private static final String URL = "jdbc:mysql://localhost:3306/sports-betting-application";
+    private static final String URL = "jdbc:mysql://localhost:3306/sports-betting-application?useLegacyDatetimeCode=false&serverTimezone=UTC";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
     private static final String DRIVER_CLASS_NAME = "com.mysql.jdbc.Driver";

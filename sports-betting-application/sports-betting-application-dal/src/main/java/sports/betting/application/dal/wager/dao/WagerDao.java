@@ -6,9 +6,9 @@ import sports.betting.application.domain.user.User;
 import sports.betting.application.domain.wager.Wager;
 
 public interface WagerDao {
-    public Wager getById(int id);
-    public List<Wager> getAll();
-    public List<Wager> getAllByPlayer(User player);
-    public void save(Wager wager);
-    public void delete(Wager wager);
+    Wager getById(int id);
+    List<Wager> getAll();
+    List<Wager> getAllByPlayer(User player);
+    void save(Wager wager);
+    void delete(Wager wager);
 }

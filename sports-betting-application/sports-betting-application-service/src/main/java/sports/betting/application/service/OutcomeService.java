@@ -13,9 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class OutcomeService {
 
     @Autowired
-    private DateTimeFormatter formatter;
-    
-    @Autowired
     private BetDao betDao;
     
     @Autowired
@@ -28,15 +25,6 @@ public class OutcomeService {
         return outcome;
     }
 
-    private void updateCurrentOutcomeOddOfOutcome(Outcome outcome, double outcomeOdd) {
-        outcome.setCurrentOdd(outcomeOdd);
-        outcomeDao.save(outcome);
-    }
-
-    public Outcome getResultOutcomeOfBet(Bet bet) {
-        return outcomeDao.getResultOutcomeByBet(bet);
-    }
-    
     public List<Outcome> getAllByBet(Bet bet) {
         return outcomeDao.getAllByBet(bet);
     }
