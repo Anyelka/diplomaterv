@@ -41,12 +41,6 @@ public class BetEntity {
     public BetEntity() {
     }
 
-    public BetEntity(SportEventEntity event, String description, BetType betType) {
-        this.event = event;
-        this.description = description;
-        this.betType = betType;
-    }
-
     public int getId() {
         return id;
     }
