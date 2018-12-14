@@ -19,18 +19,18 @@ import sports.betting.application.service.TestDataGenerator;
 @ComponentScan("sports.betting.application")
 public class AppConfig {
 
-    private DoubleSupplier doubleSupplier = () -> {
+    private DoubleSupplier randomDoubleSupplier = () -> {
         return Math.random();
     };
+
+    @Bean
+    public ResultDataGenerator resultDataGenerator() {
+        return new ResultDataGenerator(randomDoubleSupplier);
+    }
 
     @Bean(initMethod="init")
     public TestDataGenerator testDataGenerator() {
         return new TestDataGenerator();
     }
 
-    @Bean
-    public ResultDataGenerator resultDataGenerator() {
-        return new ResultDataGenerator(doubleSupplier);
-    }
-    
 }
