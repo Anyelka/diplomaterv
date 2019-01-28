@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+<spring:message code="home.accountDetails.accountDetails.title" var="accountDetailsTitle"/>
+<spring:message code="home.accountDetails.name" var="accountDetailsName"/>
+<spring:message code="home.accountDetails.dateOfBirth" var="accountDetailsDateOfBirth"/>
+<spring:message code="home.accountDetails.accountNumber" var="accountDetailsAccountNumber"/>
+<spring:message code="home.accountDetails.balance" var="accountDetailsBalance"/>
+<spring:message code="home.accountDetails.currency" var="accountDetailsCurrency"/>
+<spring:message code="home.accountDetails.save.button" var="accountDetailsSaveButton"/>
+<spring:message code="home.wagers.wagers.title" var="wagersTitle"/>
+<spring:message code="home.wagers.noWagers" var="wagersNoWagers"/>
+<spring:message code="home.wagers.eventTitle" var="wagersEventTitle"/>
+<spring:message code="home.wagers.eventType" var="wagersEventType"/>
+<spring:message code="home.wagers.betType" var="wagersBetType"/>
+<spring:message code="home.wagers.outcomeValue" var="wagersOutcomeValue"/>
+<spring:message code="home.wagers.outcomeOdd" var="wagersOutcomeOdd"/>
+<spring:message code="home.wagers.stake" var="wagersStake"/>
+<spring:message code="home.wagers.winner" var="wagersWinner"/>
+<spring:message code="home.wagers.processed" var="wagersProcessed"/>
+<spring:message code="home.wagers.remove.button" var="wagersRemove"/>
+
+
 
 <html>
 <head>
@@ -10,33 +32,33 @@
 <body>
 
 <div class="panel panel-default">
-    <div class="panel-heading">Account details</div>
+    <div class="panel-heading">${accountDetailsTitle}</div>
     <div class="panel-body">
         <form:form modelAttribute="accountDetailsRequest" action="saveAccountDetails.html">
             <form:input path="username" type="hidden" name="playerUsername"/>
             <form:input path="version" type="hidden" name="playerVersion"/>
 
             <div class="input-group">
-                <span class="input-group-addon">Name</span>
+                <span class="input-group-addon">${accountDetailsName}</span>
                 <form:input path="name" id="playerName" type="text" class="form-control" name="playerName"/>
             </div>
             <div class="input-group">
-                <span class="input-group-addon">Date of birth</span>
+                <span class="input-group-addon">${accountDetailsDateOfBirth}</span>
                 <form:input path="dateOfBirth" id="playerDateOfBirth" type="text" class="form-control"
                             name="playerDateOfBirth"/>
             </div>
             <div class="input-group">
-                <span class="input-group-addon">Account number</span>
+                <span class="input-group-addon">${accountDetailsAccountNumber}</span>
                 <form:input path="accountNumber" id="playerAccountNumber" type="text" class="form-control"
                             name="playerAccountNumber"/>
             </div>
             <div class="input-group">
-                <span class="input-group-addon">Balance</span>
+                <span class="input-group-addon">${accountDetailsBalance}</span>
                 <form:input path="balance" id="playerBalance" type="text" class="form-control" name="playerBalance"
                             disabled="true"/>
             </div>
             <div class="input-group">
-                <span class="input-group-addon">Currency</span>
+                <span class="input-group-addon">${accountDetailsCurrency}</span>
                 <form:input path="currency" id="playerCurrency" type="text" class="form-control" name="playerCurrency"
                             disabled="true"/>
             </div>
@@ -45,16 +67,16 @@
         <div id="saveAccountDetailsResponseDiv">
             <p id="saveAccountDetailsResponseText"></p>
         </div>
-        <button id="saveAccountDetailsButton" type="button" class="btn btn-default">Save</button>
+        <button id="saveAccountDetailsButton" type="button" class="btn btn-default">${accountDetailsSaveButton}</button>
     </div>
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading">Wagers</div>
+    <div class="panel-heading">${wagersTitle}</div>
     <div class="panel-body">
         <c:choose>
             <c:when test="${listWagersView.wagers.size() == 0}">
-                You have no wagers!
+                ${wagersNoWagers}
             </c:when>
             <c:otherwise>
                 <div class="table-responsive">
@@ -62,14 +84,14 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Event title</th>
-                            <th>Event type</th>
-                            <th>Bet type</th>
-                            <th>Outcome value</th>
-                            <th>Outcome odd</th>
-                            <th>Stake</th>
-                            <th>Winner</th>
-                            <th>Processed</th>
+                            <th>${wagersEventTitle}</th>
+                            <th>${wagersEventType}</th>
+                            <th>${wagersBetType}</th>
+                            <th>${wagersOutcomeValue}</th>
+                            <th>${wagersOutcomeOdd}</th>
+                            <th>${wagersStake}</th>
+                            <th>${wagersWinner}</th>
+                            <th>${wagersProcessed}</th>
                             <th id="remove"></th>
                         </tr>
                         </thead>
@@ -89,7 +111,7 @@
                                     <c:if test="${!(wager.isProcessed=='Yes')}">
                                         <form:form modelAttribute="removeWagerRequest" action="removeWager.html">
                                             <form:input path="id" type="hidden" name="id" value="${wager.id}"/>
-                                            <button type="submit" class="btn btn-inline">Remove</button>
+                                            <button type="submit" class="btn btn-inline">${wagersRemove}</button>
                                         </form:form>
                                     </c:if>
                                 </td>

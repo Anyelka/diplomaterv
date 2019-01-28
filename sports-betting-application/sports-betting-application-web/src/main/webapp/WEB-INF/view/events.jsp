@@ -1,8 +1,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+<spring:message code="page.title" var="pageTitle"></spring:message>
+<spring:message code="navbar.title" var="navbarTitle"></spring:message>
+<spring:message code="navbar.home" var="navbarHome"></spring:message>
+<spring:message code="navbar.events" var="navbarEvents"></spring:message>
+<spring:message code="navbar.language.title" var="navbarLanguage"></spring:message>
+<spring:message code="navbar.language.english" var="navbarLanguageEng"></spring:message>
+<spring:message code="navbar.language.hungarian" var="navbarLanguageHun"></spring:message>
+<spring:message code="navbar.logout" var="navbarLogout"></spring:message>
+<spring:message code="events.events.title" var="eventsTitle"></spring:message>
+<spring:message code="events.modal.stake" var="modalStake"></spring:message>
+<spring:message code="events.modal.save.button" var="modalSave"></spring:message>
+
 <html>
 <head>
-    <title>SportsBet</title>
+    <title>${pageTitle}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap-3.3.7.css">
@@ -15,17 +29,16 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">SportsBetting</a>
+            <a class="navbar-brand" href="#">${navbarTitle}</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="home.html">Home</a></li>
-            <li class="active"><a href="events.html">Events</a></li>
-            <li><a href="export.html">Export data</a></li>
+            <li><a href="home.html">${navbarHome}</a></li>
+            <li class="active"><a href="events.html">${navbarEvents}</a></li>
             <li class="dropdown"><a class="dropdown-toggle"
-                                    data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
+                                    data-toggle="dropdown" href="#">${navbarLanguage}<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Hungarian</a></li>
+                    <li><a href="#">${navbarLanguageEng}</a></li>
+                    <li><a href="#">${navbarLanguageHun}</a></li>
                 </ul>
             </li>
         </ul>
@@ -36,7 +49,7 @@
 </nav>
 
 <div class="panel panel-default">
-    <div class="panel-heading">Events</div>
+    <div class="panel-heading">${eventsTitle}</div>
     <div class="panel-body">
 
 
@@ -125,13 +138,13 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <p>Stake:</p>
+                <p>${modalStake}:</p>
                 <input type="text" id="wagerStake" class="form-control"/>
             </div>
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" id="confirmWager" class="btn btn-primary">Save</button>
+                <button type="button" id="confirmWager" class="btn btn-primary">${modalSave}</button>
             </div>
 
         </div>

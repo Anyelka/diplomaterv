@@ -1,5 +1,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+
+<spring:message code="register.title" var="title"></spring:message>
+<spring:message code="register.email.placeholder" var="email"></spring:message>
+<spring:message code="register.username.placeholder" var="username"></spring:message>
+<spring:message code="register.password.placeholder" var="password"></spring:message>
+<spring:message code="register.fullName.placeholder" var="fullName"></spring:message>
+<spring:message code="register.accountNumber.placeholder" var="accountNummber"></spring:message>
+<spring:message code="register.currency.label" var="currency"></spring:message>
+<spring:message code="register.dateOfBirth.placeholder" var="dateOfBirth"></spring:message>
+<spring:message code="register.register.button" var="registerButton"></spring:message>
+<spring:message code="register.back.button" var="backButton"></spring:message>
+
 <html>
 <head>
     <jsp:include page="../assets/include.jsp"/>
@@ -22,7 +35,7 @@
         <div class="panel panel-default registration-panel center-block">
 
             <div class="panel-heading">
-                <p>Create an account!</p>
+                <p>${title}</p>
             </div>
 
             <div class="panel-body">
@@ -30,26 +43,26 @@
                            action="sendRegistrationRequest">
                     <div class="form-group col-xs-12">
                         <form:input path="email" id="email" class="form-control"
-                                    placeholder="E-mail"/>
+                                    placeholder="${email}"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="username" id="username" class="form-control"
-                                    placeholder="Username"/>
+                                    placeholder="${username}"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="password" id="password" class="form-control"
-                                    placeholder="Password"/>
+                                    placeholder="${password}"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="fullName" id="fullName" class="form-control"
-                                    placeholder="Full Name"/>
+                                    placeholder="${fullName}"/>
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="accountNumber" id="accountNumber" class="form-control"
-                                    placeholder="Account Number"/>
+                                    placeholder="${accountNummber}"/>
                     </div>
                     <div class="form-group col-xs-12">
-                        <label>Currency</label>
+                        <label>${currency}</label>
                         <form:select path="currency" id="currency" class="form-control">
                             <form:option value="HUF"/>
                             <form:option value="EUR"/>
@@ -58,13 +71,13 @@
                     </div>
                     <div class="form-group col-xs-12">
                         <form:input path="dateOfBirth" id="dateOfBirth" class="form-control"
-                                    placeholder="Date Of Birth"/>
+                                    placeholder="${dateOfBirth}"/>
                     </div>
 
-                    <button id="registerButton" type="button" class="btn">Register</button>
+                    <button id="registerButton" type="button" class="btn">${registerButton}</button>
                     <button type="button" onclick="window.location.href='index.html'"
                             class="btn btn-secondary pull-right">
-                        Back to login page
+                        ${backButton}
                     </button>
 
                 </form:form>
