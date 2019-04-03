@@ -32,8 +32,8 @@
             <a class="navbar-brand" href="#">${navbarTitle}</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="home.html">${navbarHome}</a></li>
-            <li class="active"><a href="events.html">${navbarEvents}</a></li>
+            <li><a href="home">${navbarHome}</a></li>
+            <li class="active"><a href="events">${navbarEvents}</a></li>
             <li class="dropdown"><a class="dropdown-toggle"
                                     data-toggle="dropdown" href="#">${navbarLanguage}<span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -43,7 +43,7 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Logout</a></li>
+            <li><a href="<c:url value="/logout"/>">${navbarLogout}</a></li>
         </ul>
     </div>
 </nav>
@@ -87,7 +87,8 @@
                                                                        value="${betModel.description}">
 
                                                                 <button type="button"
-                                                                        class="btn btn-primary openModalButton"
+                                                                        id="openModalButton"
+                                                                        class="btn btn-primary"
                                                                         data-toggle="modal"
                                                                         data-target="#saveWagerModal">
                                                                         ${outcomeModel.value}<br>${outcomeModel.odd}

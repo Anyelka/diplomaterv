@@ -1,4 +1,4 @@
-package sports.betting.application.web.wager.model;
+package sports.betting.application.web.user.model.view;
 
 public class WagerView {
 

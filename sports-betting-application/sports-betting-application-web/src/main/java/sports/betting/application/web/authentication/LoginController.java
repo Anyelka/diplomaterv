@@ -13,7 +13,7 @@ public class LoginController {
         return new LoginRequest();
     }
 
-    @RequestMapping("/index.html")
+    @RequestMapping("/index")
     public String showLoginPage() {
         return "index";
     }

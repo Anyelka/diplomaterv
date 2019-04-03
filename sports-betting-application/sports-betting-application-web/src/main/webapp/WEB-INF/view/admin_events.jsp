@@ -33,8 +33,8 @@
             <a class="navbar-brand" href="#">${navbarTitle}</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="admin_events.html">${navbarEvents}</a></li>
-            <li><a href="admin_users.html">${navbarUsers}</a></li>
+            <li class="active"><a href="events">${navbarEvents}</a></li>
+            <li><a href="users">${navbarUsers}</a></li>
             <li class="dropdown"><a class="dropdown-toggle"
                                     data-toggle="dropdown" href="#">${navbarLanguage} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -44,7 +44,7 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">${navbarLogout}</a></li>
+            <li><a href="<c:url value="/logout"/>">${navbarLogout}</a></li>
         </ul>
     </div>
 </nav>

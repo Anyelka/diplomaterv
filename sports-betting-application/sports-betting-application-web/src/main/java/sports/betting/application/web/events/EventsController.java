@@ -41,9 +41,9 @@ public class EventsController {
         return saveWagerRequest;
     }
     
-    @RequestMapping("/events.html")
+    @RequestMapping("/player/events")
     public String eventsPage() {
-        return "events";
+        return "player_events";
     }
 
     private List<SportEventModel> transferEvents(List<SportEvent> events) {

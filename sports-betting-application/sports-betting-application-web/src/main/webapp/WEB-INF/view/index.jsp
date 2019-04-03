@@ -25,7 +25,7 @@
 <div class="container">
     <div class="row login-header">
         <h2>
-            <em>${titleLogin}</em> ${titleOr} <em><a href="register.html">${titleRegister}</a></em> ${titleToStart}
+            <em>${titleLogin}</em> ${titleOr} <em><a href="register">${titleRegister}</a></em> ${titleToStart}
         </h2>
         <div></div>
     </div>
@@ -39,11 +39,11 @@
                     <form:errors element="div"/>
                     <div class="form-group col-xs-12">
                         <form:input path="username" class="form-control"
-                                    placeholder="${loginboxPassword}"/>
+                                    placeholder="${loginboxUsername}"/>
                     </div>
                     <div class="form-group col-xs-12">
-                        <form:input path="password" class="form-control"
-                                    placeholder="${loginboxUsername}"/>
+                        <form:input path="password" class="form-control" type="password"
+                                    placeholder="${loginboxPassword}"/>
                     </div>
                     <button type="submit" class="btn btn-default">Login</button>
                 </form:form>

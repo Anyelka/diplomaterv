@@ -23,7 +23,7 @@ public class RegistrationController {
         return new RegistrationRequest();
     }
 
-    @RequestMapping("register.html")
+    @RequestMapping("register")
     public String showRegistrationPage(RegistrationResponse registrationResponse) {
         return "register";
     }

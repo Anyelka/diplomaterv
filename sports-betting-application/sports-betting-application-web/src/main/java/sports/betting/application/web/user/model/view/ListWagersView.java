@@ -1,9 +1,9 @@
-package sports.betting.application.web.wager.model;
+package sports.betting.application.web.user.model.view;
 
 import java.util.List;
 
 public class ListWagersView {
-    List<WagerView> wagers;
+    private List<WagerView> wagers;
 
     public List<WagerView> getWagers() {
         return wagers;

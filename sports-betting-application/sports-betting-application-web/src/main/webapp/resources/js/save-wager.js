@@ -5,7 +5,7 @@ $(document).ready(
         var outcomeId = $("#outcomeId").val();
         var stakeInput = $("#wagerStake");
 
-        $(".openModalButton").click(function() {
+        $("#openModalButton").click(function() {
             var betDescription = $(this).prev().val();
             var outcome = $(this).text();
             loadModalData(betDescription, outcome);

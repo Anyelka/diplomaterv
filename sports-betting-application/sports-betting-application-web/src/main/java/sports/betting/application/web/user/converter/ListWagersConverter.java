@@ -1,4 +1,4 @@
-package sports.betting.application.web.wager.model.converter;
+package sports.betting.application.web.user.converter;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,7 +9,7 @@ import sports.betting.application.domain.wager.Wager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
-import sports.betting.application.web.wager.model.ListWagersView;
+import sports.betting.application.web.user.model.view.ListWagersView;
 
 @Component
 public class ListWagersConverter implements Converter<User, ListWagersView> {

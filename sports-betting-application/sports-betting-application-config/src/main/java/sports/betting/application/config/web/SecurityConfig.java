@@ -1,8 +1,5 @@
 package sports.betting.application.config.web;
 
-import javax.sql.DataSource;
-
-import sports.betting.application.config.dal.JpaConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +8,10 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import sports.betting.application.config.dal.JpaConfig;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -37,20 +38,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .access("isAuthenticated()")
                 .anyRequest()
                 .permitAll()
-
+                .antMatchers("/player/**").hasAuthority("ROLE_PLAYER")
+                .antMatchers("/admin/**").hasAuthority("ROLE_ADMIN")
                 .and()
                 .formLogin()
                 .loginPage("/index.html")
                 .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/decidehome")
                 .failureUrl("/index.html")
+                .successHandler(successHandler())
                 .usernameParameter("username")
                 .passwordParameter("password")
 
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/index")
+                .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
 
                 .and()
@@ -59,5 +62,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and()
                 .csrf().disable();
+    }
+
+    private AuthenticationSuccessHandler successHandler() {
+        return new CustomAuthenticationSuccessHandler();
     }
 }

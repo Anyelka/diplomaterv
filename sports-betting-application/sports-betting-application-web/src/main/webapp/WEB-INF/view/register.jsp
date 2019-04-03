@@ -16,16 +16,17 @@
 <html>
 <head>
     <jsp:include page="../assets/include.jsp"/>
-    <%--Datepicker--%>
-    <%--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">--%>
-    <%--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>--%>
-    <%--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>--%>
-    <%--<script>--%>
-    <%--$(function () {--%>
-    <%--$("#datepicker").datepicker();--%>
-    <%--});--%>
-    <%--</script>--%>
-    <%--Datepicker--%>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -70,14 +71,14 @@
                         </form:select>
                     </div>
                     <div class="form-group col-xs-12">
-                        <form:input path="dateOfBirth" id="dateOfBirth" class="form-control"
+                        <form:input path="dateOfBirth" type="text" id="datepicker" class="form-control"
                                     placeholder="${dateOfBirth}"/>
                     </div>
 
                     <button id="registerButton" type="button" class="btn">${registerButton}</button>
                     <button type="button" onclick="window.location.href='index.html'"
                             class="btn btn-secondary pull-right">
-                        ${backButton}
+                            ${backButton}
                     </button>
 
                 </form:form>

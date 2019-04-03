@@ -2,8 +2,8 @@ package sports.betting.application.web.rest;
 
 import sports.betting.application.service.user.player.PlayerService;
 import sports.betting.application.domain.user.User;
-import sports.betting.application.web.home.model.AccountDetailsConverter;
-import sports.betting.application.web.home.model.SaveAccountDetailsRequest;
+import sports.betting.application.web.user.converter.AccountDetailsConverter;
+import sports.betting.application.web.user.model.request.SaveAccountDetailsRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

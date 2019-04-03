@@ -3,6 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
+<spring:message code="navbar.title" var="navbarTitle"></spring:message>
+<spring:message code="navbar.home" var="navbarHome"></spring:message>
+<spring:message code="navbar.events" var="navbarEvents"></spring:message>
+<spring:message code="navbar.language.title" var="navbarLanguage"></spring:message>
+<spring:message code="navbar.language.english" var="navbarLanguageEng"></spring:message>
+<spring:message code="navbar.language.hungarian" var="navbarLanguageHun"></spring:message>
+<spring:message code="navbar.logout" var="navbarLogout"></spring:message>
+
 <spring:message code="home.accountDetails.accountDetails.title" var="accountDetailsTitle"/>
 <spring:message code="home.accountDetails.name" var="accountDetailsName"/>
 <spring:message code="home.accountDetails.dateOfBirth" var="accountDetailsDateOfBirth"/>
@@ -22,15 +30,32 @@
 <spring:message code="home.wagers.processed" var="wagersProcessed"/>
 <spring:message code="home.wagers.remove.button" var="wagersRemove"/>
 
-
-
 <html>
 <head>
     <jsp:include page="../assets/include.jsp"/>
-    <jsp:include page="../assets/navbar.jsp"/>
 </head>
 <body>
-
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">${navbarTitle}</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="home">${navbarHome}</a></li>
+            <li><a href="events">${navbarEvents}</a></li>
+            <li class="dropdown"><a class="dropdown-toggle"
+                                    data-toggle="dropdown" href="#">${navbarLanguage}<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">${navbarLanguageEng}</a></li>
+                    <li><a href="#">${navbarLanguageHun}</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="<c:url value="/logout"/>">${navbarLogout}</a></li>
+        </ul>
+    </div>
+</nav>
 <div class="panel panel-default">
     <div class="panel-heading">${accountDetailsTitle}</div>
     <div class="panel-body">
@@ -109,7 +134,7 @@
                                 <td>${wager.isProcessed}</td>
                                 <td>
                                     <c:if test="${!(wager.isProcessed=='Yes')}">
-                                        <form:form modelAttribute="removeWagerRequest" action="removeWager.html">
+                                        <form:form modelAttribute="removeWagerRequest" action="removeWager">
                                             <form:input path="id" type="hidden" name="id" value="${wager.id}"/>
                                             <button type="submit" class="btn btn-inline">${wagersRemove}</button>
                                         </form:form>

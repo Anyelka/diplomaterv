@@ -6,7 +6,7 @@ $(document).ready(
         var fullNameInput = $("#fullName");
         var accountNumberInput = $("#accountNumber");
         var currencyInput = $("#currency");
-        var dateOfBirthInput = $("#dateOfBirth");
+        var dateOfBirthInput = $("#datepicker");
 
         $("#registerButton").click(
             function () {

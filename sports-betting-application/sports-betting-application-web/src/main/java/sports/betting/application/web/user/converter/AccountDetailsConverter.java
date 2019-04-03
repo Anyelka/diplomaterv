@@ -1,8 +1,9 @@
-package sports.betting.application.web.home.model;
+package sports.betting.application.web.user.converter;
 
 import sports.betting.application.domain.user.User;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
+import sports.betting.application.web.user.model.request.SaveAccountDetailsRequest;
 
 @Component
 public class AccountDetailsConverter implements Converter<User, SaveAccountDetailsRequest> {

@@ -1,11 +1,11 @@
-package sports.betting.application.web.wager.model.converter;
+package sports.betting.application.web.user.converter;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import sports.betting.application.domain.bet.BetType;
 import sports.betting.application.domain.sportevent.EventType;
 import sports.betting.application.domain.wager.Wager;
-import sports.betting.application.web.wager.model.WagerView;
+import sports.betting.application.web.user.model.view.WagerView;
 
 @Component
 public class WagerViewConverter implements Converter<Wager, WagerView> {

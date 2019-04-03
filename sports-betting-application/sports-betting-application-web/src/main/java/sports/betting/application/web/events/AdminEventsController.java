@@ -33,7 +33,7 @@ public class AdminEventsController {
         return listEventsModel;
     }
 
-    @RequestMapping("/admin_events.html")
+    @RequestMapping("/admin/events")
     public String adminEventsPage() {
         return "admin_events";
     }

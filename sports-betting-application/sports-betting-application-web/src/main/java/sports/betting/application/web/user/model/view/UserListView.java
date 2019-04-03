@@ -1,4 +1,4 @@
-package sports.betting.application.web.users;
+package sports.betting.application.web.user.model.view;
 
 import java.util.List;
 
