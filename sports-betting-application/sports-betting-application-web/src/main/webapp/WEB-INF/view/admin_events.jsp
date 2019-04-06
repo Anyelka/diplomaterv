@@ -58,62 +58,79 @@
 
             <c:forEach var="sportEventModel" items="${listEventsModel.events}">
 
-                <c:if test="${!sportEventModel.ended}">
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="card-link" data-toggle="collapse"
-                               href="#event${sportEventModel.id}">
-                                    ${sportEventModel.title} - ${sportEventModel.startDate}</a>
-                        </div>
-                        <div id="event${sportEventModel.id}" class="collapse"
-                             data-parent="#accordion">
-                            <div class="card-body">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse"
+                           href="#eventTitle${sportEventModel.id}">
+                                ${sportEventModel.title} - ${sportEventModel.startDate}</a>
+                        <button id="addFTResult${sportEventModel.id}" type="button" class="btn btn-primary pull-right"
+                                data-toggle="modal" data-target="#addFTResultModal">Add result</button>
+                    </div>
+                    <div id="eventTitle${sportEventModel.id}" class="collapse"
+                         data-parent="#accordion">
+                        <div class="card-body">
 
-                                <c:forEach var="betModel" items="${sportEventModel.bets}">
+                            <c:forEach var="betModel" items="${sportEventModel.bets}">
 
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <a class="card-link" data-toggle="collapse"
-                                               href="#bet${betModel.id}"> ${betModel.description} </a>
-                                        </div>
-                                        <div id="bet${betModel.id}" class="collapse"
-                                             data-parent="#${sportEventModel.id}">
-                                            <div class="card-body">
-                                                <div class="btn-group btn-group-justified">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse"
+                                           href="#bet${betModel.id}"> ${betModel.description} </a>
+                                    </div>
+                                    <div id="bet${betModel.id}" class="collapse"
+                                         data-parent="#${sportEventModel.id}">
+                                        <div class="card-body">
+                                            <div class="btn-group btn-group-justified">
 
-                                                    <c:forEach var="outcomeModel" items="${betModel.outcomes}">
-                                                        <div id="accordion" class="btn-group">
-                                                            <div class="card">
-                                                                <div>
-                                                                    <p>${outcomeModel.value} ${outcomeModel.odd}</p>
-                                                                </div>
+                                                <c:forEach var="outcomeModel" items="${betModel.outcomes}">
+                                                    <div id="accordion" class="btn-group">
+                                                        <div class="card">
+                                                            <div>
+                                                                <p>${outcomeModel.value} ${outcomeModel.odd}</p>
                                                             </div>
                                                         </div>
-                                                    </c:forEach>
+                                                    </div>
+                                                </c:forEach>
 
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                </c:forEach>
+                            </c:forEach>
 
-                            </div>
                         </div>
                     </div>
-                </c:if>
+                </div>
 
             </c:forEach>
 
 
         </div>
 
-        <div>
-            <button id="generateResultsButton" type="button" class="btn btn-danger">${generateResults}</button>
-        </div>
+    </div>
 
+    <!-- Add FullTime Result Modal -->
+    <div id="addFTResultModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Full Time result of event</h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button id="saveFTResultButton" type="button" class="btn btn-default" data-dismiss="modal">Save result!</button>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
-<script src="../../resources/js/generate-results.js" type="text/javascript"></script>
+<script src="../../resources/js/add-results.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,12 +1,9 @@
 $(document).ready(
     function () {
-
-        var playerUsername = $("#playerUsername").val();
-        var outcomeId = $("#outcomeId").val();
-        var stakeInput = $("#wagerStake");
-
-        $("#openModalButton").click(function() {
-            var betDescription = $(this).prev().val();
+        var outcomeId;
+        $('[id^=openModalButton]').click(function() {
+            outcomeId = this.id.replace('openModalButton', '');
+            var betDescription = $("#betDescription" + outcomeId).val();
             var outcome = $(this).text();
             loadModalData(betDescription, outcome);
         });
@@ -20,9 +17,9 @@ $(document).ready(
                 $.ajax({
                     url: "saveWager",
                     data: {
-                        playerUsername: playerUsername,
+                        playerUsername: $("#playerUsername").val(),
                         outcomeId: outcomeId,
-                        stake: stakeInput.val()
+                        stake: $("#wagerStake").val()
                     },
                     success: function (response) {
                         reload();
@@ -59,8 +56,8 @@ $(document).ready(
         }
 
         function showStakeError(errorMessage) {
-            errorOutline(stakeInput);
-            createRedAlertBox(stakeInput, errorMessage);
+            errorOutline($("#wagerStake"));
+            createRedAlertBox($("#wagerStake"), errorMessage);
         }
 
         function createRedAlertBox(inputField, alertText) {

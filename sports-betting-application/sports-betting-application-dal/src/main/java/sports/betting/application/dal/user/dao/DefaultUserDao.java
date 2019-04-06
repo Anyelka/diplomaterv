@@ -1,5 +1,7 @@
 package sports.betting.application.dal.user.dao;
 
+import com.google.common.collect.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
 import sports.betting.application.dal.user.dao.converter.PlayerDataBackConverter;
 import sports.betting.application.dal.user.dao.converter.UserBackConverter;
 import sports.betting.application.dal.user.dao.converter.UserConverter;
@@ -8,13 +10,9 @@ import sports.betting.application.dal.user.entity.UserEntity;
 import sports.betting.application.dal.user.repository.PlayerDataRepository;
 import sports.betting.application.dal.user.repository.UserRepository;
 import sports.betting.application.domain.user.User;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.google.common.collect.Lists;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class DefaultUserDao implements UserDao {
 

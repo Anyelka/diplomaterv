@@ -13,6 +13,7 @@ import sports.betting.application.service.user.player.validation.PlayerDataValid
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.Currency;
 import java.util.Optional;
 
 public class PlayerService {

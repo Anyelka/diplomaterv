@@ -23,5 +23,4 @@ public class ResultViewConverter implements Converter<ResultModel, Result>{
         Outcome outcome = betConverter.transferBet(model.getBet());
         return new Result(bet, outcome);
     }
-
 }

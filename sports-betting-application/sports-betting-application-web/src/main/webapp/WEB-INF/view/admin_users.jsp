@@ -53,6 +53,12 @@
     </div>
 </nav>
 <div class="panel panel-default">
+
+    <div id="responseDiv">
+        <p id="responseText"></p>
+    </div>
+
+
     <div class="panel-heading">${title}</div>
     <div class="panel-body">
 

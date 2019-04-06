@@ -61,10 +61,10 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="card-link" data-toggle="collapse"
-                               href="#event${sportEventModel.id}">
+                               href="#eventTitle${sportEventModel.id}">
                                     ${sportEventModel.title} - ${sportEventModel.startDate}</a>
                         </div>
-                        <div id="event${sportEventModel.id}" class="collapse"
+                        <div id="eventTitle${sportEventModel.id}" class="collapse"
                              data-parent="#accordion">
                             <div class="card-body">
 
@@ -83,11 +83,10 @@
                                                     <c:forEach var="outcomeModel" items="${betModel.outcomes}">
                                                         <div id="accordion" class="btn-group">
                                                             <div class="card">
-                                                                <input type="hidden" id="betDescription"
-                                                                       value="${betModel.description}">
-
+                                                                <input type="hidden" id="betDescription${outcomeModel.id}"
+                                                                       value="${betModel.description}" />
                                                                 <button type="button"
-                                                                        id="openModalButton"
+                                                                        id="openModalButton${outcomeModel.id}"
                                                                         class="btn btn-primary"
                                                                         data-toggle="modal"
                                                                         data-target="#saveWagerModal">

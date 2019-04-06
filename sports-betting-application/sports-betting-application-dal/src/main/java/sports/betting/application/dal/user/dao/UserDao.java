@@ -2,6 +2,7 @@ package sports.betting.application.dal.user.dao;
 
 import sports.betting.application.domain.user.User;
 
+import java.util.Currency;
 import java.util.List;
 
 public interface UserDao {

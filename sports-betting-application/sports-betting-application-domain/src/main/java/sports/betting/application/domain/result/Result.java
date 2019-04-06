@@ -35,5 +35,4 @@ public class Result {
         this.outcome = outcome;
     }
 
-
 }

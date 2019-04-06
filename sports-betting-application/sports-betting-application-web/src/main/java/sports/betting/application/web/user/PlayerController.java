@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import sports.betting.application.domain.user.User;
+import sports.betting.application.service.user.UpdateUserDataResponse;
 import sports.betting.application.service.user.UserService;
 import sports.betting.application.service.user.player.PlayerService;
 import sports.betting.application.service.user.player.UpdatePlayerDataResponse;
@@ -19,6 +20,8 @@ import sports.betting.application.web.user.model.request.SaveAccountDetailsReque
 import sports.betting.application.web.user.model.view.ListWagersView;
 import sports.betting.application.web.user.model.request.RemoveWagerRequest;
 import sports.betting.application.web.user.converter.ListWagersConverter;
+
+import java.util.Currency;
 
 @Controller
 @RequestMapping("/player")
@@ -67,6 +70,7 @@ public class PlayerController {
                                                 @RequestParam(value = "playerAccountNumber") final String playerAccountNumber) {
         return playerService.attemptPlayerDataUpdate(SecurityContextHolder.getContext().getAuthentication().getName(), playerName, playerDateOfBirth, playerAccountNumber);
     }
+
 
     @RequestMapping("saveWager")
     public @ResponseBody CreateWagerResponse createWager(@RequestParam("playerUsername") final String playerUsername, @RequestParam("outcomeId") final int outcomeId,
