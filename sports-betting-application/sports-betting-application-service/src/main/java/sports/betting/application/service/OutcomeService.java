@@ -22,7 +22,7 @@ public class OutcomeService {
     private OutcomeDao outcomeDao;
     
     public Outcome createOutcome(String betDescription, String value, double odd) {
-        Bet bet = betDao.getByDescription(betDescription);
+        Bet bet = betDao.getByDescription(betDescription).get();
         Outcome outcome = new Outcome(bet, value, odd);
         outcomeDao.save(outcome);
         return outcome;
@@ -52,7 +52,7 @@ public class OutcomeService {
     public Outcome getByFullDescription(String description) {
         String betDescription = description.substring(0, description.lastIndexOf("--") - 1);
         String value = description.substring(description.lastIndexOf("--") + 3);
-        Bet bet = betDao.getByDescription(betDescription);
+        Bet bet = betDao.getByDescription(betDescription).get();
         return getByBetAndValue(bet,value);
     }
     

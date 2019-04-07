@@ -19,7 +19,7 @@ public class ResultViewConverter implements Converter<ResultModel, Result>{
     
     @Override
     public Result convert(ResultModel model) {
-        Bet bet = betService.getByDescription(model.getBet().getBetDescription());
+        Bet bet = betService.getByDescription(model.getBet().getBetDescription()).get();
         Outcome outcome = betConverter.transferBet(model.getBet());
         return new Result(bet, outcome);
     }

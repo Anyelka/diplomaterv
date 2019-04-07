@@ -1,6 +1,7 @@
 package sports.betting.application.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import sports.betting.application.dal.bet.dao.BetDao;
 import sports.betting.application.dal.sportevent.dao.SportEventDao;
@@ -38,7 +39,7 @@ public class BetService {
         return Lists.newArrayList(bets);
     }
 
-    public Bet getByDescription(String description) {
+    public Optional<Bet> getByDescription(String description) {
         return betDao.getByDescription(description);
     }
 

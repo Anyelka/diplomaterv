@@ -1,17 +1,18 @@
 package sports.betting.application.dal.bet.dao;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
+import com.google.common.collect.Lists;
+import org.springframework.beans.factory.annotation.Autowired;
 import sports.betting.application.dal.bet.dao.converter.BetBackConverter;
 import sports.betting.application.dal.bet.dao.converter.BetConverter;
+import sports.betting.application.dal.bet.entity.BetEntity;
 import sports.betting.application.dal.bet.repository.BetRepository;
 import sports.betting.application.dal.sportevent.dao.converter.SportEventBackConverter;
 import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.sportevent.SportEvent;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import com.google.common.collect.Lists;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class DefaultBetDao implements BetDao {
 
@@ -28,8 +29,9 @@ public class DefaultBetDao implements BetDao {
     private BetRepository betRepository;
 
     @Override
-    public Bet getByDescription(String description) {
-        return betConverter.convert(betRepository.findByDescription(description));
+    public Optional<Bet> getByDescription(String description) {
+        Optional<BetEntity> bet = betRepository.findByDescription(description);
+        return bet.isPresent() ? Optional.of(betConverter.convert(bet.get())) : Optional.empty();
     }
 
     @Override

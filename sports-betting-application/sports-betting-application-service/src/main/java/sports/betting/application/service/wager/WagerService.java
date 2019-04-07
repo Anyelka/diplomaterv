@@ -49,7 +49,7 @@ public class WagerService {
     }
 
     public void createWager(User player, String betDesription, String outcomeType, int stake, LocalDateTime timestamp) {
-        Bet bet = betDao.getByDescription(betDesription);
+        Bet bet = betDao.getByDescription(betDesription).get();
         Outcome outcome = outcomeDao.getByBetAndValue(bet, outcomeType);
         Wager wager = new Wager(player, bet, outcome, outcome.getCurrentOdd(), stake, Currency.getInstance(player.getPlayerData().get().getCurrency()), timestamp);
         wagerDao.save(wager);

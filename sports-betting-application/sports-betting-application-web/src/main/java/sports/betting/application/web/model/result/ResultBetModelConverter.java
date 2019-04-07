@@ -17,7 +17,7 @@ public class ResultBetModelConverter{
     private OutcomeService outcomeService;
     
     public Outcome transferBet(ResultBetModel betModel) {
-        Bet bet = betService.getByDescription(betModel.getBetDescription());
+        Bet bet = betService.getByDescription(betModel.getBetDescription()).get();
         String value = betModel.getValue();
         return outcomeService.getByBetAndValue(bet, value);
     }

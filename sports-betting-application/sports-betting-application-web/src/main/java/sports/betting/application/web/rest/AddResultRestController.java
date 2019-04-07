@@ -30,7 +30,7 @@ public class AddResultRestController {
 
     @RequestMapping(value = "fullTimeResult", method = RequestMethod.POST, consumes = "application/json")
     public String addFullTimeResult(@RequestBody FullTimeResultModel resultModel) {
-        resultService.saveFullTimeResult(resultModel.getEventTitle(), resultModel.getFullTimeResult());
+        resultService.saveFullTimeResult(resultModel.getEventId(), resultModel.getFullTimeResult());
         return "Result successfuly saved";
     }
 }

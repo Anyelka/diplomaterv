@@ -111,7 +111,7 @@ public class TestDataGenerator {
     public void createBettingDatabase() {
         sportEventService.createEvent(EVE_MU_EVENT, EVE_MU_STARTDATE, EVE_MU_ENDDATE, EVENTTYPE_FOOTALL);
         betService.createBet(EVE_MU_EVENT, BETTYPE_FT_RES, BetType.FOOTBALL_WINNER);
-        Bet bet1 = betService.getByDescription(EVE_MU_EVENT + " -- " + BETTYPE_FT_RES);
+        Bet bet1 = betService.getByDescription(EVE_MU_EVENT + " -- " + BETTYPE_FT_RES).get();
         outcomeService.createOutcome(EVE_MU_EVENT + " -- " + BETTYPE_FT_RES, OUTCOMETYPE_HOME, EVE_MU_FT_RES_HOME_ODD);
         Outcome outcome11 = outcomeService.getByBetAndValue(bet1, OUTCOMETYPE_HOME);
         outcomeService.createOutcome(EVE_MU_EVENT + " -- " + BETTYPE_FT_RES, OUTCOMETYPE_DRAW, EVE_MU_FT_RES_DRAW_ODD);
@@ -121,7 +121,7 @@ public class TestDataGenerator {
 
         sportEventService.createEvent(ARS_CHE_EVENT, ARS_CHE_STARTDATE, ARS_CHE_ENDDATE, EVENTTYPE_FOOTALL);
         betService.createBet(ARS_CHE_EVENT, BETTYPE_FT_RES, BetType.FOOTBALL_WINNER);
-        Bet bet2 = betService.getByDescription(ARS_CHE_EVENT + " -- " + BETTYPE_FT_RES);
+        Bet bet2 = betService.getByDescription(ARS_CHE_EVENT + " -- " + BETTYPE_FT_RES).get();
         outcomeService.createOutcome(ARS_CHE_EVENT + " -- " + BETTYPE_FT_RES, OUTCOMETYPE_HOME, ARS_CHE_FT_RES_HOME_ODD);
         Outcome outcome21 = outcomeService.getByBetAndValue(bet2, OUTCOMETYPE_HOME);
         outcomeService.createOutcome(ARS_CHE_EVENT + " -- " + BETTYPE_FT_RES, OUTCOMETYPE_DRAW, ARS_CHE_FT_RES_DRAW_ODD);
@@ -130,7 +130,7 @@ public class TestDataGenerator {
         Outcome outcome23 = outcomeService.getByBetAndValue(bet2, OUTCOMETYPE_AWAY);
 
         betService.createBet(ARS_CHE_EVENT, BETTYPE_GOALS_2_5, BetType.FOOTBALL_GOALS);
-        Bet bet3 = betService.getByDescription(ARS_CHE_EVENT + " -- " + BETTYPE_GOALS_2_5);
+        Bet bet3 = betService.getByDescription(ARS_CHE_EVENT + " -- " + BETTYPE_GOALS_2_5).get();
         outcomeService.createOutcome(ARS_CHE_EVENT + " -- " + BETTYPE_GOALS_2_5, OUTCOMETYPE_OVER, ARS_CHE_GOALS_2_5_OVER_ODD);
         Outcome outcome31 = outcomeService.getByBetAndValue(bet3, OUTCOMETYPE_OVER);
         outcomeService.createOutcome(ARS_CHE_EVENT + " -- " + BETTYPE_GOALS_2_5, OUTCOMETYPE_UNDER, ARS_CHE_GOALS_2_5_UNDER_ODD);
@@ -138,7 +138,7 @@ public class TestDataGenerator {
 
         sportEventService.createEvent(SHA_EDM_EVENT, SHA_EDM_STARTDATE, SHA_EDM_ENDDATE, EVENTTYPE_TENNIS);
         betService.createBet(SHA_EDM_EVENT, BETTYPE_WINNER, BetType.TENNIS_WINNER);
-        Bet bet4 = betService.getByDescription(SHA_EDM_EVENT + " -- " + BETTYPE_WINNER);
+        Bet bet4 = betService.getByDescription(SHA_EDM_EVENT + " -- " + BETTYPE_WINNER).get();
         outcomeService.createOutcome(SHA_EDM_EVENT + " -- " + BETTYPE_WINNER, OUTCOMETYPE_HOME, SHA_EDM_WINNER_HOME_ODD);
         Outcome outcome41 = outcomeService.getByBetAndValue(bet4, OUTCOMETYPE_HOME);
         outcomeService.createOutcome(SHA_EDM_EVENT + " -- " + BETTYPE_WINNER, OUTCOMETYPE_AWAY, SHA_EDM_WINNER_AWAY_ODD);

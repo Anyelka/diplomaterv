@@ -2,15 +2,15 @@ package sports.betting.application.web.model.result;
 
 public class FullTimeResultModel {
 
-    private String eventTitle;
+    private int eventId;
     private String fullTimeResult;
 
-    public String getEventTitle() {
-        return eventTitle;
+    public int getEventId() {
+        return eventId;
     }
 
-    public void setEventTitle(String eventTitle) {
-        this.eventTitle = eventTitle;
+    public void setEventId(int eventId) {
+        this.eventId = eventId;
     }
 
     public String getFullTimeResult() {

@@ -63,8 +63,11 @@
                         <a class="card-link" data-toggle="collapse"
                            href="#eventTitle${sportEventModel.id}">
                                 ${sportEventModel.title} - ${sportEventModel.startDate}</a>
+                        <input type="hidden" id="sportEventTitle${sportEventModel.id}"
+                               value="${sportEventModel.title}"/>
                         <button id="addFTResult${sportEventModel.id}" type="button" class="btn btn-primary pull-right"
-                                data-toggle="modal" data-target="#addFTResultModal">Add result</button>
+                                data-toggle="modal" data-target="#FTResultModal">Add result
+                        </button>
                     </div>
                     <div id="eventTitle${sportEventModel.id}" class="collapse"
                          data-parent="#accordion">
@@ -111,20 +114,59 @@
     </div>
 
     <!-- Add FullTime Result Modal -->
-    <div id="addFTResultModal" class="modal fade" role="dialog">
+    <div id="FTResultModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Add Full Time result of event</h4>
+                    <h4 id="addFTResultModalText" class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
-
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label id="homeTeamModalLabel"></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <select id="homeScoreSelect" class="form-control">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <label id="awayTeamModalLabel"></label>
+                        </div>
+                        <div class="col-sm-3">
+                            <select id="awayScoreSelect" class="form-control">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="saveFTResultButton" type="button" class="btn btn-default" data-dismiss="modal">Save result!</button>
+                    <button id="saveFTResultButton" type="button" class="btn btn-default" data-dismiss="modal">Save
+                        result!
+                    </button>
                 </div>
             </div>
 
