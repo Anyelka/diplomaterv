@@ -17,7 +17,7 @@ import java.util.GregorianCalendar;
 public class DateFormatter {
 
     private DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-    private DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+    private DateTimeFormatter dateTimeFormatter2 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
     /**
      * Uses the format of the date picker: MM/DD/YYYY

@@ -1,6 +1,6 @@
 package sports.betting.application.web.rest.test;
 
-import sports.betting.application.service.SportEventService;
+import sports.betting.application.service.event.SportEventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

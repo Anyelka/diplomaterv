@@ -148,7 +148,7 @@
 //        Result resultResult = underTest.generateRandomResultForEvent(event2);
 //        // THEN
 //        EasyMock.verify(numberGenerator);
-//        Assert.assertEquals(outcome212.getValue(), resultResult.getOutcomes().get(0).getValue());
+//        Assert.assertEquals(outcome212.getOutcomeValue(), resultResult.getOutcomes().get(0).getOutcomeValue());
 //        Assert.assertEquals(outcome221, resultResult.getOutcomes().get(1));
 //        Assert.assertEquals(outcome232, resultResult.getOutcomes().get(2));
 //    }
@@ -164,11 +164,11 @@
 //        // THEN
 //        EasyMock.verify(numberGenerator);
 //        System.out.println(bdDatabase.getEvent(1));
-//        Assert.assertEquals(outcome112.getValue(), bdDatabase.getEvent(1).getResult().getOutcomes().get(0).getValue());
-//        Assert.assertEquals(outcome122.getValue(), bdDatabase.getEvent(1).getResult().getOutcomes().get(1).getValue());
+//        Assert.assertEquals(outcome112.getOutcomeValue(), bdDatabase.getEvent(1).getResult().getOutcomes().get(0).getOutcomeValue());
+//        Assert.assertEquals(outcome122.getOutcomeValue(), bdDatabase.getEvent(1).getResult().getOutcomes().get(1).getOutcomeValue());
 //        Assert.assertEquals(outcome131, bdDatabase.getEvent(1).getResult().getOutcomes().get(2));
-//        Assert.assertEquals(outcome213.getValue(), bdDatabase.getEvent(2).getResult().getOutcomes().get(0).getValue());
-//        Assert.assertEquals(outcome222.getValue(), bdDatabase.getEvent(2).getResult().getOutcomes().get(1).getValue());
+//        Assert.assertEquals(outcome213.getOutcomeValue(), bdDatabase.getEvent(2).getResult().getOutcomes().get(0).getOutcomeValue());
+//        Assert.assertEquals(outcome222.getOutcomeValue(), bdDatabase.getEvent(2).getResult().getOutcomes().get(1).getOutcomeValue());
 //        Assert.assertEquals(outcome231, bdDatabase.getEvent(2).getResult().getOutcomes().get(2));        
 //
 //    }

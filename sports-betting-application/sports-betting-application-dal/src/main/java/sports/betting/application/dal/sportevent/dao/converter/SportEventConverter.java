@@ -17,6 +17,7 @@ public class SportEventConverter implements Converter<SportEventEntity, SportEve
         sportEvent.setEndDate(sportEventEntity.getEndDate());
         sportEvent.setEventType(sportEventEntity.getEventType());
         sportEvent.setEnded(sportEventEntity.isEnded());
+        sportEvent.setFullTimeResult(sportEventEntity.getFullTimeResult());
         return sportEvent;
     }
 

@@ -42,4 +42,14 @@ public class FormatValidator {
         }
         return true;
     }
+
+    public boolean isValidFullTimeResultFormat(String fullTimeResult) {
+        try{
+            Integer.parseInt(fullTimeResult.split("-")[0].trim());
+            Integer.parseInt(fullTimeResult.split("-")[1].trim());
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
 }

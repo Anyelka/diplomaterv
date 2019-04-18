@@ -2,15 +2,16 @@ package sports.betting.application.web.model;
 
 import java.util.List;
 
-public class SportEventModel {
+public class SportEventView {
     
     private int id;
     private String type;
     private String title;
     private String startDate;
     private String endDate;
-    private List<BetModel> bets;
+    private List<BetView> bets;
     private boolean ended;
+    private String fullTimeResult;
     
     public int getId() {
         return id;
@@ -42,10 +43,10 @@ public class SportEventModel {
     public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
-    public List<BetModel> getBets() {
+    public List<BetView> getBets() {
         return bets;
     }
-    public void setBets(List<BetModel> bets) {
+    public void setBets(List<BetView> bets) {
         this.bets = bets;
     }
     public boolean isEnded() {
@@ -54,5 +55,10 @@ public class SportEventModel {
     public void setEnded(boolean ended) {
         this.ended = ended;
     }
-    
+    public String getFullTimeResult() {
+        return fullTimeResult;
+    }
+    public void setFullTimeResult(String fullTimeResult) {
+        this.fullTimeResult = fullTimeResult;
+    }
 }

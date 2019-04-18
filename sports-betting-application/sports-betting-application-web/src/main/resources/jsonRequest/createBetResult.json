@@ -1,9 +1,4 @@
 {
-	"eventTitle": "Arsenal - Chelsea",
-	"bets": [
-		{
-			"betDescription": "Arsenal - Chelsea -- Full Time Result",
-			"value": "DRAW"
-		}
-	]
+  "betDescription": "Arsenal - Chelsea -- Full Time Result",
+  "value": "DRAW"
 }

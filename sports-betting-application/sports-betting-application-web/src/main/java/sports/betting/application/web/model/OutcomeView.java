@@ -1,6 +1,6 @@
 package sports.betting.application.web.model;
 
-public class OutcomeModel {
+public class OutcomeView {
     
     private int id;
     private String fullDescription;

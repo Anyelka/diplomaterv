@@ -55,7 +55,7 @@ under the License.
 
   <!-- interactiveMode
    | This will determine whether maven prompts you when it needs input. If set to false,
-   | maven will use a sensible default value, perhaps based on some other setting, for
+   | maven will use a sensible default outcomeValue, perhaps based on some other setting, for
    | the parameter in question.
    |
    | Default: true
@@ -169,9 +169,9 @@ under the License.
    |
    | As noted above, profiles can be activated in a variety of ways. One way - the activeProfiles
    | section of this document (settings.xml) - will be discussed later. Another way essentially
-   | relies on the detection of a system property, either matching a particular value for the property,
+   | relies on the detection of a system property, either matching a particular outcomeValue for the property,
    | or merely testing its existence. Profiles can also be activated by JDK version prefix, where a
-   | value of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
+   | outcomeValue of '1.4' might activate a profile when the build is executed on a JDK version of '1.4.2_07'.
    | Finally, the list of active profiles can be specified directly from the command line.
    |
    | NOTE: For profiles defined in the settings.xml, you are restricted to specifying only artifact
@@ -211,7 +211,7 @@ under the License.
     -->
 
     <!--
-     | Here is another profile, activated by the system property 'target-env' with a value of 'dev',
+     | Here is another profile, activated by the system property 'target-env' with a outcomeValue of 'dev',
      | which provides a specific path to the Tomcat instance. To use this, your plugin configuration
      | might hypothetically look like:
      |
@@ -227,7 +227,7 @@ under the License.
      | ...
      |
      | NOTE: If you just wanted to inject this configuration whenever someone set 'target-env' to
-     |       anything, you could just leave off the <value/> inside the activation-property.
+     |       anything, you could just leave off the <outcomeValue/> inside the activation-property.
      |
     <profile>
       <id>env-dev</id>
@@ -235,7 +235,7 @@ under the License.
       <activation>
         <property>
           <name>target-env</name>
-          <value>dev</value>
+          <outcomeValue>dev</outcomeValue>
         </property>
       </activation>
 

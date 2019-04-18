@@ -23,7 +23,7 @@
 <spring:message code="home.wagers.eventTitle" var="wagersEventTitle"/>
 <spring:message code="home.wagers.eventType" var="wagersEventType"/>
 <spring:message code="home.wagers.betType" var="wagersBetType"/>
-<spring:message code="home.wagers.outcomeValue" var="wagersOutcomeValue"/>
+<spring:message code="home.wagers.outcomeValue" var="wagersOutcomevalue"/>
 <spring:message code="home.wagers.outcomeOdd" var="wagersOutcomeOdd"/>
 <spring:message code="home.wagers.stake" var="wagersStake"/>
 <spring:message code="home.wagers.winner" var="wagersWinner"/>
@@ -112,7 +112,7 @@
                             <th>${wagersEventTitle}</th>
                             <th>${wagersEventType}</th>
                             <th>${wagersBetType}</th>
-                            <th>${wagersOutcomeValue}</th>
+                            <th>${wagersOutcomevalue}</th>
                             <th>${wagersOutcomeOdd}</th>
                             <th>${wagersStake}</th>
                             <th>${wagersWinner}</th>

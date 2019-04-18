@@ -1,4 +1,4 @@
-package sports.betting.application.service;
+package sports.betting.application.service.result;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import sports.betting.application.dal.result.dao.ResultDao;
@@ -6,6 +6,13 @@ import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.outcome.Outcome;
 import sports.betting.application.domain.result.Result;
 import sports.betting.application.domain.sportevent.SportEvent;
+import sports.betting.application.service.bet.BetService;
+import sports.betting.application.service.outcome.OutcomeService;
+import sports.betting.application.service.event.SportEventService;
+import sports.betting.application.service.result.model.request.AddFullTimeResultRequest;
+import sports.betting.application.service.result.model.request.AddSingleBetResultRequest;
+import sports.betting.application.service.result.model.response.AddBetResultResponse;
+import sports.betting.application.service.result.model.response.AddFullTimeResultResponse;
 import sports.betting.application.service.wager.WagerService;
 
 import java.util.Optional;
@@ -27,15 +34,32 @@ public class ResultService {
     @Autowired
     private OutcomeService outcomeService;
 
+    @Autowired
+    private ResultValidator resultValidator;
+
     public void save(Result result) {
         resultDao.save(result);
-        
-        eventService.updateEvent(result.getBet().getEvent());
-            
+        betService.end(result.getBet(), result.getOutcome().toCapitalizedString());
         wagerService.updateWagers(result);
     }
 
-    public void saveFullTimeResult(int eventId, String fullTimeResult) {
+    public AddFullTimeResultResponse attemptFullTimeResultSave(AddFullTimeResultRequest request) {
+        AddFullTimeResultResponse response = resultValidator.checkAddFullTimeResultRequest(request);
+        if(response.isValid()) {
+            saveFullTimeResult(request.getEventId(), request.getFullTimeResult());
+        }
+        return response;
+    }
+
+    public AddBetResultResponse attemptBetResultSave(AddSingleBetResultRequest request) {
+        AddBetResultResponse response = resultValidator.checkAddBetResultRequest(request);
+        if(response.isValid()) {
+            saveBetResult(request.getBetDescription(), request.getOutcomeValue());
+        }
+        return response;
+    }
+
+    private void saveFullTimeResult(int eventId, String fullTimeResult) {
         SportEvent event = eventService.getEvent(eventId);
         Optional<Bet> ftBet = betService.getByDescription(event.getTitle() + " -- Full Time Result");
         Optional<Bet> goalsOUBet = betService.getByDescription(event.getTitle() + " -- Goals Over/Under (2.5)");
@@ -49,6 +73,7 @@ public class ResultService {
             Result goalsOUResult = new Result(goalsOUBet.get(), goalsOUOutcome);
             save(goalsOUResult);
         }
+        eventService.addFullTimeResult(event, fullTimeResult);
     }
 
     private String getFTResultOutcomeValue(String fullTimeResult) {
@@ -75,5 +100,12 @@ public class ResultService {
             goalsOUOutcomeValue = "UNDER";
         }
         return goalsOUOutcomeValue;
+    }
+
+    private void saveBetResult(String betDescription, String outcomeValue) {
+        Optional<Bet> bet = betService.getByDescription(betDescription);
+        Outcome outcome = outcomeService.getByBetAndValue(bet.get(), outcomeValue);
+        Result result = new Result(bet.get(), outcome);
+        save(result);
     }
 }

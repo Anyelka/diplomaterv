@@ -1,7 +1,6 @@
 package sports.betting.application.service;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 
 import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.bet.BetType;
@@ -11,6 +10,9 @@ import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import sports.betting.application.domain.user.UserCredentials;
+import sports.betting.application.service.bet.BetService;
+import sports.betting.application.service.event.SportEventService;
+import sports.betting.application.service.outcome.OutcomeService;
 import sports.betting.application.service.user.UserService;
 import sports.betting.application.service.user.player.PlayerService;
 import sports.betting.application.service.wager.WagerService;

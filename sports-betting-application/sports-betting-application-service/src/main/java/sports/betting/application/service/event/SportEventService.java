@@ -1,10 +1,11 @@
-package sports.betting.application.service;
+package sports.betting.application.service.event;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import sports.betting.application.dal.sportevent.dao.SportEventDao;
+import sports.betting.application.domain.result.Result;
 import sports.betting.application.domain.sportevent.EventType;
 import sports.betting.application.domain.sportevent.SportEvent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +42,13 @@ public class SportEventService {
         return sportEventDao.getByTitle(title);
     }
 
-    public void updateEvent(SportEvent event) {
+    public void end(SportEvent event) {
         event.setEnded(true);
         sportEventDao.save(event);
     }
 
+    public void addFullTimeResult(SportEvent event, String fullTimeResult) {
+        event.setFullTimeResult(fullTimeResult);
+        end(event);
+    }
 }

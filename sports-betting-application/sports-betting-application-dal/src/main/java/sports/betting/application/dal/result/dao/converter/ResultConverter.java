@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class ResultConverter implements Converter<ResultEntity, Result> {
 
@@ -26,4 +29,7 @@ public class ResultConverter implements Converter<ResultEntity, Result> {
         return result;
     }
 
+    public List<Result> convert(List<ResultEntity> resultEntities) {
+        return resultEntities.stream().map(this::convert).collect(Collectors.toList());
+    }
 }

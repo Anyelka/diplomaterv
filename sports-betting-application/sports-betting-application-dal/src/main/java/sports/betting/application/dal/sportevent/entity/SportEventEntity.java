@@ -31,6 +31,8 @@ public class SportEventEntity implements Serializable {
     
     private boolean ended;
 
+    private String fullTimeResult;
+
     public SportEventEntity() {
     };
 
@@ -40,6 +42,7 @@ public class SportEventEntity implements Serializable {
         this.endDate = endDate;
         this.eventType = type;
         this.ended = false;
+        this.fullTimeResult = "";
     };
 
     public int getId() {
@@ -90,4 +93,11 @@ public class SportEventEntity implements Serializable {
         this.ended = ended;
     }
 
+    public String getFullTimeResult() {
+        return fullTimeResult;
+    }
+
+    public void setFullTimeResult(String fullTimeResult) {
+        this.fullTimeResult = fullTimeResult;
+    }
 }

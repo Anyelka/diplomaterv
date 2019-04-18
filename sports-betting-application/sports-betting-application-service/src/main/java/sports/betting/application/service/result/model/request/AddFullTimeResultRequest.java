@@ -1,6 +1,6 @@
-package sports.betting.application.web.model.result;
+package sports.betting.application.service.result.model.request;
 
-public class FullTimeResultModel {
+public class AddFullTimeResultRequest {
 
     private int eventId;
     private String fullTimeResult;

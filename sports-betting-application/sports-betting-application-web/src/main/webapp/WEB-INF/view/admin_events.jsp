@@ -56,47 +56,57 @@
 
         <div id="accordion">
 
-            <c:forEach var="sportEventModel" items="${listEventsModel.events}">
+            <c:forEach var="sportEventView" items="${eventListView.events}">
 
                 <div class="card">
+
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse"
-                           href="#eventTitle${sportEventModel.id}">
-                                ${sportEventModel.title} - ${sportEventModel.startDate}</a>
-                        <input type="hidden" id="sportEventTitle${sportEventModel.id}"
-                               value="${sportEventModel.title}"/>
-                        <button id="addFTResult${sportEventModel.id}" type="button" class="btn btn-primary pull-right"
-                                data-toggle="modal" data-target="#FTResultModal">Add result
-                        </button>
+                           href="#eventTitle${sportEventView.id}">
+                                ${sportEventView.title} - ${sportEventView.startDate}</a>
+                        <input type="hidden" id="sportEventTitle${sportEventView.id}"
+                               value="${sportEventView.title}"/>
+                        <c:if test="${!sportEventView.ended}">
+                            <button id="addFTResult${sportEventView.id}" type="button" class="btn btn-primary pull-right"
+                                    data-toggle="modal" data-target="#FTResultModal">Add result
+                            </button>
+                        </c:if>
+                        <c:if test="${sportEventView.ended}">
+                            <span class="label label-default pull-right">Full Time Result: ${sportEventView.fullTimeResult}</span>
+                        </c:if>
                     </div>
-                    <div id="eventTitle${sportEventModel.id}" class="collapse"
+
+                    <div id="eventTitle${sportEventView.id}" class="collapse"
                          data-parent="#accordion">
                         <div class="card-body">
 
-                            <c:forEach var="betModel" items="${sportEventModel.bets}">
+                            <c:forEach var="betView" items="${sportEventView.bets}">
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <a class="card-link" data-toggle="collapse"
-                                           href="#bet${betModel.id}"> ${betModel.description} </a>
-                                    </div>
-                                    <div id="bet${betModel.id}" class="collapse"
-                                         data-parent="#${sportEventModel.id}">
-                                        <div class="card-body">
-                                            <div class="btn-group btn-group-justified">
-
-                                                <c:forEach var="outcomeModel" items="${betModel.outcomes}">
-                                                    <div id="accordion" class="btn-group">
-                                                        <div class="card">
-                                                            <div>
-                                                                <p>${outcomeModel.value} ${outcomeModel.odd}</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </c:forEach>
-
-                                            </div>
-                                        </div>
+                                        <a class="card-link"> ${betView.description} </a>
+                                        <input type="hidden" id="betTitle${betView.id}"
+                                               value="${betView.description}"/>
+                                        <c:if test="${!betView.ended}">
+                                            <button id="addBetResultButton${betView.id}" type="button"
+                                                    class="btn btn-primary pull-right"
+                                                    data-toggle="modal" data-target="#betResultModal">Add result of bet
+                                            </button>
+                                        </c:if>
+                                        <c:if test="${betView.ended}">
+                                            <span class="label label-default pull-right">Bet Result: ${betView.result}</span>
+                                        </c:if>
+                                        <c:forEach var="outcomeView" items="${betView.outcomes}">
+                                            <input type="hidden"
+                                                   id="addBetResultOutcomeDescription${betView.id}${outcomeView.id}"
+                                                   value="${outcomeView.fullDescription}"/>
+                                            <input type="hidden"
+                                                   id="addBetResultOutcomeValue${betView.id}${outcomeView.id}"
+                                                   value="${outcomeView.value}"/>
+                                            <input type="hidden"
+                                                   id="addBetResultOutcomeOdd${betView.id}${outcomeView.id}"
+                                                   value="${outcomeView.odd}"/>
+                                        </c:forEach>
                                     </div>
                                 </div>
 
@@ -116,12 +126,10 @@
     <!-- Add FullTime Result Modal -->
     <div id="FTResultModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 id="addFTResultModalText" class="modal-title"></h4>
+                    <h4 id="FTResultModalText" class="modal-title"></h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -163,13 +171,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button id="saveFTResultButton" type="button" class="btn btn-default" data-dismiss="modal">Save
+                <div id="FTResultModalFooter" class="modal-footer">
+                    <button id="saveFTResultButton" type="button" class="btn btn-default">Save
                         result!
                     </button>
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- Add Bet Result Modal -->
+    <div id="betResultModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button id="closeBetResultModalButton" type="button" class="close" data-dismiss="modal">&times;
+                    </button>
+                    <h4 id="betResultModalText" class="modal-title"></h4>
+                </div>
+                <div id="betResultModalBody" class="modal-body">
+                    <div id="modalOutcomesButtonGroup" class="btn-group btn-group-justified">
+                        <%--save bet result buttons for each outcome rendered here dynamically--%>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>

@@ -2,12 +2,14 @@ package sports.betting.application.web.model;
 
 import java.util.List;
 
-public class BetModel {
+public class BetView {
     
     private int id;
     private String description;
     private String type;
-    private List<OutcomeModel> outcomes;
+    private List<OutcomeView> outcomes;
+    private boolean ended;
+    private String result;
         
     public int getId() {
         return id;
@@ -27,11 +29,22 @@ public class BetModel {
     public void setType(String type) {
         this.type = type;
     }
-    public List<OutcomeModel> getOutcomes() {
+    public List<OutcomeView> getOutcomes() {
         return outcomes;
     }
-    public void setOutcomes(List<OutcomeModel> outcomes) {
+    public void setOutcomes(List<OutcomeView> outcomes) {
         this.outcomes = outcomes;
     }
-    
+    public boolean isEnded() {
+        return ended;
+    }
+    public void setEnded(boolean ended) {
+        this.ended = ended;
+    }
+    public String getResult() {
+        return result;
+    }
+    public void setResult(String result) {
+        this.result = result;
+    }
 }

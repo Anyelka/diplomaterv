@@ -24,9 +24,9 @@
 	<xs:element name="currency">
 		<xs:simpleType>
 			<xs:restriction base="xs:string">
-				<xs:enumeration value="EUR" />
-				<xs:enumeration value="USD" />
-				<xs:enumeration value="HUF" />
+				<xs:enumeration outcomeValue="EUR" />
+				<xs:enumeration outcomeValue="USD" />
+				<xs:enumeration outcomeValue="HUF" />
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>

@@ -38,8 +38,10 @@ public class BetEntity {
     @Enumerated(EnumType.STRING)
     private BetType betType;
 
-    public BetEntity() {
-    }
+    private boolean ended;
+    private String result;
+
+    public BetEntity() {}
 
     public BetEntity(SportEventEntity event, String description, BetType betType) {
         this.event = event;
@@ -50,40 +52,43 @@ public class BetEntity {
     public int getId() {
         return id;
     }
-
     public void setId(int betId) {
         this.id = betId;
     }
-
     public SportEventEntity getEvent() {
         return event;
     }
-
     public void setEvent(SportEventEntity event) {
         this.event = event;
     }
-
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public Set<OutcomeEntity> getOutcomes() {
         return outcomes;
     }
-
     public void setOutcomes(Set<OutcomeEntity> outcomes) {
         this.outcomes = outcomes;
     }
-
     public BetType getBetType() {
         return betType;
     }
-
     public void setBetType(BetType betType) {
         this.betType = betType;
+    }
+    public boolean isEnded() {
+        return ended;
+    }
+    public void setEnded(boolean ended) {
+        this.ended = ended;
+    }
+    public String getResult() {
+        return result;
+    }
+    public void setResult(String result) {
+        this.result = result;
     }
 }

@@ -1,14 +1,14 @@
 package sports.betting.application.web.rest;
 
-import sports.betting.application.service.BetService;
-import sports.betting.application.service.OutcomeService;
-import sports.betting.application.service.SportEventService;
+import sports.betting.application.service.bet.BetService;
+import sports.betting.application.service.outcome.OutcomeService;
+import sports.betting.application.service.event.SportEventService;
 import sports.betting.application.domain.bet.BetType;
 import sports.betting.application.domain.outcome.Outcome;
 import sports.betting.application.domain.sportevent.EventType;
-import sports.betting.application.web.model.BetModel;
-import sports.betting.application.web.model.OutcomeModel;
-import sports.betting.application.web.model.SportEventModel;
+import sports.betting.application.web.model.BetView;
+import sports.betting.application.web.model.OutcomeView;
+import sports.betting.application.web.model.SportEventView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,13 +33,13 @@ public class AddSportEventRestController {
     
     @RequestMapping(value = REQUEST_MAPPING, method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public String getSportEventModel(@RequestBody SportEventModel eventModel) {
+    public String getSportEventModel(@RequestBody SportEventView eventModel) {
         eventService.createEvent(eventModel.getTitle(), eventModel.getStartDate(), eventModel.getEndDate(),
                                                     EventType.valueOf(eventModel.getType()));
-        for(BetModel betModel : eventModel.getBets()) {
-            betService.createBet(betModel.getDescription(), BetType.valueOf(betModel.getType()));
-            for (OutcomeModel outcomeModel : betModel.getOutcomes()) {
-                Outcome outcome = outcomeService.createOutcome(betModel.getDescription(), outcomeModel.getValue(), Double.parseDouble(outcomeModel.getOdd()));
+        for(BetView betView : eventModel.getBets()) {
+            betService.createBet(betView.getDescription(), BetType.valueOf(betView.getType()));
+            for (OutcomeView outcomeView : betView.getOutcomes()) {
+                Outcome outcome = outcomeService.createOutcome(betView.getDescription(), outcomeView.getValue(), Double.parseDouble(outcomeView.getOdd()));
             }
         }
             

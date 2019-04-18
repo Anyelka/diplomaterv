@@ -1,4 +1,4 @@
-package sports.betting.application.service;
+package sports.betting.application.service.outcome;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

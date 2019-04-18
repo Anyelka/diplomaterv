@@ -20,6 +20,8 @@ public class BetConverter implements Converter<BetEntity, Bet>{
         bet.setEvent(sportEventConverter.convert(betEntity.getEvent()));
         bet.setDescription(betEntity.getDescription());
         bet.setBetType(betEntity.getBetType());
+        bet.setEnded(betEntity.isEnded());
+        bet.setResult(betEntity.getResult());
         return bet;
     }
 

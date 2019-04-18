@@ -14,7 +14,7 @@ import sports.betting.application.domain.result.Result;
 import sports.betting.application.domain.user.User;
 import sports.betting.application.domain.wager.Wager;
 import org.springframework.beans.factory.annotation.Autowired;
-import sports.betting.application.service.OutcomeService;
+import sports.betting.application.service.outcome.OutcomeService;
 import sports.betting.application.service.user.player.PlayerService;
 
 public class WagerService {

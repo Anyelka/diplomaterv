@@ -1,4 +1,4 @@
-package sports.betting.application.service;
+package sports.betting.application.service.bet;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,4 +43,9 @@ public class BetService {
         return betDao.getByDescription(description);
     }
 
+    public void end(Bet bet, String result) {
+        bet.setEnded(true);
+        bet.setResult(result);
+        betDao.save(bet);
+    }
 }

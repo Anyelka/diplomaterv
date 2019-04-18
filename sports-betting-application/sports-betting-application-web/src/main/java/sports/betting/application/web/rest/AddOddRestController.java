@@ -9,8 +9,8 @@
  import org.springframework.web.bind.annotation.RestController;
  import sports.betting.application.dal.outcome.dao.OutcomeDao;
  import sports.betting.application.domain.outcome.Outcome;
- import sports.betting.application.service.OutcomeService;
- import sports.betting.application.web.model.OutcomeOddModel;
+ import sports.betting.application.service.outcome.OutcomeService;
+ import sports.betting.application.web.model.OutcomeOddView;
 
 @RestController
 public class AddOddRestController {
@@ -25,7 +25,7 @@ public class AddOddRestController {
     
     @RequestMapping(value = REQUEST_MAPPING, method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(code=HttpStatus.CREATED)
-    public String addOdd(@RequestBody OutcomeOddModel odd) {
+    public String addOdd(@RequestBody OutcomeOddView odd) {
         Outcome outcome = outcomeService.getByFullDescription(odd.getOutcomeFullDescription());
         outcome.setCurrentOdd(odd.getValue());
         outcomeDao.save(outcome);

@@ -1,9 +1,9 @@
-package sports.betting.application.web.model.result;
+package sports.betting.application.service.result.model.request;
 
-public class ResultModel {
+public class AddBetResultForEventRequest {
     
     private String eventTitle;
-    private ResultBetModel bet;
+    private AddSingleBetResultRequest bet;
     
     public String getEventTitle() {
         return eventTitle;
@@ -11,10 +11,10 @@ public class ResultModel {
     public void setEventTitle(String eventTitle) {
         this.eventTitle = eventTitle;
     }
-    public ResultBetModel getBet() {
+    public AddSingleBetResultRequest getBet() {
         return bet;
     }
-    public void setBet(ResultBetModel bets) {
+    public void setBet(AddSingleBetResultRequest bets) {
         this.bet = bets;
     }
     

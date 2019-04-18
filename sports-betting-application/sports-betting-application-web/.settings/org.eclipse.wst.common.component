@@ -16,7 +16,7 @@
         <dependent-module archiveName="sports-betting-application-config-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sports-betting-application-config/sports-betting-application-config">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="sports-betting-application-sba.config.web"/>
-        <property name="java-output-path" value="/sports-betting-application-sba.config.web/target/classes"/>
+        <property name="context-root" outcomeValue="sports-betting-application-sba.config.web"/>
+        <property name="java-output-path" outcomeValue="/sports-betting-application-sba.config.web/target/classes"/>
     </wb-module>
 </project-modules>

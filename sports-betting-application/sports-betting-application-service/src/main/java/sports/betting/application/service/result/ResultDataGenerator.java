@@ -1,10 +1,9 @@
-package sports.betting.application.service;
+package sports.betting.application.service.result;
 
 import java.util.function.DoubleSupplier;
 
 import sports.betting.application.dal.bet.dao.BetDao;
 import sports.betting.application.dal.outcome.dao.OutcomeDao;
-import sports.betting.application.dal.result.dao.ResultDao;
 import sports.betting.application.dal.sportevent.dao.SportEventDao;
 import sports.betting.application.domain.bet.Bet;
 import sports.betting.application.domain.outcome.Outcome;

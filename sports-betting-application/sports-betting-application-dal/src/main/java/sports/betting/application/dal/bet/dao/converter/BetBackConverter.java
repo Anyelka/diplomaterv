@@ -20,6 +20,8 @@ public class BetBackConverter implements Converter<Bet, BetEntity>{
         betEntity.setEvent(sportEventBackConverter.convert(bet.getEvent()));
         betEntity.setDescription(bet.getDescription());
         betEntity.setBetType(bet.getBetType());
+        betEntity.setEnded(bet.isEnded());
+        betEntity.setResult(bet.getResult());
         return betEntity;
     }
 

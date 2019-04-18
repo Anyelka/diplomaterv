@@ -55,42 +55,42 @@
 
         <div id="accordion">
 
-            <c:forEach var="sportEventModel" items="${listEventsModel.events}">
+            <c:forEach var="sportEventView" items="${eventListView.events}">
 
-                <c:if test="${!sportEventModel.ended}">
+                <c:if test="${!sportEventView.ended}">
                     <div class="card">
                         <div class="card-header">
                             <a class="card-link" data-toggle="collapse"
-                               href="#eventTitle${sportEventModel.id}">
-                                    ${sportEventModel.title} - ${sportEventModel.startDate}</a>
+                               href="#eventTitle${sportEventView.id}">
+                                    ${sportEventView.title} - ${sportEventView.startDate}</a>
                         </div>
-                        <div id="eventTitle${sportEventModel.id}" class="collapse"
+                        <div id="eventTitle${sportEventView.id}" class="collapse"
                              data-parent="#accordion">
                             <div class="card-body">
 
-                                <c:forEach var="betModel" items="${sportEventModel.bets}">
+                                <c:forEach var="betView" items="${sportEventView.bets}">
 
                                     <div class="card">
                                         <div class="card-header">
                                             <a class="card-link" data-toggle="collapse"
-                                               href="#bet${betModel.id}"> ${betModel.description} </a>
+                                               href="#bet${betView.id}"> ${betView.description} </a>
                                         </div>
-                                        <div id="bet${betModel.id}" class="collapse"
-                                             data-parent="#${sportEventModel.id}">
+                                        <div id="bet${betView.id}" class="collapse"
+                                             data-parent="#${sportEventView.id}">
                                             <div class="card-body">
                                                 <div class="btn-group btn-group-justified">
 
-                                                    <c:forEach var="outcomeModel" items="${betModel.outcomes}">
+                                                    <c:forEach var="outcomeView" items="${betView.outcomes}">
                                                         <div id="accordion" class="btn-group">
                                                             <div class="card">
-                                                                <input type="hidden" id="betDescription${outcomeModel.id}"
-                                                                       value="${betModel.description}" />
+                                                                <input type="hidden" id="betDescription${outcomeView.id}"
+                                                                       value="${betView.description}" />
                                                                 <button type="button"
-                                                                        id="openModalButton${outcomeModel.id}"
+                                                                        id="openModalButton${outcomeView.id}"
                                                                         class="btn btn-primary"
                                                                         data-toggle="modal"
                                                                         data-target="#saveWagerModal">
-                                                                        ${outcomeModel.value}<br>${outcomeModel.odd}
+                                                                        ${outcomeView.value}<br>${outcomeView.odd}
                                                                 </button>
                                                             </div>
 
@@ -101,7 +101,7 @@
                                                                 <form:input path="outcomeId"
                                                                             id="outcomeId"
                                                                             type="hidden"
-                                                                            value="${outcomeModel.id}"/>
+                                                                            value="${outcomeView.id}"/>
                                                             </form:form>
                                                         </div>
                                                     </c:forEach>

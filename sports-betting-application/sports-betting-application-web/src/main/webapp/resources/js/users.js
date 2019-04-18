@@ -33,6 +33,7 @@ $(document).ready(
         );
 
         function sendSaveAjaxRequest(userId) {
+
             $.ajax({
                 url: "editUser",
                 data: {
