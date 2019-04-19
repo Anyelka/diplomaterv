@@ -41,7 +41,7 @@ public class ResultValidator {
         AddFullTimeResultResponse response = new AddFullTimeResultResponse();
         response.setEventIdError(getEventIdError(request.getEventId()));
         response.setFullTimeResultError(getFullTimeResultError(request.getFullTimeResult()));
-        response.setExistingResultError(getExistingResultError(request.getEventId()));
+        response.setExistingResultError(getExistingEventResultError(request.getEventId()));
         return response;
     }
 
@@ -49,6 +49,7 @@ public class ResultValidator {
         AddBetResultResponse response = new AddBetResultResponse();
         response.setBetDescriptionError(getBetDescriptionError(request.getBetDescription()));
         response.setOutcomeValueError(getOutcomeValueError(request.getBetDescription(), request.getOutcomeValue()));
+        response.setExistingResultError(getExistingBetResultError(request.getBetDescription()));
         return response;
     }
 
@@ -69,7 +70,7 @@ public class ResultValidator {
         return "";
     }
 
-    private String getExistingResultError(int eventId) {
+    private String getExistingEventResultError(int eventId) {
         SportEvent event = eventService.getEvent(eventId);
         if(hasResult(event)) {
             return "The event already has a result!";
@@ -107,6 +108,14 @@ public class ResultValidator {
         Optional<Bet> bet = betService.getByDescription(betDescription);
         if(bet.isPresent() && outcomeService.getAllByBet(bet.get()).stream().noneMatch(b->b.getValue().equals(outcomeValue))) {
             return "The given outcome is invalid for the selected bet!";
+        }
+        return "";
+    }
+
+    private String getExistingBetResultError(String betDescription) {
+        Optional<Bet> bet = betService.getByDescription(betDescription);
+        if(bet.isPresent() && bet.get().isEnded()) {
+            return "The bet already has a result!";
         }
         return "";
     }

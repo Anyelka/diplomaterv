@@ -125,6 +125,9 @@ $(document).ready(
                         if(response.outcomeValueError != "") {
                             alertText = response.outcomeValueError;
                         }
+                        if(response.existingResultError != "") {
+                            alertText = response.existingResultError;
+                        }
                         $("#betResultModalBody").append('<div class="alert alert-danger"><p>' + alertText + '</p></div>');
                     }
                 }

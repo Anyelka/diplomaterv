@@ -35,7 +35,7 @@ public class WagerConverter implements Converter<WagerEntity, Wager>{
         wager.setCurrency(wagerEntity.getCurrency());
         wager.setTimestamp(wagerEntity.getTimestamp());
         wager.setProcessed(wagerEntity.isProcessed());
-        wager.setWinner(wager.isWinner());
+        wager.setWinner(wagerEntity.isWinner());
         return wager;
     }
 

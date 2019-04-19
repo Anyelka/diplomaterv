@@ -65,23 +65,17 @@ public class WagerService {
     }
 
     public boolean isWinner(Wager wager) {
-        Result betResult = resultDao.getByBet(wager.getBet());
-        Outcome outcome = betResult.getOutcome();
-        if (outcome.equals(wager.getOutcome())) {
-            return true;
-        }
-        return false;
-
+        Outcome resultOutcomeOfBet = resultDao.getByBet(wager.getBet()).getOutcome();
+        return resultOutcomeOfBet.getValue().equals(wager.getOutcome().getValue());
     }
 
-    public int getWagersPrize(Wager wager) {
-        return (int) ((wager.getStake()) * (wager.getOutcomeOdd()));
+    public double getWagersPrize(Wager wager) {
+        return (double) ((wager.getStake()) * (wager.getOutcomeOdd()));
     }
 
-    public void evaluateWager(Wager wager) {
+    public void evaluateWagerPrize(Wager wager) {
         if (isWinner(wager)) {
-            double amount = ((double) wager.getStake()) * (wager.getOutcomeOdd());
-            playerService.increaseBalance((int) amount, wager.getPlayer());
+            playerService.increaseBalance((int) getWagersPrize(wager), wager.getPlayer());
         }
     }
 
@@ -118,6 +112,7 @@ public class WagerService {
         Outcome resultoutcome = result.getOutcome();
         if (resultoutcome.getBet().getId() == wager.getBet().getId()) {
             closeWager(wager);
+            evaluateWagerPrize(wager);
         }
     }
 
@@ -128,7 +123,6 @@ public class WagerService {
     private void closeWager(Wager wager) {
         wager.setProcessed(true);
         wager.setWinner(isWinner(wager));
-        evaluateWager(wager);
         saveWager(wager);
     }
 

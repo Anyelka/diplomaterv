@@ -32,7 +32,7 @@ public class WagerBackConverter implements Converter<Wager, WagerEntity>{
         wagerEntity.setCurrency(wager.getCurrency());
         wagerEntity.setTimestamp(wager.getTimestamp());
         wagerEntity.setProcessed(wager.isProcessed());
-        wagerEntity.setWinner(wagerEntity.isWinner());
+        wagerEntity.setWinner(wager.isWinner());
         return wagerEntity;
     }
 

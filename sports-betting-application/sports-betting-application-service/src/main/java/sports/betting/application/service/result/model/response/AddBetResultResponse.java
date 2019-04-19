@@ -5,14 +5,16 @@ public class AddBetResultResponse {
 
     private String betDescriptionError;
     private String outcomeValueError;
+    private String existingResultError;
 
     public AddBetResultResponse() {
         this.betDescriptionError= "";
         this.outcomeValueError = "";
+        this.existingResultError = "";
     }
 
     public boolean getValid() {
-        return betDescriptionError.isEmpty() && outcomeValueError.isEmpty() ;
+        return betDescriptionError.isEmpty() && outcomeValueError.isEmpty() && existingResultError.isEmpty();
     }
 
     public boolean isValid() {
@@ -38,6 +40,15 @@ public class AddBetResultResponse {
 
     public void setOutcomeValueError(String outcomeValueError) {
         this.outcomeValueError = outcomeValueError;
+        setValid(getValid());
+    }
+
+    public String getExistingResultError() {
+        return existingResultError;
+    }
+
+    public void setExistingResultError(String existingResultError) {
+        this.existingResultError = existingResultError;
         setValid(getValid());
     }
 }

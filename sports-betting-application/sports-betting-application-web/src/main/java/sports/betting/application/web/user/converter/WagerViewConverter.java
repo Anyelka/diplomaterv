@@ -1,16 +1,17 @@
 package sports.betting.application.web.user.converter;
 
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 import sports.betting.application.domain.bet.BetType;
 import sports.betting.application.domain.sportevent.EventType;
 import sports.betting.application.domain.wager.Wager;
 import sports.betting.application.web.user.model.view.WagerView;
 
-@Component
-public class WagerViewConverter implements Converter<Wager, WagerView> {
+import java.util.List;
+import java.util.stream.Collectors;
 
-    @Override
+@Component
+public class WagerViewConverter {
+
     public WagerView convert(Wager wager) {
         WagerView wagerView = new WagerView();
         wagerView.setId(wager.getId());
@@ -23,6 +24,10 @@ public class WagerViewConverter implements Converter<Wager, WagerView> {
         wagerView.setWinner(getIsWinner(wager));
         wagerView.setIsProcessed(wager.isProcessed() ? "Yes" : "-");
         return wagerView;
+    }
+
+    public List<WagerView> convert(List<Wager> wagers) {
+        return wagers.stream().map(this::convert).collect(Collectors.toList());
     }
 
     private String formatEventType(EventType eventTypeAsEnum) {

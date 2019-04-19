@@ -5,12 +5,14 @@ import java.util.List;
 public class ListWagersView {
     private List<WagerView> wagers;
 
+    public ListWagersView(List<WagerView> wagers) {
+        this.wagers = wagers;
+    }
+
     public List<WagerView> getWagers() {
         return wagers;
     }
-
     public void setWagers(List<WagerView> wagers) {
         this.wagers = wagers;
     }
-    
 }
