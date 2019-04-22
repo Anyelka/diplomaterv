@@ -1,4 +1,4 @@
-package sports.betting.application.web.user.converter;
+package sports.betting.application.web.user.model.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -8,7 +8,6 @@ import sports.betting.application.service.wager.WagerService;
 import sports.betting.application.web.user.model.view.ListWagersView;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class ListWagersConverter {

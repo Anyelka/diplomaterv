@@ -1,4 +1,4 @@
- package sports.betting.application.web.rest;
+ package sports.betting.application.web.odd;
 
  import org.springframework.beans.factory.annotation.Autowired;
  import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package sports.betting.application.web.rest;
+package sports.betting.application.web.result;
 
 import sports.betting.application.service.result.ResultService;
 import sports.betting.application.domain.result.Result;

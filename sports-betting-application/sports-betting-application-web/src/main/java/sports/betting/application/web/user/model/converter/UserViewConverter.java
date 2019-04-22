@@ -1,4 +1,4 @@
-package sports.betting.application.web.user.converter;
+package sports.betting.application.web.user.model.converter;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;

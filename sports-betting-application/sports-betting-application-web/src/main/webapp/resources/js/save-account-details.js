@@ -9,12 +9,21 @@ $(document).ready(function () {
     $("#saveAccountDetailsButton").click(function () {
         console.log("save account details button clicked");
         $.ajax({
-            url: "saveAccountDetails",
-            data: {
-                playerName: $("#playerName").val(),
-                playerDateOfBirth: $("#playerDateOfBirth").val(),
-                playerAccountNumber: $("#playerAccountNumber").val()
-            },
+            type: "POST",
+            url: "/user/edit",
+            dataType: 'json',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                userId: $("#playerUserId").val(),
+                userEmail: $("#playerEmail").val(),
+                username: $("#playerUsername").val(),
+                userFullName: playerNameInput.val(),
+                userAccountNumber: accountNumberInput.val(),
+                userDateOfBirth: dateOfBirthInput.val(),
+                userBalance: $("#playerBalance").val(),
+                userCurrency: $("#playerCurrency").val()
+
+            }),
             success: function (response) {
                 reloadForm();
                 if (response.valid) {

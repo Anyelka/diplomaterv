@@ -12,7 +12,7 @@ import sports.betting.application.service.event.SportEventService;
 import sports.betting.application.service.outcome.OutcomeService;
 import sports.betting.application.service.result.ResultService;
 import sports.betting.application.service.user.UserService;
-import sports.betting.application.service.user.player.PlayerService;
+import sports.betting.application.service.player.PlayerService;
 import sports.betting.application.service.wager.WagerService;
 
 @Configuration

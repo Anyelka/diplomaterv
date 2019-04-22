@@ -1,4 +1,4 @@
-package sports.betting.application.service.user.player;
+package sports.betting.application.service.player;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -7,13 +7,11 @@ import sports.betting.application.dal.user.dao.UserDao;
 import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.User;
 import sports.betting.application.domain.user.UserCredentials;
-import sports.betting.application.domain.user.UserRole;
+import sports.betting.application.service.player.model.request.EditPlayerDataRequest;
+import sports.betting.application.service.player.model.response.EditPlayerDataResponse;
 import sports.betting.application.service.user.UserService;
-import sports.betting.application.service.user.player.validation.PlayerDataValidator;
+import sports.betting.application.service.player.validation.PlayerDataValidator;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
-import java.util.Currency;
 import java.util.Optional;
 
 public class PlayerService {
@@ -63,18 +61,17 @@ public class PlayerService {
     }
 
     public User getPlayerByUsername(String username) {
-        return userService.getUser(username);
+        return userService.getUser(username).get();
     }
 
-    public UpdatePlayerDataResponse attemptPlayerDataUpdate(String username, String fullName, String dob, String accountNumber) {
-        User player = getPlayerByUsername(username);
-        final PlayerData playerData = new PlayerData(fullName, accountNumber, player.getPlayerData().get().getBalance(), player.getPlayerData().get().getCurrency(), dob);
+    public EditPlayerDataResponse attemptPlayerDataEdit(EditPlayerDataRequest request) {
+        User player = getPlayerById(request.getUserId());
 
-        UpdatePlayerDataResponse updatePlayerDataResponse = playerDataValidator.checkUpdatePlayerDataRequest(playerData);
-        if (updatePlayerDataResponse.isValid()) {
-            playerDao.updatePlayerData(username, playerData);
+        EditPlayerDataResponse editPlayerDataResponse = playerDataValidator.checkEditPlayerDataRequest(request);
+        if (editPlayerDataResponse.isValid()) {
+            final PlayerData playerData = new PlayerData(request.getFullName(), request.getAccountNumber(), player.getPlayerData().get().getBalance(), player.getPlayerData().get().getCurrency(), request.getDateOfBirth());
+            playerDao.updatePlayerData(request.getUserId(), playerData);
         }
-        return updatePlayerDataResponse;
+        return editPlayerDataResponse;
     }
-
 }

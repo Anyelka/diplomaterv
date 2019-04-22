@@ -31,8 +31,8 @@ public class DefaultPlayerDao implements PlayerDao {
     private UserConverter userConverter;
 
     @Override
-    public void updatePlayerData(String username, PlayerData playerData) {
-        UserEntity userEntity = userRepository.findByUsername(username);
+    public void updatePlayerData(Integer id, PlayerData playerData) {
+        UserEntity userEntity = userRepository.findById(id).get();
         PlayerDataEntity playerDataEntity = playerDataBackConverter.convert(Optional.of(playerData));
 
         playerDataRepository.save(playerDataEntity);

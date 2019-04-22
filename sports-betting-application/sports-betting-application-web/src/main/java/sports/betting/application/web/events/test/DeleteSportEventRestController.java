@@ -1,4 +1,4 @@
-package sports.betting.application.web.rest.test;
+package sports.betting.application.web.events.test;
 
 import sports.betting.application.service.event.SportEventService;
 import org.springframework.beans.factory.annotation.Autowired;

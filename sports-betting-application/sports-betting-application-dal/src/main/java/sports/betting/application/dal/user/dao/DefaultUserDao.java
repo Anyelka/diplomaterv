@@ -12,6 +12,7 @@ import sports.betting.application.dal.user.repository.UserRepository;
 import sports.betting.application.domain.user.User;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class DefaultUserDao implements UserDao {
@@ -42,8 +43,8 @@ public class DefaultUserDao implements UserDao {
     }
 
     @Override
-    public User getByUsername(String username) {
-        return userConverter.convert(userRepository.findByUsername(username));
+    public Optional<User> getByUsername(String username) {
+        return Optional.ofNullable(userConverter.convert(userRepository.findByUsername(username)));
     }
 
     @Override
@@ -64,7 +65,23 @@ public class DefaultUserDao implements UserDao {
 
     @Override
     public boolean checkIfUserExists(String username) {
-        return userRepository.findByUsername(username) == null ? false : true;
+        return userRepository.findByUsername(username) != null;
+    }
+
+    @Override
+    public boolean checkIfDifferentUserExistsWithSameUsername(String username, int userId) {
+        UserEntity userByUsername = userRepository.findByUsername(username);
+        Optional<UserEntity> userById = userRepository.findById(userId);
+        if(userRepository.findByUsername(username) == null){
+            return false;
+        } else {
+            return userById.filter(userEntity -> userByUsername.getId() != userEntity.getId()).isPresent();
+        }
+    }
+
+    @Override
+    public void delete(String username) {
+        userRepository.deleteByUsername(username);
     }
 
 }

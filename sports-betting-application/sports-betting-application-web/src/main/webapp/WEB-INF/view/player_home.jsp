@@ -60,8 +60,9 @@
     <div class="panel-heading">${accountDetailsTitle}</div>
     <div class="panel-body">
         <form:form modelAttribute="accountDetailsRequest" action="saveAccountDetails.html">
-            <form:input path="username" type="hidden" name="playerUsername"/>
-            <form:input path="version" type="hidden" name="playerVersion"/>
+            <form:input path="userId" id="playerUserId" type="hidden" name="playerUserId" />
+            <form:input path="username" id="playerUsername" type="hidden" name="playerUsername"/>
+            <form:input path="email" id="playerEmail" type="hidden" name="playerEmail"/>
 
             <div class="input-group">
                 <span class="input-group-addon">${accountDetailsName}</span>

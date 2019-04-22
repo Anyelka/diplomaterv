@@ -1,8 +1,8 @@
-package sports.betting.application.web.rest;
+package sports.betting.application.web.user;
 
-import sports.betting.application.service.user.player.PlayerService;
+import sports.betting.application.service.player.PlayerService;
 import sports.betting.application.domain.user.User;
-import sports.betting.application.web.user.converter.AccountDetailsConverter;
+import sports.betting.application.web.user.model.converter.AccountDetailsConverter;
 import sports.betting.application.web.user.model.request.SaveAccountDetailsRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

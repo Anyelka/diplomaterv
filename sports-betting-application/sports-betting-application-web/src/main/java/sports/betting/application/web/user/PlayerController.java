@@ -8,20 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import sports.betting.application.domain.user.User;
-import sports.betting.application.service.user.UpdateUserDataResponse;
+import sports.betting.application.service.player.PlayerService;
 import sports.betting.application.service.user.UserService;
-import sports.betting.application.service.user.player.PlayerService;
-import sports.betting.application.service.user.player.UpdatePlayerDataResponse;
 import sports.betting.application.service.wager.CreateWagerResponse;
 import sports.betting.application.service.wager.SaveWagerRequest;
 import sports.betting.application.service.wager.WagerService;
-import sports.betting.application.web.user.converter.AccountDetailsConverter;
+import sports.betting.application.web.user.model.converter.AccountDetailsConverter;
+import sports.betting.application.web.user.model.converter.ListWagersConverter;
+import sports.betting.application.web.user.model.request.RemoveWagerRequest;
 import sports.betting.application.web.user.model.request.SaveAccountDetailsRequest;
 import sports.betting.application.web.user.model.view.ListWagersView;
-import sports.betting.application.web.user.model.request.RemoveWagerRequest;
-import sports.betting.application.web.user.converter.ListWagersConverter;
-
-import java.util.Currency;
 
 @Controller
 @RequestMapping("/player")
@@ -44,9 +40,7 @@ public class PlayerController {
 
     @ModelAttribute("accountDetailsRequest")
     public SaveAccountDetailsRequest createAccountDetailsRequest(){
-        User player = getCurrentUser();
-        SaveAccountDetailsRequest accountDetailsRequest = accountDetailsConverter.convert(player);
-        return accountDetailsRequest;
+        return accountDetailsConverter.convert(getCurrentUser());
     }
 
     @ModelAttribute("listWagersView")
@@ -64,14 +58,6 @@ public class PlayerController {
         return "player_home";
     }
 
-    @RequestMapping("saveAccountDetails")
-    public @ResponseBody
-    UpdatePlayerDataResponse saveAccountDetails(@RequestParam(value = "playerName") final String playerName, @RequestParam(value = "playerDateOfBirth") final String playerDateOfBirth,
-                                                @RequestParam(value = "playerAccountNumber") final String playerAccountNumber) {
-        return playerService.attemptPlayerDataUpdate(SecurityContextHolder.getContext().getAuthentication().getName(), playerName, playerDateOfBirth, playerAccountNumber);
-    }
-
-
     @RequestMapping("saveWager")
     public @ResponseBody CreateWagerResponse createWager(@RequestParam("playerUsername") final String playerUsername, @RequestParam("outcomeId") final int outcomeId,
                                     @RequestParam("stake") final String stake) {
@@ -85,6 +71,6 @@ public class PlayerController {
     }
 
     private User getCurrentUser() {
-        return userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName());
+        return userService.getUser(SecurityContextHolder.getContext().getAuthentication().getName()).get();
     }
 }

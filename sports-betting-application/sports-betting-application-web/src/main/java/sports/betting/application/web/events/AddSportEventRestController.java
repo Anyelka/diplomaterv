@@ -1,4 +1,4 @@
-package sports.betting.application.web.rest;
+package sports.betting.application.web.events;
 
 import sports.betting.application.service.bet.BetService;
 import sports.betting.application.service.outcome.OutcomeService;
@@ -20,8 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AddSportEventRestController {
 
-    private static final String REQUEST_MAPPING = "/addEvent";
-    
     @Autowired
     private SportEventService eventService;
     
@@ -31,7 +29,7 @@ public class AddSportEventRestController {
     @Autowired
     private OutcomeService outcomeService;
     
-    @RequestMapping(value = REQUEST_MAPPING, method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/addEvent", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(code = HttpStatus.CREATED)
     public String getSportEventModel(@RequestBody SportEventView eventModel) {
         eventService.createEvent(eventModel.getTitle(), eventModel.getStartDate(), eventModel.getEndDate(),

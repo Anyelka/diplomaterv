@@ -1,21 +1,27 @@
-package sports.betting.application.service.user.player;
+package sports.betting.application.service.player.model.response;
 
-public class UpdatePlayerDataResponse {
+public class EditPlayerDataResponse {
 
     private boolean valid;
 
     private String fullNameError;
-    private String dateOfBirthError;
     private String accountNumberError;
+    private String dateOfBirthError;
+    private String balanceError;
+    private String currencyError;
 
-    public UpdatePlayerDataResponse() {
+    public EditPlayerDataResponse() {
+        this.valid = true;
         this.fullNameError = "";
         this.dateOfBirthError = "";
         this.accountNumberError = "";
+        this.balanceError = "";
+        this.currencyError = "";
     }
 
     public boolean getValid() {
-        return fullNameError.isEmpty() && dateOfBirthError.isEmpty() && accountNumberError.isEmpty();
+        return fullNameError.isEmpty() && dateOfBirthError.isEmpty() && accountNumberError.isEmpty()
+                && balanceError.isEmpty() && currencyError.isEmpty();
     }
 
     public boolean isValid() {
@@ -50,6 +56,24 @@ public class UpdatePlayerDataResponse {
 
     public void setAccountNumberError(String accountNumberError) {
         this.accountNumberError = accountNumberError;
+        setValid(getValid());
+    }
+
+    public String getBalanceError() {
+        return balanceError;
+    }
+
+    public void setBalanceError(String balanceError) {
+        this.balanceError = balanceError;
+        setValid(getValid());
+    }
+
+    public String getCurrencyError() {
+        return currencyError;
+    }
+
+    public void setCurrencyError(String currencyError) {
+        this.currencyError = currencyError;
         setValid(getValid());
     }
 }
