@@ -83,6 +83,8 @@ public class TestDataGenerator {
     public void init() {
         createRoles();
         createPlayer();
+        playerService.createPlayer(new PlayerData( "Marton Takacs", "12345", 12345, "HUF", "1995-02-16") ,
+                new UserCredentials("m@t.com", "anyelka", "anyelka"), PLAYER_ENABLED);
         createAdmin();
         createBettingDatabase();
         createTestWagers();
