@@ -8,8 +8,7 @@ public class Outcome {
     private String value;
     private double currentOdd;
 
-    public Outcome() {
-    };
+    public Outcome() {}
 
     public Outcome(Bet bet, String value, double currentOdd) {
         this.bet = bet;

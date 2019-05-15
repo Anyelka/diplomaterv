@@ -17,11 +17,9 @@ public class User {
     public User() {
         this.roles = new HashSet<>();
     }
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -65,19 +63,15 @@ public class User {
     public void setRoles(Set<UserRole> roles) {
         this.roles = roles;
     }
-
     public Optional<PlayerData> getPlayerData() {
         return playerData;
     }
-
     public void setPlayerData(Optional<PlayerData> playerData) {
         this.playerData = playerData;
     }
-
     public Integer getVersion() {
         return version;
     }
-
     public void setVersion(Integer version) {
         this.version = version;
     }

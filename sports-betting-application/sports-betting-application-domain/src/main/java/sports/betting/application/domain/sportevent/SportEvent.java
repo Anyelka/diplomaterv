@@ -1,11 +1,9 @@
 package sports.betting.application.domain.sportevent;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class SportEvent implements Serializable {
+public class SportEvent{
 
-    private static final long serialVersionUID = 1L;
     private int id;
     private String title;
     private LocalDateTime startDate;
