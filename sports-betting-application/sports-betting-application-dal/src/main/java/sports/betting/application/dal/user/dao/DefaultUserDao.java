@@ -34,7 +34,7 @@ public class DefaultUserDao implements UserDao {
 
     @Override
     public List<User> getAll() {
-        return Lists.newArrayList(userRepository.findAll()).stream().map(userEntity -> userConverter.convert(userEntity)).collect(Collectors.toList());
+        return userConverter.convert(userRepository.findAll());
     }
 
     @Override

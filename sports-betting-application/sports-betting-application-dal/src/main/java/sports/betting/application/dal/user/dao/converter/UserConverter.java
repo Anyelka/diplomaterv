@@ -1,5 +1,6 @@
 package sports.betting.application.dal.user.dao.converter;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 import sports.betting.application.dal.user.entity.UserEntity;
@@ -30,5 +31,8 @@ public class UserConverter implements Converter<UserEntity, User> {
         user.setVersion(userEntity.getVersion());
         return user;
     }
-    
+
+    public List<User> convert(List<UserEntity> entities) {
+        return entities.stream().map(this::convert).collect(Collectors.toList());
+    }
 }
