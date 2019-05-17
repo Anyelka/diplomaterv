@@ -1,4 +1,4 @@
-package sports.betting.application.service.registration;
+package sports.betting.application.service.registration.model;
 
 public class RegistrationResponse {
 

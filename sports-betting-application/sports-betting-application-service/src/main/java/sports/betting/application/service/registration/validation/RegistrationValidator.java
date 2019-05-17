@@ -1,10 +1,11 @@
-package sports.betting.application.service.registration;
+package sports.betting.application.service.registration.validation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import sports.betting.application.domain.user.PlayerData;
 import sports.betting.application.domain.user.UserCredentials;
 import sports.betting.application.lib.validate.FormatValidator;
+import sports.betting.application.service.registration.model.RegistrationResponse;
 import sports.betting.application.service.user.UserService;
 
 @Component

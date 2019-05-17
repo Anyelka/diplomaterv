@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sports.betting.application.service.registration.RegistrationRequest;
-import sports.betting.application.service.registration.RegistrationResponse;
+import sports.betting.application.service.registration.model.RegistrationRequest;
+import sports.betting.application.service.registration.model.RegistrationResponse;
 import sports.betting.application.service.registration.RegistrationService;
 
 import java.util.Currency;

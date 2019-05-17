@@ -1,4 +1,4 @@
-package sports.betting.application.service.registration;
+package sports.betting.application.service.registration.model;
 
 import java.util.Currency;
 

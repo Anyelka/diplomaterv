@@ -1,7 +1,0 @@
-#intellij
-.idea/
-*.iml
-*.ipr
-*.iws
-
-target/
