@@ -4,6 +4,6 @@ import org.aspectj.lang.annotation.Pointcut;
 
 public class PointCuts {
 
-	@Pointcut("execution(* org.sports.betting.application.app.*.*.*(..))")
+	@Pointcut("execution(* sports.betting.application.*.*.*(..))")
 	public void all() {}
 }

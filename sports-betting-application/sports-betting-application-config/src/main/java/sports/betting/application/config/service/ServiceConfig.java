@@ -16,7 +16,6 @@ import sports.betting.application.service.player.PlayerService;
 import sports.betting.application.service.wager.WagerService;
 
 @Configuration
-@ComponentScan("org.sports.betting.application.app.springconfig")
 @Import({JpaConfig.class})
 public class ServiceConfig {
 
